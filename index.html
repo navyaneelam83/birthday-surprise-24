@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday My Love ❤️</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
-html,body{
+html,
+body{
     width:100%;
     height:100%;
     overflow:hidden;
 }
 
 body{
-    font-family:"Times New Roman", Georgia, serif;
+    font-family:"Times New Roman",Georgia,serif;
+
     background:
         radial-gradient(circle at 20% 20%, rgba(255,70,160,.28), transparent 30%),
         radial-gradient(circle at 80% 25%, rgba(80,90,255,.30), transparent 32%),
         radial-gradient(circle at 50% 90%, rgba(255,50,120,.20), transparent 35%),
         linear-gradient(135deg,#130022,#25004b,#16005c,#090018);
+
     color:white;
 }
 
-/* =========================
+
+/* =====================================================
    COMMON SCREEN
-========================= */
+===================================================== */
 
 .screen{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
+
     display:none;
+
     justify-content:center;
     align-items:center;
+
     text-align:center;
+
     overflow:hidden;
 }
 
@@ -51,32 +64,41 @@ body{
 .content{
     position:relative;
     z-index:10;
+
     width:92%;
     max-width:900px;
 }
 
-/* =========================
+
+/* =====================================================
    STARS
-========================= */
+===================================================== */
 
 .stars{
     position:absolute;
     inset:0;
+
     overflow:hidden;
     pointer-events:none;
 }
 
 .star{
     position:absolute;
+
     width:2px;
     height:2px;
+
     background:white;
+
     border-radius:50%;
+
     opacity:.7;
+
     animation:twinkle 3s infinite ease-in-out;
 }
 
 @keyframes twinkle{
+
     0%,100%{
         opacity:.25;
         transform:scale(.8);
@@ -88,21 +110,28 @@ body{
     }
 }
 
-/* =========================
+
+/* =====================================================
    GLOW
-========================= */
+===================================================== */
 
 .glow{
     position:absolute;
+
     width:450px;
     height:450px;
+
     border-radius:50%;
+
     background:rgba(255,60,170,.12);
+
     filter:blur(80px);
+
     animation:pulseGlow 5s infinite alternate;
 }
 
 @keyframes pulseGlow{
+
     from{
         transform:scale(.9);
         opacity:.5;
@@ -114,41 +143,56 @@ body{
     }
 }
 
-/* =========================
+
+/* =====================================================
    INTRO VIDEO
-========================= */
+===================================================== */
 
 #videoScreen{
     background:#050008;
 }
 
 #introVideo{
+
     position:absolute;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     background:#050008;
 }
 
 .videoOverlay{
+
     position:absolute;
+
     inset:0;
-    background:rgba(0,0,0,.20);
+
+    background:rgba(0,0,0,.15);
+
     z-index:2;
+
+    pointer-events:none;
 }
 
-/* =========================
+
+/* =====================================================
    SCREEN 1
-========================= */
+===================================================== */
 
 #screen1{
+
     background:
         radial-gradient(circle at 50% 45%, rgba(255,70,170,.18), transparent 35%),
         linear-gradient(135deg,#180026,#33005c,#10004d,#090018);
 }
 
 .assalam{
+
     font-size:clamp(32px,6vw,64px);
+
     font-weight:bold;
 
     text-shadow:
@@ -159,13 +203,18 @@ body{
 }
 
 .heart{
+
     display:block;
+
     font-size:42px;
+
     margin-top:18px;
+
     animation:heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat{
+
     0%,100%{
         transform:scale(1);
     }
@@ -176,6 +225,7 @@ body{
 }
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
         transform:translateY(30px);
@@ -187,11 +237,13 @@ body{
     }
 }
 
-/* =========================
+
+/* =====================================================
    SCREEN 2 - PRAYER
-========================= */
+===================================================== */
 
 #screen2{
+
     background:
         radial-gradient(circle at 50% 30%, rgba(255,100,180,.18), transparent 35%),
         radial-gradient(circle at 20% 80%, rgba(100,80,255,.18), transparent 30%),
@@ -199,14 +251,19 @@ body{
 }
 
 .prayerBox{
+
     max-width:850px;
+
     margin:auto;
+
     padding:35px 30px;
 
     border:1px solid rgba(255,255,255,.18);
+
     border-radius:25px;
 
     background:rgba(255,255,255,.07);
+
     backdrop-filter:blur(12px);
 
     box-shadow:
@@ -215,34 +272,49 @@ body{
 }
 
 .prayerEmoji{
+
     font-size:38px;
+
     margin-bottom:18px;
 }
 
 .prayerEnglish{
+
     font-size:clamp(18px,2.5vw,26px);
+
     line-height:1.65;
+
     font-weight:bold;
+
     margin-bottom:25px;
 }
 
 .prayerTelugu{
+
     font-size:clamp(17px,2.3vw,23px);
+
     line-height:1.75;
+
     color:#f7eaff;
 }
 
 .continueBtn{
+
     margin-top:30px;
+
     padding:13px 30px;
+
     border:none;
+
     border-radius:30px;
 
-    background:linear-gradient(90deg,#ff4fa3,#9b5cff);
+    background:
+        linear-gradient(90deg,#ff4fa3,#9b5cff);
 
     color:white;
 
     font-size:17px;
+
     font-family:inherit;
 
     cursor:pointer;
@@ -256,11 +328,13 @@ body{
     transform:scale(1.05);
 }
 
-/* =========================
+
+/* =====================================================
    SCREEN 3 - BIRTHDAY
-========================= */
+===================================================== */
 
 #screen3{
+
     background:
         radial-gradient(circle at 50% 30%, rgba(255,70,160,.25), transparent 32%),
         radial-gradient(circle at 20% 70%, rgba(100,80,255,.20), transparent 30%),
@@ -269,16 +343,22 @@ body{
 }
 
 .birthdaySmall{
+
     font-size:clamp(17px,2.5vw,24px);
+
     margin-bottom:10px;
+
     color:#f5d7ff;
 }
 
 .birthdayTitle{
+
     font-size:clamp(55px,10vw,115px);
+
     line-height:.9;
 
     font-weight:bold;
+
     letter-spacing:3px;
 
     background:
@@ -291,6 +371,7 @@ body{
         );
 
     -webkit-background-clip:text;
+
     -webkit-text-fill-color:transparent;
 
     text-shadow:
@@ -298,6 +379,7 @@ body{
 }
 
 .buddu{
+
     font-size:clamp(38px,7vw,75px);
 
     margin-top:25px;
@@ -312,6 +394,7 @@ body{
 }
 
 .mubarak{
+
     margin-top:20px;
 
     font-size:clamp(21px,3vw,31px);
@@ -320,6 +403,7 @@ body{
 }
 
 .dua{
+
     margin:22px auto 0;
 
     max-width:600px;
@@ -331,11 +415,13 @@ body{
     color:#f4eaff;
 }
 
-/* =========================
+
+/* =====================================================
    BALLOONS
-========================= */
+===================================================== */
 
 .balloon{
+
     position:absolute;
 
     width:62px;
@@ -349,6 +435,7 @@ body{
 }
 
 .balloon:after{
+
     content:"";
 
     position:absolute;
@@ -359,37 +446,50 @@ body{
     background:rgba(255,255,255,.45);
 
     top:75px;
+
     left:50%;
 }
 
 .b1{
+
     background:#ff4b9b;
+
     left:7%;
     top:8%;
 }
 
 .b2{
+
     background:#ffd34f;
+
     left:33%;
     top:4%;
+
     animation-delay:1s;
 }
 
 .b3{
+
     background:#4fdcff;
+
     right:33%;
     top:7%;
+
     animation-delay:2s;
 }
 
 .b4{
+
     background:#9d63ff;
+
     right:8%;
     top:5%;
+
     animation-delay:3s;
 }
 
 @keyframes float{
+
     0%,100%{
         transform:translateY(0);
     }
@@ -399,11 +499,13 @@ body{
     }
 }
 
-/* =========================
+
+/* =====================================================
    MUSIC BUTTON
-========================= */
+===================================================== */
 
 .musicButton{
+
     position:fixed;
 
     top:18px;
@@ -429,9 +531,10 @@ body{
     backdrop-filter:blur(8px);
 }
 
-/* =========================
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:600px){
 
@@ -452,19 +555,23 @@ body{
         height:58px;
     }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
 
 <!-- =====================================================
-     FIRST SONG - EXACT 00:00 TO 00:58
+     SONG
 ===================================================== -->
 
 <audio
     id="birthdaySong"
     src="./birthday-song-00-00-to-00-58.mp3"
+    autoplay
     preload="auto"
     playsinline>
 </audio>
@@ -494,6 +601,8 @@ body{
 
     <video
         id="introVideo"
+        autoplay
+        muted
         playsinline
         preload="auto">
 
@@ -537,7 +646,6 @@ body{
             Assalamu Alaikum ❤️
 
         </div>
-
 
         <span class="heart">
 
@@ -626,7 +734,6 @@ body{
 
             </button>
 
-
         </div>
 
     </div>
@@ -704,18 +811,25 @@ body{
 
 <script>
 
+
 /* =====================================================
    ELEMENTS
 ===================================================== */
 
 const music =
-    document.getElementById("birthdaySong");
+    document.getElementById(
+        "birthdaySong"
+    );
 
 const musicButton =
-    document.getElementById("musicButton");
+    document.getElementById(
+        "musicButton"
+    );
 
 const introVideo =
-    document.getElementById("introVideo");
+    document.getElementById(
+        "introVideo"
+    );
 
 let playing = false;
 
@@ -730,27 +844,40 @@ function createStars(id){
         document.getElementById(id);
 
 
-    for(let i = 0; i < 90; i++){
+    for(
+        let i = 0;
+        i < 90;
+        i++
+    ){
 
         const star =
             document.createElement("div");
 
-        star.className = "star";
+        star.className =
+            "star";
 
 
         star.style.left =
-            Math.random() * 100 + "%";
+            Math.random() *
+            100 +
+            "%";
 
 
         star.style.top =
-            Math.random() * 100 + "%";
+            Math.random() *
+            100 +
+            "%";
 
 
         star.style.animationDelay =
-            Math.random() * 3 + "s";
+            Math.random() *
+            3 +
+            "s";
 
 
-        container.appendChild(star);
+        container.appendChild(
+            star
+        );
 
     }
 
@@ -758,7 +885,9 @@ function createStars(id){
 
 
 createStars("stars1");
+
 createStars("stars2");
+
 createStars("stars3");
 
 
@@ -772,7 +901,9 @@ function showScreen(id){
         .querySelectorAll(".screen")
         .forEach(function(screen){
 
-            screen.classList.remove("active");
+            screen.classList.remove(
+                "active"
+            );
 
         });
 
@@ -788,7 +919,7 @@ function showScreen(id){
 
 
 /* =====================================================
-   START SONG
+   START MUSIC AUTOMATICALLY
 ===================================================== */
 
 function startMusic(){
@@ -807,14 +938,24 @@ function startMusic(){
 
         playing = true;
 
-        musicButton.textContent = "🔊";
+        musicButton.textContent =
+            "🔊";
+
+        console.log(
+            "Birthday song started automatically."
+        );
 
     })
 
     .catch(function(error){
 
+        playing = false;
+
+        musicButton.textContent =
+            "🔇";
+
         console.log(
-            "Music error:",
+            "Browser blocked automatic audio:",
             error
         );
 
@@ -824,7 +965,7 @@ function startMusic(){
 
 
 /* =====================================================
-   STOP SONG
+   STOP MUSIC
 ===================================================== */
 
 function stopMusic(){
@@ -840,7 +981,8 @@ function stopMusic(){
 
     playing = false;
 
-    musicButton.textContent = "🔇";
+    musicButton.textContent =
+        "🔇";
 
 }
 
@@ -859,7 +1001,17 @@ function toggleMusic(){
 
             playing = true;
 
-            musicButton.textContent = "🔊";
+            musicButton.textContent =
+                "🔊";
+
+        })
+
+        .catch(function(error){
+
+            console.log(
+                "Music blocked:",
+                error
+            );
 
         });
 
@@ -871,7 +1023,8 @@ function toggleMusic(){
 
         playing = false;
 
-        musicButton.textContent = "🔇";
+        musicButton.textContent =
+            "🔇";
 
     }
 
@@ -879,16 +1032,52 @@ function toggleMusic(){
 
 
 /* =====================================================
-   INTRO VIDEO
+   AUTOMATIC VIDEO
 ===================================================== */
 
-/*
-   Video start ayyinappudu song start.
-*/
+function startVideo(){
 
-introVideo.addEventListener(
-    "play",
+    introVideo
+        .play()
+        .then(function(){
+
+            console.log(
+                "Countdown video started automatically."
+            );
+
+        })
+
+        .catch(function(error){
+
+            console.log(
+                "Video autoplay error:",
+                error
+            );
+
+        });
+
+}
+
+
+/* =====================================================
+   PAGE LOAD
+===================================================== */
+
+window.addEventListener(
+    "load",
     function(){
+
+        /*
+           Start video automatically.
+        */
+
+        startVideo();
+
+
+        /*
+           Start song automatically
+           from 00:00.
+        */
 
         startMusic();
 
@@ -896,16 +1085,17 @@ introVideo.addEventListener(
 );
 
 
-/*
-   Video complete ayyaka
-   Screen 1 open avuthundi.
-*/
+/* =====================================================
+   VIDEO END
+===================================================== */
 
 introVideo.addEventListener(
     "ended",
     function(){
 
-        showScreen("screen1");
+        showScreen(
+            "screen1"
+        );
 
     }
 );
@@ -915,41 +1105,24 @@ introVideo.addEventListener(
    BIRTHDAY SCREEN
 ===================================================== */
 
-/*
-   Prayer nunchi Birthday screen ki
-   vellinappudu first song completely stop.
-*/
-
 function showBirthdayScreen(){
+
+    /*
+       First song stops completely.
+    */
 
     stopMusic();
 
-    showScreen("screen3");
+
+    /*
+       Happy Birthday screen opens.
+    */
+
+    showScreen(
+        "screen3"
+    );
 
 }
-
-
-/* =====================================================
-   VIDEO AUTOPLAY
-===================================================== */
-
-window.addEventListener(
-    "load",
-    function(){
-
-        introVideo
-            .play()
-            .catch(function(error){
-
-                console.log(
-                    "Video autoplay blocked:",
-                    error
-                );
-
-            });
-
-    }
-);
 
 </script>
 
