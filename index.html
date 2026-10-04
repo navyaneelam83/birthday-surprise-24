@@ -8,8 +8,6 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Dancing+Script:wght@500;600;700&display=swap');
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -21,7 +19,7 @@ html{
 }
 
 body{
-    font-family:'Baloo 2',sans-serif;
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     background:#12002d;
     color:white;
     overflow-x:hidden;
@@ -57,7 +55,6 @@ body{
     to{transform:translateY(75px)}
 }
 
-
 /* MUSIC */
 
 .musicBtn{
@@ -65,33 +62,25 @@ body{
     top:18px;
     right:18px;
     z-index:1000;
-
     width:50px;
     height:50px;
     border-radius:50%;
-
     border:2px solid rgba(255,255,255,.5);
-
     background:rgba(255,70,170,.65);
     color:white;
-
     font-size:22px;
     cursor:pointer;
-
     box-shadow:0 0 25px rgba(255,80,190,.5);
 }
-
 
 /* SCREEN */
 
 .screen{
     min-height:100vh;
     padding:40px 20px;
-
     display:none;
     align-items:center;
     justify-content:center;
-
     position:relative;
     z-index:2;
 }
@@ -105,11 +94,10 @@ body{
     text-align:center;
 }
 
-
 /* TEXT */
 
 .script{
-    font-family:'Dancing Script',cursive;
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
 }
 
 .small{
@@ -120,7 +108,6 @@ body{
 .bigGradient{
     font-size:clamp(55px,12vw,125px);
     line-height:.9;
-
     background:linear-gradient(
         90deg,
         #ffd45b,
@@ -128,16 +115,11 @@ body{
         #9cecff,
         #ffd45b
     );
-
     background-size:300%;
-
     -webkit-background-clip:text;
     background-clip:text;
-
     color:transparent;
-
     animation:gradient 5s linear infinite;
-
     filter:drop-shadow(0 8px 25px rgba(255,80,180,.25));
 }
 
@@ -152,36 +134,27 @@ body{
     line-height:1.6;
 }
 
-
 /* BUTTON */
 
 .btn{
     margin-top:30px;
-
     padding:16px 34px;
-
     border:0;
     border-radius:60px;
-
     background:linear-gradient(
         90deg,
         #ff3fa4,
         #ff7b62,
         #ffd05b
     );
-
     color:white;
-
-    font-family:'Baloo 2',sans-serif;
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:20px;
     font-weight:800;
-
     cursor:pointer;
-
     box-shadow:
         0 0 25px rgba(255,70,170,.65),
         0 10px 30px rgba(0,0,0,.2);
-
     transition:.25s;
 }
 
@@ -193,7 +166,6 @@ body{
     transform:scale(.96);
 }
 
-
 /* BALLOONS */
 
 .balloonArea{
@@ -203,25 +175,19 @@ body{
 
 .balloon{
     position:absolute;
-
     width:62px;
     height:80px;
-
     border-radius:50%;
-
     animation:float 3s ease-in-out infinite;
 }
 
 .balloon:after{
     content:"";
     position:absolute;
-
     width:1px;
     height:100px;
-
     left:50%;
     top:78px;
-
     background:rgba(255,255,255,.6);
 }
 
@@ -258,32 +224,24 @@ body{
     }
 }
 
-
 /* LETTER */
 
 .letter{
     width:min(850px,100%);
-
     max-height:75vh;
     overflow-y:auto;
-
     padding:35px 30px;
-
     border-radius:30px;
-
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.12),
             rgba(255,255,255,.04)
         );
-
     border:1px solid rgba(255,255,255,.2);
-
     box-shadow:
         0 20px 70px rgba(0,0,0,.3),
         inset 0 0 50px rgba(255,100,200,.08);
-
     text-align:left;
 }
 
@@ -297,14 +255,10 @@ body{
 }
 
 .letter p{
-    font-family:'Dancing Script',cursive;
-
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:clamp(22px,4vw,30px);
-
     line-height:1.55;
-
     color:#fff5fc;
-
     margin-bottom:22px;
 }
 
@@ -312,7 +266,6 @@ body{
     color:#ffd1ec;
     font-weight:700;
 }
-
 
 /* GIFTS */
 
@@ -328,44 +281,30 @@ body{
 
 .giftGrid{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:14px;
-
     max-width:760px;
-
     margin:auto;
 }
 
 .gift{
     aspect-ratio:1;
-
     border-radius:22px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     cursor:pointer;
-
     position:relative;
-
     border:2px solid rgba(255,255,255,.22);
-
     background:
         linear-gradient(
             145deg,
             #ff4fa4,
             #743eff
         );
-
     box-shadow:
         0 10px 30px rgba(0,0,0,.25);
-
     transition:.3s;
-
     overflow:hidden;
 }
 
@@ -411,27 +350,20 @@ body{
             #fff,
             #ffd8ee
         );
-
     color:#64134e;
 }
-
 
 /* MODAL */
 
 .modal{
     position:fixed;
     inset:0;
-
     display:none;
     align-items:center;
     justify-content:center;
-
     padding:20px;
-
     background:rgba(5,0,20,.85);
-
     backdrop-filter:blur(12px);
-
     z-index:2000;
 }
 
@@ -441,15 +373,10 @@ body{
 
 .modalCard{
     width:min(520px,100%);
-
     padding:35px 25px;
-
     text-align:center;
-
     border-radius:32px;
-
     color:#5a164e;
-
     background:
         radial-gradient(
             circle at top,
@@ -461,10 +388,8 @@ body{
             #fff,
             #ffd7ed
         );
-
     box-shadow:
         0 0 80px rgba(255,60,190,.5);
-
     animation:modalIn .4s ease;
 }
 
@@ -490,41 +415,29 @@ body{
 }
 
 .modalText{
-    font-family:'Dancing Script',cursive;
-
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:28px;
-
     line-height:1.45;
 }
 
 .close{
     margin-top:22px;
-
     border:0;
     border-radius:50px;
-
     padding:11px 25px;
-
     background:#ff3f9f;
-
     color:white;
-
     font-size:17px;
     font-weight:700;
-
     cursor:pointer;
 }
-
 
 /* THEATRE */
 
 .theatre{
     width:min(850px,100%);
-
     padding:25px;
-
     border-radius:30px;
-
     background:
         radial-gradient(
             circle,
@@ -536,14 +449,10 @@ body{
             #26000c,
             #65001e
         );
-
     border:2px solid rgba(255,200,80,.4);
-
     box-shadow:
         0 0 80px rgba(255,50,80,.3);
-
     position:relative;
-
     overflow:hidden;
 }
 
@@ -557,28 +466,19 @@ body{
 
 .theatreTitle{
     font-size:clamp(40px,8vw,75px);
-
     color:#ffd85c;
-
     text-shadow:
         0 0 25px rgba(255,210,70,.5);
 }
 
 .ticket{
     margin:25px auto;
-
     max-width:500px;
-
     padding:25px;
-
     background:#fff4d3;
-
     color:#481621;
-
     border-radius:15px;
-
     border:4px dashed #e74b60;
-
     transform:rotate(-1deg);
 }
 
@@ -591,14 +491,11 @@ body{
     margin-top:7px;
 }
 
-
 /* FINAL */
 
 .finalTitle{
-    font-family:'Dancing Script',cursive;
-
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:clamp(60px,12vw,120px);
-
     background:
         linear-gradient(
             90deg,
@@ -606,39 +503,27 @@ body{
             #ffe477,
             #72eaff
         );
-
     background-size:300%;
-
     -webkit-background-clip:text;
     background-clip:text;
-
     color:transparent;
-
     animation:gradient 5s linear infinite;
 }
 
 .finalText{
-    font-family:'Dancing Script',cursive;
-
+    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:clamp(25px,5vw,38px);
-
     line-height:1.5;
-
     color:#ffe8f7;
 }
-
 
 /* HEARTS */
 
 .heart{
     position:fixed;
-
     bottom:-40px;
-
     pointer-events:none;
-
     z-index:1500;
-
     animation:heartFloat linear forwards;
 }
 
@@ -648,7 +533,6 @@ body{
         transform:
             translateY(0)
             scale(.6);
-
         opacity:0;
     }
 
@@ -661,23 +545,17 @@ body{
             translateY(-110vh)
             scale(1.4)
             rotate(25deg);
-
         opacity:0;
     }
 }
-
 
 /* CONFETTI */
 
 .confetti{
     position:fixed;
-
     top:-30px;
-
     z-index:3000;
-
     pointer-events:none;
-
     animation:fall linear forwards;
 }
 
@@ -689,15 +567,12 @@ body{
     }
 }
 
-
 /* MOBILE */
 
 @media(max-width:650px){
 
     .giftGrid{
-        grid-template-columns:
-            repeat(3,1fr);
-
+        grid-template-columns:repeat(3,1fr);
         gap:10px;
     }
 
@@ -722,13 +597,11 @@ body{
 </style>
 </head>
 
-
 <body>
 
 <div class="page">
 
 <div class="stars"></div>
-
 
 <!-- MUSIC BUTTON -->
 
@@ -738,10 +611,7 @@ body{
     ♫
 </button>
 
-
-<!-- ======================================================
-     SCREEN 1
-====================================================== -->
+<!-- SCREEN 1 -->
 
 <section class="screen active" id="screen1">
 
@@ -810,11 +680,7 @@ Headphones pettukunte inka baguntundhi. 🥹❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 2
-====================================================== -->
+<!-- SCREEN 2 -->
 
 <section class="screen" id="screen2">
 
@@ -843,7 +709,7 @@ THALLIII ❤️
 
 <p class="subtitle">
 
-24 years ayyavvv... 🥹❤️
+24 years vachayiiii... 🥹❤️
 
 <br>
 
@@ -875,12 +741,7 @@ ONE MORE THING... 👀❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 3
-     LONG BIRTHDAY LETTER
-====================================================== -->
+<!-- SCREEN 3 -->
 
 <section class="screen" id="screen3">
 
@@ -900,9 +761,7 @@ Buddu Thalli... ❤️
 
 </h2>
 
-
 <div class="letter">
-
 
 <p>
 <strong>
@@ -910,7 +769,6 @@ Happy Birthday to My Favorite Person,
 My Forever, My Love ❤️🥹🎂
 </strong>
 </p>
-
 
 <p>
 
@@ -927,7 +785,6 @@ it's the day my favorite person came into this world.
 
 </p>
 
-
 <p>
 
 Sometimes I still wonder how someone who was once
@@ -943,7 +800,6 @@ and now you're someone I can't imagine my tomorrow without.
 
 </p>
 
-
 <p>
 
 Life lo chala mandi people ostharu, potharu.
@@ -956,7 +812,6 @@ nuvvu na life loki vachhi na life lo oka permanent place create chesav.
 </span> ❤️
 
 </p>
-
 
 <p>
 
@@ -978,7 +833,6 @@ You're my person.
 
 </p>
 
-
 <p>
 
 The one I want to share stupid things with.
@@ -996,7 +850,6 @@ The one I want beside me when life is beautiful.
 And the one I want beside me when life isn't beautiful at all.
 
 </p>
-
 
 <p>
 
@@ -1018,7 +871,6 @@ I choose you. ❤️
 
 </p>
 
-
 <p>
 
 And if life ever gave me the chance
@@ -1032,7 +884,6 @@ of whatever <span class="highlight">"us"</span> becomes.
 
 </p>
 
-
 <p>
 
 Nee birthday roju nenu neeku expensive gifts ivvalekapoyina,
@@ -1045,7 +896,6 @@ my promise that I'll always want to see you happy. 🫂❤️
 </strong>
 
 </p>
-
 
 <p>
 
@@ -1066,7 +916,6 @@ I hope there is a little place for me too. 🥹
 
 </p>
 
-
 <p>
 
 Because naa biggest dreams lo okati
@@ -1081,7 +930,6 @@ ani smile cheskovali. 🏡💍❤️
 </span>
 
 </p>
-
 
 <p>
 
@@ -1108,7 +956,6 @@ That's the life I want. ❤️
 
 </p>
 
-
 <p>
 
 And birthday boy,
@@ -1123,7 +970,6 @@ achievements that make you proud,
 and happiness that stays longer than you expect. 🥹✨
 
 </p>
-
 
 <p>
 
@@ -1143,7 +989,6 @@ I want to be there smiling because you're smiling.
 </span> ❤️
 
 </p>
-
 
 <p>
 
@@ -1174,7 +1019,6 @@ ani anipisthadhi.
 
 </p>
 
-
 <p>
 
 That's when I realize…
@@ -1187,7 +1031,6 @@ You became a part of the way I experience life.
 
 </p>
 
-
 <p>
 
 And maybe that's why I don't want just a beautiful life.
@@ -1199,7 +1042,6 @@ I want my life to be beautiful because you're in it. ❤️
 </strong>
 
 </p>
-
 
 <p>
 
@@ -1226,7 +1068,6 @@ Come as my husband. 💍❤️
 
 </p>
 
-
 <p>
 
 Because somehow,
@@ -1251,7 +1092,6 @@ Very, very rare. ❤️
 
 </p>
 
-
 <p>
 
 So thank you.
@@ -1274,7 +1114,6 @@ For being the person I can call
 
 </p>
 
-
 <p>
 
 And yes…
@@ -1290,7 +1129,6 @@ I'm genuinely sorry. ❤️
 </span>
 
 </p>
-
 
 <p>
 
@@ -1309,7 +1147,6 @@ More than these words can explain. 🥹❤️
 </strong>
 
 </p>
-
 
 <p>
 
@@ -1344,7 +1181,6 @@ Every ordinary day too. ❤️
 
 </p>
 
-
 <p>
 
 Today, I don't just want to wish you a happy birthday.
@@ -1372,7 +1208,6 @@ as life allows me to be. 🥹❤️
 
 </p>
 
-
 <p>
 
 Because I don't want to be just a chapter in your life.
@@ -1384,7 +1219,6 @@ I want to be there for the whole story. ♾️❤️
 </strong>
 
 </p>
-
 
 <p>
 
@@ -1407,7 +1241,6 @@ the girl annoying you at midnight. 😂❤️
 
 </p>
 
-
 <p>
 
 <strong>
@@ -1421,7 +1254,6 @@ the person who became my safest place,
 and the husband I hope life lets me call mine someday. 💍🥹❤️
 
 </p>
-
 
 <p>
 
@@ -1443,7 +1275,6 @@ I hope it brings me to you. ♾️❤️
 
 </p>
 
-
 <p>
 
 <strong>
@@ -1460,9 +1291,7 @@ but I'm going to celebrate you a little extra. 😌❤️
 
 </p>
 
-
 </div>
-
 
 <button class="btn"
         onclick="showScreen('screen4');createHearts(20);">
@@ -1475,12 +1304,7 @@ OKAYYY... NOW THE SURPRISES 🎁❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 4
-     24 GIFTS
-====================================================== -->
+<!-- SCREEN 4 -->
 
 <section class="screen" id="screen4">
 
@@ -1505,11 +1329,9 @@ So don't try guessing. 😌❤️
 
 </p>
 
-
 <div class="giftGrid"
      id="giftGrid">
 </div>
-
 
 <button class="btn"
         id="giftFinished"
@@ -1524,12 +1346,7 @@ So don't try guessing. 😌❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 5
-     AFTER 24
-====================================================== -->
+<!-- SCREEN 5 -->
 
 <section class="screen" id="screen5">
 
@@ -1592,12 +1409,7 @@ OPEN IT 🎬❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 6
-     THEATRE
-====================================================== -->
+<!-- SCREEN 6 -->
 
 <section class="screen" id="screen6">
 
@@ -1678,12 +1490,7 @@ BUT THIS ISN'T THE LAST ONE ❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     SCREEN 7
-     FINAL REVEAL
-====================================================== -->
+<!-- SCREEN 7 -->
 
 <section class="screen" id="screen7">
 
@@ -1803,11 +1610,7 @@ and hopefully a lifetime of us. ♾️💍❤️
 
 </section>
 
-
-
-<!-- ======================================================
-     GIFT MODAL
-====================================================== -->
+<!-- GIFT MODAL -->
 
 <div class="modal"
      id="giftModal">
@@ -1840,36 +1643,19 @@ Awww ❤️
 
 </div>
 
+<!-- MUSIC -->
 
-
-<!-- ======================================================
-     MUSIC
-
-     IMPORTANT:
-     Upload your MP3 to the repository.
-     Name it: birthday-song.mp3
-
-     Then this will work automatically.
-====================================================== -->
-
-<audio id="birthdaySong"
-       loop
-       preload="auto">
-
-<source src="birthday-song.mp3"
-        type="audio/mpeg">
-
+<audio
+    id="birthdaySong"
+    src="./birthday-song.mp3"
+    loop
+    preload="auto"
+    playsinline>
 </audio>
-
-
 
 <script>
 
-
-/* ======================================================
-   24 GIFTS
-   INTENTIONALLY INDIRECT
-====================================================== */
+/* 24 GIFTS */
 
 const gifts = [
 
@@ -2019,14 +1805,11 @@ const gifts = [
 
 ];
 
-
 const giftGrid =
 document.getElementById("giftGrid");
 
-
 let opened =
 new Set();
-
 
 /* CREATE GIFTS */
 
@@ -2057,8 +1840,6 @@ gifts.forEach((gift,index)=>{
 
 });
 
-
-
 /* OPEN GIFT */
 
 function openGift(index,box){
@@ -2081,7 +1862,6 @@ function openGift(index,box){
 
     createHearts(7);
 
-
     if(opened.size===24){
 
         document.getElementById("giftFinished")
@@ -2102,8 +1882,6 @@ function openGift(index,box){
 
 }
 
-
-
 /* CLOSE GIFT */
 
 function closeGift(){
@@ -2112,8 +1890,6 @@ function closeGift(){
         .classList.remove("show");
 
 }
-
-
 
 /* SCREEN */
 
@@ -2134,8 +1910,6 @@ function showScreen(id){
 
 }
 
-
-
 /* MUSIC */
 
 const music =
@@ -2143,25 +1917,38 @@ document.getElementById("birthdaySong");
 
 let playing=false;
 
+/*
+   IMPORTANT:
+   No music.src check here.
+   The song is already:
+   ./birthday-song.mp3
+*/
 
 function beginEverything(){
 
-    music.play()
-    .then(()=>{
+    if(music){
 
-        playing=true;
+        music.load();
 
-        document.getElementById("musicButton")
-            .textContent="🔊";
+        music.play()
+        .then(()=>{
 
-    })
-    .catch(()=>{
+            playing=true;
 
-        alert(
-            "Please tap the music button once to start the song ❤️"
-        );
+            document.getElementById("musicButton")
+                .textContent="🔊";
 
-    });
+        })
+        .catch((error)=>{
+
+            console.log(
+                "Music playback error:",
+                error
+            );
+
+        });
+
+    }
 
     showScreen("screen2");
 
@@ -2169,20 +1956,11 @@ function beginEverything(){
 
 }
 
-
-
 function toggleMusic(){
 
-    if(!music.src){
-
-        alert(
-            "Please upload birthday-song.mp3 to your GitHub repository first ❤️"
-        );
-
+    if(!music){
         return;
-
     }
-
 
     if(playing){
 
@@ -2195,18 +1973,29 @@ function toggleMusic(){
 
     }else{
 
-        music.play();
+        music.load();
 
-        playing=true;
+        music.play()
+        .then(()=>{
 
-        document.getElementById("musicButton")
-            .textContent="🔊";
+            playing=true;
+
+            document.getElementById("musicButton")
+                .textContent="🔊";
+
+        })
+        .catch((error)=>{
+
+            console.log(
+                "Music playback error:",
+                error
+            );
+
+        });
 
     }
 
 }
-
-
 
 /* HEARTS */
 
@@ -2222,7 +2011,6 @@ function createHearts(amount=5){
         "💫",
         "🌸"
     ];
-
 
     for(let i=0;i<amount;i++){
 
@@ -2249,7 +2037,6 @@ function createHearts(amount=5){
 
         document.body.appendChild(heart);
 
-
         setTimeout(()=>{
             heart.remove();
         },9000);
@@ -2257,8 +2044,6 @@ function createHearts(amount=5){
     }
 
 }
-
-
 
 /* CONFETTI */
 
@@ -2272,7 +2057,6 @@ function celebration(){
         "⭐",
         "🎈"
     ];
-
 
     for(let i=0;i<60;i++){
 
@@ -2302,7 +2086,6 @@ function celebration(){
 
         document.body.appendChild(piece);
 
-
         setTimeout(()=>{
             piece.remove();
         },7000);
@@ -2312,8 +2095,6 @@ function celebration(){
     createHearts(15);
 
 }
-
-
 
 /* MODAL OUTSIDE CLICK */
 
@@ -2330,8 +2111,6 @@ document
     }
 );
 
-
-
 /* BACKGROUND HEARTS */
 
 setInterval(()=>{
@@ -2343,7 +2122,6 @@ setInterval(()=>{
     }
 
 },1700);
-
 
 </script>
 
