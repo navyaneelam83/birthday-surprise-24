@@ -3,546 +3,725 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>24 Little Surprises ❤️</title>
+
+<title>For My Buddu Thalli ❤️</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Dancing+Script:wght@500;600;700&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Dancing+Script:wght@500;600;700&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html, body {
-    width: 100%;
-    min-height: 100%;
-    font-family: 'Baloo 2', sans-serif;
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #12002b;
-    color: white;
+body{
+    font-family:'Baloo 2',sans-serif;
+    background:#12002d;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* ---------- BACKGROUND ---------- */
-
-.page {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
+.page{
+    min-height:100vh;
     background:
-        radial-gradient(circle at 20% 20%, #ff4fa3 0, transparent 25%),
-        radial-gradient(circle at 80% 20%, #7b4dff 0, transparent 28%),
-        radial-gradient(circle at 50% 80%, #ff8c42 0, transparent 25%),
-        linear-gradient(135deg, #16002f, #32005c, #0d174d);
+        radial-gradient(circle at 20% 20%,#ff4fa3 0%,transparent 27%),
+        radial-gradient(circle at 80% 20%,#7048ff 0%,transparent 30%),
+        radial-gradient(circle at 50% 80%,#ff7c42 0%,transparent 27%),
+        linear-gradient(135deg,#16002f,#31005c,#08194e);
+    position:relative;
+    overflow:hidden;
 }
 
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.4;
     background-image:
-        radial-gradient(circle, white 1px, transparent 1px),
-        radial-gradient(circle, #ffd6f6 1px, transparent 1px);
-    background-size: 80px 80px, 130px 130px;
-    background-position: 0 0, 40px 50px;
-    opacity: .35;
-    animation: starsMove 15s linear infinite;
+        radial-gradient(circle,#fff 1px,transparent 1px),
+        radial-gradient(circle,#ffd8f5 1px,transparent 1px);
+    background-size:75px 75px,125px 125px;
+    background-position:0 0,40px 50px;
+    animation:stars 18s linear infinite;
+    z-index:0;
 }
 
-@keyframes starsMove {
-    from { transform: translateY(0); }
-    to { transform: translateY(80px); }
+@keyframes stars{
+    from{transform:translateY(0)}
+    to{transform:translateY(75px)}
 }
 
-/* ---------- SCREENS ---------- */
 
-.screen {
-    min-height: 100vh;
-    display: none;
-    position: relative;
-    z-index: 2;
-    padding: 35px 20px;
-    align-items: center;
-    justify-content: center;
+/* MUSIC */
+
+.musicBtn{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:1000;
+
+    width:50px;
+    height:50px;
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.5);
+
+    background:rgba(255,70,170,.65);
+    color:white;
+
+    font-size:22px;
+    cursor:pointer;
+
+    box-shadow:0 0 25px rgba(255,80,190,.5);
 }
 
-.screen.active {
-    display: flex;
+
+/* SCREEN */
+
+.screen{
+    min-height:100vh;
+    padding:40px 20px;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    z-index:2;
 }
 
-.content {
-    width: min(900px, 100%);
-    text-align: center;
+.screen.active{
+    display:flex;
 }
 
-/* ---------- TYPOGRAPHY ---------- */
-
-.small-title {
-    font-size: clamp(18px, 4vw, 28px);
-    letter-spacing: 3px;
-    color: #ffd9f4;
+.content{
+    width:min(950px,100%);
+    text-align:center;
 }
 
-.script {
-    font-family: 'Dancing Script', cursive;
+
+/* TEXT */
+
+.script{
+    font-family:'Dancing Script',cursive;
 }
 
-.big-title {
-    font-size: clamp(55px, 13vw, 125px);
-    line-height: .85;
-    margin: 15px 0;
-    background: linear-gradient(
+.small{
+    font-size:22px;
+    color:#ffe1f5;
+}
+
+.bigGradient{
+    font-size:clamp(55px,12vw,125px);
+    line-height:.9;
+
+    background:linear-gradient(
         90deg,
-        #ff76c8,
-        #ffd35a,
-        #8be9ff,
-        #ff76c8
+        #ffd45b,
+        #ff7ac8,
+        #9cecff,
+        #ffd45b
     );
-    background-size: 300%;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: gradientText 5s linear infinite;
-    filter: drop-shadow(0 5px 20px rgba(255, 90, 190, .35));
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:gradient 5s linear infinite;
+
+    filter:drop-shadow(0 8px 25px rgba(255,80,180,.25));
 }
 
-@keyframes gradientText {
-    0% { background-position: 0%; }
-    100% { background-position: 300%; }
+@keyframes gradient{
+    from{background-position:0}
+    to{background-position:300%}
 }
 
-.subtitle {
-    font-size: clamp(19px, 4vw, 28px);
-    color: #ffeafa;
-    margin: 15px auto;
-    max-width: 650px;
+.subtitle{
+    font-size:clamp(19px,4vw,27px);
+    color:#ffe9f8;
+    line-height:1.6;
 }
 
-.message {
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(25px, 5vw, 42px);
-    line-height: 1.35;
-    color: #fff;
-}
 
-/* ---------- BUTTON ---------- */
+/* BUTTON */
 
-.btn {
-    border: none;
-    cursor: pointer;
-    padding: 16px 35px;
-    margin-top: 28px;
-    border-radius: 100px;
-    color: white;
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 21px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ff3f9f, #ff7a59, #ffcf4a);
+.btn{
+    margin-top:30px;
+
+    padding:16px 34px;
+
+    border:0;
+    border-radius:60px;
+
+    background:linear-gradient(
+        90deg,
+        #ff3fa4,
+        #ff7b62,
+        #ffd05b
+    );
+
+    color:white;
+
+    font-family:'Baloo 2',sans-serif;
+    font-size:20px;
+    font-weight:800;
+
+    cursor:pointer;
+
     box-shadow:
-        0 0 20px rgba(255, 64, 165, .7),
-        0 0 50px rgba(255, 100, 100, .3);
-    transition: .25s;
-    position: relative;
-    overflow: hidden;
+        0 0 25px rgba(255,70,170,.65),
+        0 10px 30px rgba(0,0,0,.2);
+
+    transition:.25s;
 }
 
-.btn:hover {
-    transform: scale(1.07);
+.btn:hover{
+    transform:scale(1.07);
 }
 
-.btn:active {
-    transform: scale(.96);
+.btn:active{
+    transform:scale(.96);
 }
 
-.btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: rgba(255,255,255,.3);
-    transform: skewX(-25deg);
-    animation: shine 3s infinite;
+
+/* BALLOONS */
+
+.balloonArea{
+    height:150px;
+    position:relative;
 }
 
-@keyframes shine {
-    0% { left: -100%; }
-    30%, 100% { left: 140%; }
+.balloon{
+    position:absolute;
+
+    width:62px;
+    height:80px;
+
+    border-radius:50%;
+
+    animation:float 3s ease-in-out infinite;
 }
 
-/* ---------- FLOATING HEARTS ---------- */
+.balloon:after{
+    content:"";
+    position:absolute;
 
-.heart {
-    position: fixed;
-    bottom: -40px;
-    font-size: 25px;
-    pointer-events: none;
-    animation: floatHeart linear forwards;
-    z-index: 10;
+    width:1px;
+    height:100px;
+
+    left:50%;
+    top:78px;
+
+    background:rgba(255,255,255,.6);
 }
 
-@keyframes floatHeart {
-    0% {
-        transform: translateY(0) scale(.6) rotate(0);
-        opacity: 0;
+.b1{
+    left:8%;
+    background:#ff4da6;
+}
+
+.b2{
+    left:28%;
+    background:#ffd447;
+    animation-delay:.5s;
+}
+
+.b3{
+    right:28%;
+    background:#57dcff;
+    animation-delay:1s;
+}
+
+.b4{
+    right:8%;
+    background:#a36cff;
+    animation-delay:1.5s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(-3deg)
     }
-    15% { opacity: 1; }
-    100% {
-        transform: translateY(-110vh) scale(1.4) rotate(25deg);
-        opacity: 0;
+
+    50%{
+        transform:translateY(-25px) rotate(3deg)
     }
 }
 
-/* ---------- BALLOONS ---------- */
 
-.balloon-area {
-    height: 150px;
-    position: relative;
-    margin-bottom: 15px;
-}
+/* LETTER */
 
-.balloon {
-    position: absolute;
-    bottom: 0;
-    width: 65px;
-    height: 80px;
-    border-radius: 50% 50% 48% 48%;
-    animation: balloonFloat 3s ease-in-out infinite;
-    box-shadow: inset -10px -12px 20px rgba(0,0,0,.15);
-}
+.letter{
+    width:min(850px,100%);
 
-.balloon::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 100px;
-    background: rgba(255,255,255,.6);
-    left: 50%;
-    top: 78px;
-}
+    max-height:75vh;
+    overflow-y:auto;
 
-.balloon::before {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 28px;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    background: inherit;
-}
+    padding:35px 30px;
 
-.b1 { left: 7%; background: #ff4fa3; animation-delay: 0s; }
-.b2 { left: 25%; background: #ffd34e; animation-delay: .5s; }
-.b3 { right: 25%; background: #61dcff; animation-delay: 1s; }
-.b4 { right: 7%; background: #a86cff; animation-delay: 1.5s; }
+    border-radius:30px;
 
-@keyframes balloonFloat {
-    0%,100% { transform: translateY(0) rotate(-3deg); }
-    50% { transform: translateY(-25px) rotate(3deg); }
-}
-
-/* ---------- GIFT GRID ---------- */
-
-.gift-heading {
-    font-size: clamp(32px, 7vw, 58px);
-    margin-bottom: 8px;
-}
-
-.gift-subtitle {
-    color: #ffd7f0;
-    font-size: 19px;
-    margin-bottom: 25px;
-}
-
-.gift-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 13px;
-    max-width: 750px;
-    margin: auto;
-}
-
-.gift {
-    aspect-ratio: 1;
-    border-radius: 20px;
-    border: 2px solid rgba(255,255,255,.25);
-    background: linear-gradient(145deg, #ff4fa3, #703cff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,.25);
-    transition: .3s;
-}
-
-.gift:nth-child(3n) {
-    background: linear-gradient(145deg, #ff8c42, #ff3f9f);
-}
-
-.gift:nth-child(4n) {
-    background: linear-gradient(145deg, #5d5cff, #25c8ff);
-}
-
-.gift:hover {
-    transform: translateY(-7px) scale(1.04);
-}
-
-.gift-number {
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.gift-icon {
-    position: absolute;
-    font-size: 40px;
-    opacity: .35;
-}
-
-.gift.opened {
-    background: linear-gradient(145deg, #fff, #ffd9f1);
-    color: #6b165b;
-}
-
-/* ---------- MODAL ---------- */
-
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(8,0,25,.82);
-    backdrop-filter: blur(10px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    padding: 20px;
-}
-
-.modal.show {
-    display: flex;
-}
-
-.modal-card {
-    width: min(500px, 100%);
-    padding: 35px 25px;
-    border-radius: 35px;
-    text-align: center;
     background:
-        radial-gradient(circle at top, #ff9ad7, transparent 40%),
-        linear-gradient(145deg, #fff, #ffd7ed);
-    color: #54134f;
-    box-shadow: 0 0 80px rgba(255,70,190,.5);
-    animation: modalIn .45s ease;
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.04)
+        );
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,.3),
+        inset 0 0 50px rgba(255,100,200,.08);
+
+    text-align:left;
 }
 
-@keyframes modalIn {
-    from {
-        opacity: 0;
-        transform: scale(.7) rotate(-3deg);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) rotate(0);
-    }
+.letter::-webkit-scrollbar{
+    width:7px;
 }
 
-.modal-gift {
-    font-size: 75px;
+.letter::-webkit-scrollbar-thumb{
+    background:#ff5cab;
+    border-radius:20px;
 }
 
-.modal-title {
-    font-size: 30px;
-    margin: 8px;
+.letter p{
+    font-family:'Dancing Script',cursive;
+
+    font-size:clamp(22px,4vw,30px);
+
+    line-height:1.55;
+
+    color:#fff5fc;
+
+    margin-bottom:22px;
 }
 
-.modal-text {
-    font-family: 'Dancing Script', cursive;
-    font-size: 27px;
-    line-height: 1.35;
+.letter .highlight{
+    color:#ffd1ec;
+    font-weight:700;
 }
 
-.close-btn {
-    margin-top: 22px;
-    border: none;
-    border-radius: 50px;
-    padding: 11px 25px;
-    cursor: pointer;
-    background: #ff3f9f;
-    color: white;
-    font-size: 17px;
-    font-weight: 700;
+
+/* GIFTS */
+
+.giftHeading{
+    font-size:clamp(38px,7vw,65px);
 }
 
-/* ---------- THEATRE ---------- */
+.giftSub{
+    font-size:20px;
+    color:#ffd8ef;
+    margin:10px 0 25px;
+}
 
-.theatre {
-    width: min(850px, 100%);
-    padding: 25px;
-    border-radius: 30px;
+.giftGrid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+
+    max-width:760px;
+
+    margin:auto;
+}
+
+.gift{
+    aspect-ratio:1;
+
+    border-radius:22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    position:relative;
+
+    border:2px solid rgba(255,255,255,.22);
+
     background:
-        radial-gradient(circle at center, rgba(255,80,90,.2), transparent 50%),
-        linear-gradient(145deg, #26000b, #61001c);
-    border: 2px solid rgba(255,190,90,.4);
-    box-shadow: 0 0 80px rgba(255,50,80,.25);
-    position: relative;
+        linear-gradient(
+            145deg,
+            #ff4fa4,
+            #743eff
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    overflow:hidden;
 }
 
-.curtain {
-    position: absolute;
-    top: 0;
-    width: 18%;
-    height: 100%;
-    background: linear-gradient(90deg, #5d0014, #e40045, #620015);
-    z-index: 2;
+.gift:nth-child(3n){
+    background:
+        linear-gradient(
+            145deg,
+            #ff8c4a,
+            #ff3f9f
+        );
 }
 
-.curtain.left {
-    left: 0;
-    border-radius: 30px 0 0 30px;
+.gift:nth-child(4n){
+    background:
+        linear-gradient(
+            145deg,
+            #5b6cff,
+            #20c9ff
+        );
 }
 
-.curtain.right {
-    right: 0;
-    border-radius: 0 30px 30px 0;
+.gift:hover{
+    transform:
+        translateY(-8px)
+        scale(1.04);
 }
 
-.theatre-inner {
-    position: relative;
-    z-index: 3;
-    padding: 40px 18%;
+.giftNumber{
+    font-size:31px;
+    font-weight:800;
 }
 
-.movie-icon {
-    font-size: 70px;
+.giftSymbol{
+    position:absolute;
+    font-size:42px;
+    opacity:.3;
 }
 
-.theatre-title {
-    font-size: clamp(38px, 8vw, 75px);
-    color: #ffd75e;
-    text-shadow: 0 0 20px rgba(255,200,60,.5);
+.gift.opened{
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #ffd8ee
+        );
+
+    color:#64134e;
 }
 
-.ticket {
-    margin: 25px auto;
-    max-width: 500px;
-    padding: 25px;
-    background: #fff4d4;
-    color: #4b1721;
-    border-radius: 15px;
-    border: 4px dashed #e34b5f;
-    transform: rotate(-1deg);
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(5,0,20,.85);
+
+    backdrop-filter:blur(12px);
+
+    z-index:2000;
 }
 
-.ticket h3 {
-    font-size: 25px;
+.modal.show{
+    display:flex;
 }
 
-.ticket p {
-    font-size: 18px;
-    margin-top: 5px;
+.modalCard{
+    width:min(520px,100%);
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    color:#5a164e;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ffb2df,
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #fff,
+            #ffd7ed
+        );
+
+    box-shadow:
+        0 0 80px rgba(255,60,190,.5);
+
+    animation:modalIn .4s ease;
 }
 
-/* ---------- FINAL ---------- */
-
-.final-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(55px, 11vw, 110px);
-    background: linear-gradient(90deg, #ff6fb5, #ffe477, #72eaff);
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 300%;
-    animation: gradientText 5s linear infinite;
-}
-
-.final-message {
-    font-size: 24px;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 20px auto;
-    color: #ffe8f7;
-}
-
-/* ---------- MUSIC ---------- */
-
-.music {
-    position: fixed;
-    right: 18px;
-    top: 18px;
-    z-index: 50;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,.5);
-    background: rgba(255,60,160,.55);
-    color: white;
-    cursor: pointer;
-    font-size: 21px;
-}
-
-/* ---------- RESPONSIVE ---------- */
-
-@media (max-width: 650px) {
-    .gift-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+@keyframes modalIn{
+    from{
+        opacity:0;
+        transform:scale(.75);
     }
 
-    .gift-number {
-        font-size: 25px;
-    }
-
-    .gift-icon {
-        font-size: 30px;
-    }
-
-    .balloon {
-        width: 48px;
-        height: 62px;
-    }
-
-    .theatre-inner {
-        padding: 35px 12%;
-    }
-
-    .curtain {
-        width: 10%;
+    to{
+        opacity:1;
+        transform:scale(1);
     }
 }
 
-@media (max-width: 400px) {
-    .gift-grid {
-        grid-template-columns: repeat(3, 1fr);
+.modalIcon{
+    font-size:75px;
+}
+
+.modalTitle{
+    font-size:30px;
+    margin:10px 0;
+}
+
+.modalText{
+    font-family:'Dancing Script',cursive;
+
+    font-size:28px;
+
+    line-height:1.45;
+}
+
+.close{
+    margin-top:22px;
+
+    border:0;
+    border-radius:50px;
+
+    padding:11px 25px;
+
+    background:#ff3f9f;
+
+    color:white;
+
+    font-size:17px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+/* THEATRE */
+
+.theatre{
+    width:min(850px,100%);
+
+    padding:25px;
+
+    border-radius:30px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,80,80,.25),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #26000c,
+            #65001e
+        );
+
+    border:2px solid rgba(255,200,80,.4);
+
+    box-shadow:
+        0 0 80px rgba(255,50,80,.3);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.theatreInside{
+    padding:40px 15%;
+}
+
+.movie{
+    font-size:70px;
+}
+
+.theatreTitle{
+    font-size:clamp(40px,8vw,75px);
+
+    color:#ffd85c;
+
+    text-shadow:
+        0 0 25px rgba(255,210,70,.5);
+}
+
+.ticket{
+    margin:25px auto;
+
+    max-width:500px;
+
+    padding:25px;
+
+    background:#fff4d3;
+
+    color:#481621;
+
+    border-radius:15px;
+
+    border:4px dashed #e74b60;
+
+    transform:rotate(-1deg);
+}
+
+.ticket h3{
+    font-size:26px;
+}
+
+.ticket p{
+    font-size:18px;
+    margin-top:7px;
+}
+
+
+/* FINAL */
+
+.finalTitle{
+    font-family:'Dancing Script',cursive;
+
+    font-size:clamp(60px,12vw,120px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff71b8,
+            #ffe477,
+            #72eaff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:gradient 5s linear infinite;
+}
+
+.finalText{
+    font-family:'Dancing Script',cursive;
+
+    font-size:clamp(25px,5vw,38px);
+
+    line-height:1.5;
+
+    color:#ffe8f7;
+}
+
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+
+    bottom:-40px;
+
+    pointer-events:none;
+
+    z-index:1500;
+
+    animation:heartFloat linear forwards;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.6);
+
+        opacity:0;
     }
 
-    .gift-number {
-        font-size: 22px;
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-110vh)
+            scale(1.4)
+            rotate(25deg);
+
+        opacity:0;
     }
 }
 
-/* ---------- CONFETTI ---------- */
 
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 15px;
-    top: -30px;
-    z-index: 200;
-    pointer-events: none;
-    animation: confettiFall linear forwards;
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+
+    top:-30px;
+
+    z-index:3000;
+
+    pointer-events:none;
+
+    animation:fall linear forwards;
 }
 
-@keyframes confettiFall {
-    to {
-        transform: translateY(110vh) rotate(720deg);
+@keyframes fall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(720deg);
     }
 }
+
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    .giftGrid{
+        grid-template-columns:
+            repeat(3,1fr);
+
+        gap:10px;
+    }
+
+    .giftNumber{
+        font-size:23px;
+    }
+
+    .giftSymbol{
+        font-size:30px;
+    }
+
+    .letter{
+        padding:25px 20px;
+    }
+
+    .theatreInside{
+        padding:35px 10%;
+    }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
@@ -550,182 +729,875 @@ body {
 
 <div class="stars"></div>
 
-<button class="music" onclick="toggleMusic()">♫</button>
 
-<!-- ================= SCREEN 1 ================= -->
+<!-- MUSIC BUTTON -->
+
+<button class="musicBtn"
+        id="musicButton"
+        onclick="toggleMusic()">
+    ♫
+</button>
+
+
+<!-- ======================================================
+     SCREEN 1
+====================================================== -->
 
 <section class="screen active" id="screen1">
 
 <div class="content">
 
-    <div class="balloon-area">
-        <div class="balloon b1"></div>
-        <div class="balloon b2"></div>
-        <div class="balloon b3"></div>
-        <div class="balloon b4"></div>
-    </div>
+<div class="balloonArea">
 
-    <div class="small-title script">Hey you... ❤️</div>
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
 
-    <h1 class="big-title">I Have<br>Something</h1>
+</div>
 
-    <p class="subtitle">
-        very special waiting for you...
-        <br>
-        But I'm not telling you what it is. 👀
-    </p>
+<div class="script"
+     style="font-size:32px;">
+    Hey Buddu Thalli... ❤️
+</div>
 
-    <button class="btn" onclick="startSurprise()">
-        CLICK HERE ❤️
-    </button>
+<h1 class="bigGradient">
+    HAPPY<br>
+    BIRTHDAY
+</h1>
 
-    <p style="margin-top:15px;color:#ffd3ed;">
-        Don't overthink... just click 😌
-    </p>
+<h2 class="script"
+    style="
+    font-size:clamp(45px,9vw,80px);
+    color:white;
+    ">
+    My Love ❤️
+</h2>
+
+<p class="subtitle">
+
+Finallyyyy... aa roju vachindhiii 🥹❤️
+
+<br>
+
+October 1st nunchi wait chesthunna roju...
+
+<br>
+
+<strong>October 30th. 🎂</strong>
+
+</p>
+
+<button class="btn"
+        onclick="beginEverything()">
+
+CLICK HERE ❤️
+
+</button>
+
+<p style="
+margin-top:15px;
+color:#ffd8ed;
+">
+
+Song start avuthundiii... 🎶
+<br>
+Headphones pettukunte inka baguntundhi. 🥹❤️
+
+</p>
 
 </div>
 
 </section>
 
 
-<!-- ================= SCREEN 2 ================= -->
+
+<!-- ======================================================
+     SCREEN 2
+====================================================== -->
 
 <section class="screen" id="screen2">
 
 <div class="content">
 
-    <div style="font-size:70px;">🎁</div>
+<div style="font-size:70px;">
+🎈 🎂 🎈
+</div>
 
-    <p class="small-title">Loading your surprise...</p>
+<p class="script"
+   style="
+   font-size:34px;
+   color:#ffd7ef;
+   ">
 
-    <h1 class="big-title" style="font-size:65px;">
-        Almost...
-    </h1>
+HAPPIEEE 24TH BIRTHDAYYY...
 
-    <p class="message">
-        Good things take a little time ❤️
-    </p>
+</p>
 
-    <div style="
-        width:min(500px,90%);
-        height:18px;
-        background:rgba(255,255,255,.15);
-        border-radius:50px;
-        margin:30px auto;
-        overflow:hidden;
-    ">
-        <div id="loadingBar" style="
-            width:0%;
-            height:100%;
-            border-radius:50px;
-            background:linear-gradient(90deg,#ff3fa4,#ffd34e);
-        "></div>
-    </div>
+<h1 class="bigGradient">
+
+BUDDU<br>
+THALLIII ❤️
+
+</h1>
+
+<p class="subtitle">
+
+24 years ayyavvv... 🥹❤️
+
+<br>
+
+And somehow, aa 24 years lo
+nuvvu na life loki vachina part
+na favourite part ayyindhi.
+
+<br><br>
+
+Ivala just nee birthday kaadhu...
+
+<br>
+
+<strong>
+It's the day my favourite person
+came into this world. ❤️
+</strong>
+
+</p>
+
+<button class="btn"
+        onclick="showScreen('screen3');createHearts(15);">
+
+ONE MORE THING... 👀❤️
+
+</button>
 
 </div>
 
 </section>
 
 
-<!-- ================= SCREEN 3 ================= -->
+
+<!-- ======================================================
+     SCREEN 3
+     LONG BIRTHDAY LETTER
+====================================================== -->
 
 <section class="screen" id="screen3">
 
 <div class="content">
 
-    <div class="balloon-area">
-        <div class="balloon b1"></div>
-        <div class="balloon b2"></div>
-        <div class="balloon b3"></div>
-        <div class="balloon b4"></div>
-    </div>
+<div style="font-size:65px;">
+💌
+</div>
 
-    <div style="font-size:35px;">🎉 🎈 ✨ ❤️ ✨ 🎈 🎉</div>
-
-    <h1 class="big-title">
-        HAPPY<br>24TH
-    </h1>
-
-    <h1 class="script" style="
-        font-size:clamp(50px,10vw,90px);
-        color:#fff;
+<h2 class="script"
+    style="
+    font-size:48px;
+    margin-bottom:20px;
     ">
-        Birthday! ❤️
-    </h1>
 
-    <p class="subtitle">
-        24 years of you...
-        <br>
-        24 reasons to smile...
-        <br>
-        and so many more memories to make. ✨
-    </p>
+Buddu Thalli... ❤️
 
-    <button class="btn" onclick="showScreen('screen4')">
-        LET'S GO ❤️ →
-    </button>
+</h2>
+
+
+<div class="letter">
+
+
+<p>
+<strong>
+Happy Birthday to My Favorite Person,
+My Forever, My Love ❤️🥹🎂
+</strong>
+</p>
+
+
+<p>
+
+Finally… <span class="highlight">nee birthday vachindhi.</span> 🥹❤️
+
+Nijanga cheppali ante, ee roju kosam nenu
+chala excited ga wait chesa.
+
+Endukante idi just another date for me kadu…
+
+<span class="highlight">
+it's the day my favorite person came into this world.
+</span> 🫂❤️
+
+</p>
+
+
+<p>
+
+Sometimes I still wonder how someone who was once
+a complete stranger became the person I can't imagine
+my life without. 🥺
+
+<br><br>
+
+<span class="highlight">
+You were once someone I didn't even know existed…
+and now you're someone I can't imagine my tomorrow without.
+</span>
+
+</p>
+
+
+<p>
+
+Life lo chala mandi people ostharu, potharu.
+
+Konthamandi memories istaru,
+konthamandi lessons istaru.
+
+Kani <span class="highlight">
+nuvvu na life loki vachhi na life lo oka permanent place create chesav.
+</span> ❤️
+
+</p>
+
+
+<p>
+
+Netho unna relationship ni explain cheyyadaniki
+oka perfect word dorakadam kastam.
+
+You're not just my boyfriend.
+
+You're the person I run to when I'm happy,
+the person I want when I'm upset,
+the person I want to tell everything to,
+and the person whose presence itself makes me feel okay. 🥹❤️
+
+<br><br>
+
+<span class="highlight">
+You're my person.
+</span>
+
+</p>
+
+
+<p>
+
+The one I want to share stupid things with.
+
+<br>
+
+The one I want to annoy forever. 😂❤️
+
+<br>
+
+The one I want beside me when life is beautiful.
+
+<br>
+
+And the one I want beside me when life isn't beautiful at all.
+
+</p>
+
+
+<p>
+
+Nenu perfect kadhu.
+
+Na mood swings untayi,
+overthinking untadhi,
+unnecessary ga irritate chestha,
+sometimes ninnu hurt kuda chestha. 😭
+
+But through all of that,
+one thing has never changed—
+
+<br><br>
+
+<strong>
+I choose you. ❤️
+</strong>
+
+</p>
+
+
+<p>
+
+And if life ever gave me the chance
+to start everything from zero,
+I'd still want to find you.
+
+Maybe this time konchem earlier ga. 😭❤️
+
+Because I wouldn't want to miss even one chapter
+of whatever <span class="highlight">"us"</span> becomes.
+
+</p>
+
+
+<p>
+
+Nee birthday roju nenu neeku expensive gifts ivvalekapoyina,
+oka thing matram wholeheartedly ivvagalanu—
+
+<br><br>
+
+<strong>
+my promise that I'll always want to see you happy. 🫂❤️
+</strong>
+
+</p>
+
+
+<p>
+
+Nee dreams anni fulfill avvali.
+
+Nuvvu anukunna places ki vellali.
+
+Nuvvu korukunna success motham ravali.
+
+Nuvvu proud ga
+<span class="highlight">"I did it"</span>
+ani cheppukune days chala ravali. ❤️
+
+<br><br>
+
+And somewhere in all those dreams,
+I hope there is a little place for me too. 🥹
+
+</p>
+
+
+<p>
+
+Because naa biggest dreams lo okati
+success or money kante simple ga untadhi…
+
+<br><br>
+
+<span class="highlight">
+One day, morning nee pakkana lechi,
+ninnu chusi "manam really did it"
+ani smile cheskovali. 🏡💍❤️
+</span>
+
+</p>
+
+
+<p>
+
+No perfect life.
+
+<br>
+
+No perfect relationship.
+
+<br>
+
+No perfect people.
+
+<br><br>
+
+<span class="highlight">
+Just you and me, choosing each other
+through every version of life.
+</span>
+
+<br><br>
+
+That's the life I want. ❤️
+
+</p>
+
+
+<p>
+
+And birthday boy,
+I hope this new year of your life
+changes you only for the better.
+
+I hope you become everything
+you've ever wanted to become.
+
+I hope you get opportunities that scare you,
+achievements that make you proud,
+and happiness that stays longer than you expect. 🥹✨
+
+</p>
+
+
+<p>
+
+And when something good happens to you,
+I want to be the person you call first.
+
+When something bad happens,
+I want to be the person you know will stay.
+
+When you're tired,
+I want my presence to feel like home.
+
+And when you're happy…
+
+<span class="highlight">
+I want to be there smiling because you're smiling.
+</span> ❤️
+
+</p>
+
+
+<p>
+
+Nuvvu na life lo entha important ayipoyavo
+sometimes nene realize avvanu.
+
+But small things make me realize it.
+
+<br><br>
+
+Oka random song vintunte nuvvu gurthosthav.
+
+<br>
+
+Something funny jarigithe first netho share cheyali anipisthadhi.
+
+<br>
+
+Something bad jarigithe netho matladali anipisthadhi.
+
+<br>
+
+Something beautiful kanipisthe
+<span class="highlight">
+"if he was here..."
+</span>
+ani anipisthadhi.
+
+</p>
+
+
+<p>
+
+That's when I realize…
+
+<br><br>
+
+<span class="highlight">
+You became a part of the way I experience life.
+</span> 🥹❤️
+
+</p>
+
+
+<p>
+
+And maybe that's why I don't want just a beautiful life.
+
+<br><br>
+
+<strong>
+I want my life to be beautiful because you're in it. ❤️
+</strong>
+
+</p>
+
+
+<p>
+
+Inko janma ane concept nijanga unte,
+naku ekkuva em korikalu levu.
+
+<br><br>
+
+<span class="highlight">
+Please find me again.
+</span>
+
+<br><br>
+
+And this time,
+don't come as just a friend,
+don't come as someone I have to lose and find again…
+
+<br><br>
+
+<strong>
+Come as my husband. 💍❤️
+</strong>
+
+</p>
+
+
+<p>
+
+Because somehow,
+life partner ane bond ni first time
+truly feel cheyinchindhi nuvve. 🥹
+
+Netho nenu na real self ga undagalanu.
+
+Filter lekunda.
+
+Pretending lekunda.
+
+Evariki cheppaleni things kuda cheppagalanu.
+
+And that kind of comfort is rare.
+
+<br><br>
+
+<span class="highlight">
+Very, very rare. ❤️
+</span>
+
+</p>
+
+
+<p>
+
+So thank you.
+
+Not just for loving me.
+
+Thank you for knowing me.
+
+For understanding the versions of me
+that even I don't understand sometimes.
+
+For staying through my difficult days.
+
+For making ordinary conversations into memories.
+
+For making me laugh when I don't feel like laughing.
+
+For being the person I can call
+<span class="highlight">mine.</span> 🫂❤️
+
+</p>
+
+
+<p>
+
+And yes…
+I know I've hurt you too. 😔
+
+Konni words tho,
+konni actions tho,
+konni unnecessary fights tho.
+
+For every time I made your heart heavy,
+<span class="highlight">
+I'm genuinely sorry. ❤️
+</span>
+
+</p>
+
+
+<p>
+
+I may not always know how to express everything correctly,
+but please never confuse my imperfect way of loving
+with a lack of love.
+
+Because if there is one thing I'm completely sure about…
+
+<br><br>
+
+<strong>
+I love you.
+A lot.
+More than these words can explain. 🥹❤️
+</strong>
+
+</p>
+
+
+<p>
+
+Actually, ee whole message kuda
+naa heart lo unna love lo maybe
+<span class="highlight">1% kuda undadhu.</span> 😂❤️
+
+Remaining <span class="highlight">99%</span>
+words lo explain cheyyadam impossible.
+
+So aa 99% ni oka promise laga petkuntunna—
+
+<br><br>
+
+<strong>
+I'll make you feel it.
+</strong>
+
+<br>
+
+Not only today.
+
+<br>
+
+Not only on your birthday.
+
+<br>
+
+<span class="highlight">
+Every ordinary day too. ❤️
+</span>
+
+</p>
+
+
+<p>
+
+Today, I don't just want to wish you a happy birthday.
+
+I want to wish you a life that makes you genuinely happy.
+
+A life where you achieve everything you've worked for.
+
+A life where you never feel alone.
+
+A life full of laughter,
+peace,
+success,
+love,
+and beautiful memories.
+
+<br><br>
+
+And selfish ga oka wish na kosam…
+
+<span class="highlight">
+I want to be there for as many of those moments
+as life allows me to be. 🥹❤️
+</span>
+
+</p>
+
+
+<p>
+
+Because I don't want to be just a chapter in your life.
+
+<br><br>
+
+<strong>
+I want to be there for the whole story. ♾️❤️
+</strong>
+
+</p>
+
+
+<p>
+
+So here's to another year of you.
+
+Another year of your dreams.
+
+Another year of your smiles.
+
+Another year of us.
+
+<br><br>
+
+And hopefully…
+
+<span class="highlight">
+many, many more birthdays where I'm still
+the girl annoying you at midnight. 😂❤️
+</span>
+
+</p>
+
+
+<p>
+
+<strong>
+Happy Birthday, my love. 🎂❤️
+</strong>
+
+<br><br>
+
+Happy Birthday to the man I fell in love with,
+the person who became my safest place,
+and the husband I hope life lets me call mine someday. 💍🥹❤️
+
+</p>
+
+
+<p>
+
+I loved you yesterday.
+
+<br>
+
+I love you today.
+
+<br>
+
+And whatever tomorrow brings…
+
+<br>
+
+<span class="highlight">
+I hope it brings me to you. ♾️❤️
+</span>
+
+</p>
+
+
+<p>
+
+<strong>
+Happy Birthday, Jaan. ❤️🫂🎂💍
+</strong>
+
+<br><br>
+
+Now go enjoy your day, birthday boy…
+
+because today the whole world gets to celebrate you,
+
+but I'm going to celebrate you a little extra. 😌❤️
+
+</p>
+
+
+</div>
+
+
+<button class="btn"
+        onclick="showScreen('screen4');createHearts(20);">
+
+OKAYYY... NOW THE SURPRISES 🎁❤️
+
+</button>
 
 </div>
 
 </section>
 
 
-<!-- ================= SCREEN 4 ================= -->
+
+<!-- ======================================================
+     SCREEN 4
+     24 GIFTS
+====================================================== -->
 
 <section class="screen" id="screen4">
 
 <div class="content">
 
-    <div style="font-size:70px;">💌</div>
+<h1 class="giftHeading">
+🎁 24 Little Surprises
+</h1>
 
-    <p class="small-title">A little message from me...</p>
+<p class="giftSub">
 
-    <p class="message" style="margin-top:25px;">
-        To the person who makes my ordinary days
-        feel a little more special... ❤️
-        <br><br>
-        This is just a small digital hug
-        before all the real surprises begin.
-        <br><br>
-        And yes...
-        there are <b>24</b> little surprises waiting for you. 🎁
-    </p>
+24 years ki 24 little surprises...
 
-    <button class="btn" onclick="showScreen('screen5')">
-        OPEN THE 24 GIFTS 🎁
-    </button>
+<br>
+
+Kani exact ga em unnayo...
+<strong>ippude telusukunte surprise pothundhi kadaaa 👀😂</strong>
+
+<br>
+
+So don't try guessing. 😌❤️
+
+</p>
+
+
+<div class="giftGrid"
+     id="giftGrid">
+</div>
+
+
+<button class="btn"
+        id="giftFinished"
+        style="display:none;"
+        onclick="showScreen('screen5');celebration();">
+
+24 OPENED... BUT WAIT 👀❤️
+
+</button>
 
 </div>
 
 </section>
 
 
-<!-- ================= SCREEN 5 ================= -->
+
+<!-- ======================================================
+     SCREEN 5
+     AFTER 24
+====================================================== -->
 
 <section class="screen" id="screen5">
 
 <div class="content">
 
-    <h1 class="gift-heading">🎁 24 Little Surprises</h1>
+<div style="font-size:75px;">
+🎁✨❤️
+</div>
 
-    <p class="gift-subtitle">
-        Tap every gift. Some are sweet, some are silly... 👀
-    </p>
+<h1 class="bigGradient"
+    style="font-size:clamp(50px,10vw,100px);">
 
-    <div class="gift-grid" id="giftGrid"></div>
+24 ayipoyay...
 
-    <button class="btn" id="finalButton"
-            style="display:none;"
-            onclick="showScreen('screen6')">
-        ONE LAST SURPRISE → 🎬
-    </button>
+</h1>
+
+<p class="script"
+   style="
+   font-size:42px;
+   color:#ffe0f3;
+   ">
+
+Kani naa daggara...
+
+<br>
+
+inka oka surprise undhiii. 👀
+
+</p>
+
+<p class="subtitle"
+   style="margin-top:20px;">
+
+Idi konchem different.
+
+<br>
+
+Idi box lo raadhu.
+
+<br>
+
+Idi gift wrap lo undadhu.
+
+<br><br>
+
+<strong>
+Actually... idi experience cheyyali. ❤️
+</strong>
+
+</p>
+
+<button class="btn"
+        onclick="showScreen('screen6');celebration();">
+
+OPEN IT 🎬❤️
+
+</button>
 
 </div>
 
 </section>
 
 
-<!-- ================= SCREEN 6 ================= -->
+
+<!-- ======================================================
+     SCREEN 6
+     THEATRE
+====================================================== -->
 
 <section class="screen" id="screen6">
 
@@ -733,41 +1605,72 @@ body {
 
 <div class="theatre">
 
-    <div class="curtain left"></div>
-    <div class="curtain right"></div>
+<div class="theatreInside">
 
-    <div class="theatre-inner">
+<div class="movie">
+🎬🍿
+</div>
 
-        <div class="movie-icon">🎬 🍿</div>
+<h1 class="theatreTitle">
+ONE MORE SURPRISE
+</h1>
 
-        <h1 class="theatre-title">
-            YOUR NEXT<br>SURPRISE
-        </h1>
+<div class="ticket">
 
-        <div class="ticket">
+<h3>
+🎟️ SPECIAL INVITATION 🎟️
+</h3>
 
-            <h3>🎟️ SPECIAL INVITATION 🎟️</h3>
+<p>
+<strong>For:</strong>
+Birthday Boy ❤️
+</p>
 
-            <p><b>For:</b> The Birthday Boy ❤️</p>
+<p>
+<strong>Reason:</strong>
+24 needs a proper celebration. 🎂
+</p>
 
-            <p><b>Experience:</b> Private Theatre Party</p>
+<p>
+<strong>Place:</strong>
+Somewhere you'll have to discover... 👀
+</p>
 
-            <p><b>Reason:</b> Because 24 deserves a celebration.</p>
+<p>
+<strong>Dress code:</strong>
+Just look good. 😌😂
+</p>
 
-            <p><b>With:</b> Me. Obviously. 😌❤️</p>
+<p>
+<strong>Company:</strong>
+Someone who has been planning this
+for longer than you think. ❤️
+</p>
 
-        </div>
+</div>
 
-        <p class="message">
-            Get ready for a movie experience
-            that's not really about the movie... 👀
-        </p>
+<p class="script"
+   style="
+   font-size:32px;
+   color:#ffe1e8;
+   ">
 
-        <button class="btn" onclick="showScreen('screen7'); celebration();">
-            OPEN FINAL MESSAGE ❤️
-        </button>
+Movie chuddam ani cheppina...
 
-    </div>
+<br>
+
+story lo twist untundhi kadaaa. 👀
+
+</p>
+
+<button class="btn"
+        onclick="showScreen('screen7');celebration();">
+
+BUT THIS ISN'T THE LAST ONE ❤️
+
+</button>
+
+</div>
 
 </div>
 
@@ -776,368 +1679,434 @@ body {
 </section>
 
 
-<!-- ================= SCREEN 7 ================= -->
+
+<!-- ======================================================
+     SCREEN 7
+     FINAL REVEAL
+====================================================== -->
 
 <section class="screen" id="screen7">
 
 <div class="content">
 
-    <div style="font-size:65px;">
-        💖 ✨ 🎈 🎉 ✨ 💖
-    </div>
+<div style="font-size:80px;">
+❤️✨🥹✨❤️
+</div>
 
-    <h1 class="final-title">
-        Happy 24th<br>
-        My Love ❤️
-    </h1>
+<p class="script"
+   style="
+   font-size:38px;
+   color:#ffd7ef;
+   ">
 
-    <p class="final-message">
-        24 gifts.<br>
-        Countless memories.<br>
-        One very special person.
-        <br><br>
-        This isn't the end of the surprise...
-        <br>
-        It's only the beginning. ✨
-        <br><br>
-        Here's to 24,
-        and all the beautiful chapters ahead.
-        ❤️
-    </p>
+And finally...
 
-    <div style="
-        font-family:'Dancing Script',cursive;
-        font-size:34px;
-        color:#ffd7ef;
-        margin-top:25px;
+</p>
+
+<h1 class="finalTitle">
+
+THE LAST<br>
+SURPRISE ❤️
+
+</h1>
+
+<p class="finalText">
+
+24 gifts icha...
+
+<br>
+
+Party plan chesa...
+
+<br>
+
+Private theatre kuda ready...
+
+<br><br>
+
+Kani naa daggara
+inka oka gift undhi.
+
+<br><br>
+
+Adi wrap cheyyalem.
+
+<br>
+
+Box lo pettalem.
+
+<br>
+
+Courier lo pampinchalem.
+
+<br><br>
+
+Because...
+
+</p>
+
+<h2 class="script"
+    style="
+    font-size:clamp(55px,12vw,100px);
+    color:#fff;
+    margin-top:20px;
     ">
-        Always with you. ❤️
-    </div>
+
+It's Me. ❤️
+
+</h2>
+
+<p class="finalText"
+   style="margin-top:25px;">
+
+Your 25th surprise... 😂❤️
+
+<br><br>
+
+Naa daggara expensive gift undakapovachu...
+
+Kani naa heart lo
+nee kosam unna place matram
+already permanent. 🥹❤️
+
+<br><br>
+
+<strong>
+24 gifts are things I bought for you.
+
+<br>
+
+But this one...
+
+<br>
+
+is the person who wants to
+stay beside you through all the
+next birthdays too. ❤️
+</strong>
+
+<br><br>
+
+Happy Birthday,
+Buddu Thalli. ❤️🫂🎂
+
+<br>
+
+<strong>
+Here's to 24...
+and hopefully a lifetime of us. ♾️💍❤️
+</strong>
+
+</p>
 
 </div>
 
 </section>
 
 
-<!-- ================= GIFT MODAL ================= -->
 
-<div class="modal" id="giftModal">
+<!-- ======================================================
+     GIFT MODAL
+====================================================== -->
 
-    <div class="modal-card">
+<div class="modal"
+     id="giftModal">
 
-        <div class="modal-gift" id="modalGift">🎁</div>
+<div class="modalCard">
 
-        <h2 class="modal-title" id="modalTitle">
-            Gift 1
-        </h2>
+<div class="modalIcon"
+     id="modalIcon">
+🎁
+</div>
 
-        <p class="modal-text" id="modalText">
-            Something special...
-        </p>
+<h2 class="modalTitle"
+    id="modalTitle">
+Surprise
+</h2>
 
-        <button class="close-btn" onclick="closeGift()">
-            Aww ❤️
-        </button>
+<p class="modalText"
+   id="modalText">
+Something special is waiting...
+</p>
 
-    </div>
+<button class="close"
+        onclick="closeGift()">
+
+Awww ❤️
+
+</button>
+
+</div>
 
 </div>
 
 
-<!-- OPTIONAL AUDIO -->
-<audio id="music" loop>
-    <!--
-    OPTIONAL:
-    Upload an MP3 to your GitHub repository and replace the
-    line below with:
 
-    src="yourmusic.mp3"
+<!-- ======================================================
+     MUSIC
 
-    Example:
-    -->
+     IMPORTANT:
+     Upload your MP3 to the repository.
+     Name it: birthday-song.mp3
+
+     Then this will work automatically.
+====================================================== -->
+
+<audio id="birthdaySong"
+       loop
+       preload="auto">
+
+<source src="birthday-song.mp3"
+        type="audio/mpeg">
+
 </audio>
+
 
 
 <script>
 
-/* ==========================================
+
+/* ======================================================
    24 GIFTS
-   EDIT THESE MESSAGES
-========================================== */
+   INTENTIONALLY INDIRECT
+====================================================== */
 
 const gifts = [
 
 {
-    icon:"💖",
-    title:"Gift 1",
-    text:"You are one of the best things that ever happened to me. ❤️"
-},
-
-{
-    icon:"🥰",
-    title:"Gift 2",
-    text:"Your smile is still one of my favourite things in this world."
-},
-
-{
-    icon:"😂",
-    title:"Gift 3",
-    text:"Thank you for giving me approximately 847 reasons to laugh at you. 😂"
-},
-
-{
-    icon:"📸",
-    title:"Gift 4",
-    text:"Some memories become favourites without us even realizing it."
-},
-
-{
-    icon:"🧸",
-    title:"Gift 5",
-    text:"If hugs could be wrapped, this gift would be a giant one. 🤗"
-},
-
-{
-    icon:"🌙",
-    title:"Gift 6",
-    text:"Even ordinary nights become better when I get to talk to you."
-},
-
-{
-    icon:"🍫",
-    title:"Gift 7",
-    text:"A little sweetness for someone who already makes my life sweeter."
-},
-
-{
-    icon:"🎵",
-    title:"Gift 8",
-    text:"There are songs I hear now that automatically remind me of you."
-},
-
-{
-    icon:"🌎",
-    title:"Gift 9",
-    text:"Wherever life takes us, I hope we keep making memories together."
-},
-
-{
     icon:"✨",
-    title:"Gift 10",
-    text:"You deserve more happiness than you know."
+    title:"Surprise 01",
+    text:"Idi chinna comfort kosam... daily life lo silent ga nee pakkana undedhi. 😌❤️"
 },
 
 {
-    icon:"❤️",
-    title:"Gift 11",
-    text:"One simple truth: I really, really love you."
-},
-
-{
-    icon:"🎈",
-    title:"Gift 12",
-    text:"Halfway there... and I'm still not done surprising you. 👀"
-},
-
-{
-    icon:"☀️",
-    title:"Gift 13",
-    text:"You have a way of making even normal days feel special."
-},
-
-{
-    icon:"🫶",
-    title:"Gift 14",
-    text:"Thank you for being someone I can laugh, talk and be myself with."
-},
-
-{
-    icon:"🌹",
-    title:"Gift 15",
-    text:"Some people enter your life. Some people become a part of it."
-},
-
-{
-    icon:"🥳",
-    title:"Gift 16",
-    text:"Today is your day. So yes, you're allowed to be extra. 😂"
+    icon:"👕",
+    title:"Surprise 02",
+    text:"Konni things choosthe simple ga anipisthayi... kani avi ninnu imagine chesi choose chesinavi. 👀❤️"
 },
 
 {
     icon:"💫",
-    title:"Gift 17",
-    text:"I hope 24 brings you everything you've been wishing for."
+    title:"Surprise 03",
+    text:"Another little something... because birthday boy ki options ekkuva undali kadaaa 😂❤️"
 },
 
 {
-    icon:"🎬",
-    title:"Gift 18",
-    text:"Some surprises are better experienced together... ❤️"
+    icon:"🖤",
+    title:"Surprise 04",
+    text:"Idi everyday adventures kosam. Nee style lo neeku set avvali ani chusa. 😌"
 },
 
 {
-    icon:"🍿",
-    title:"Gift 19",
-    text:"Hmm... why does this gift suddenly feel like a movie night? 👀"
+    icon:"🔥",
+    title:"Surprise 05",
+    text:"Konchem different. Konchem cool. And definitely something I imagined you wearing. 👀"
 },
 
 {
-    icon:"🎁",
-    title:"Gift 20",
-    text:"Only four more. Don't get too confident. 😌"
+    icon:"🤲",
+    title:"Surprise 06",
+    text:"Idi chusthe naaku oka peaceful feeling osthundhi. Something close to the heart. ❤️"
 },
 
 {
-    icon:"💌",
-    title:"Gift 21",
-    text:"If I could wrap up every happy memory with you, I'd need a much bigger box."
+    icon:"🧸",
+    title:"Surprise 07",
+    text:"Chinna cute thing... but somehow it reminded me of you immediately. 🥹❤️"
 },
 
 {
-    icon:"🔐",
-    title:"Gift 22",
-    text:"There's something I'm still keeping secret... 🤫"
+    icon:"🫶",
+    title:"Surprise 08",
+    text:"Cold weather, long days, busy days... whatever it is, I thought this might make things a little easier. ❤️"
 },
 
 {
-    icon:"❓",
-    title:"Gift 23",
-    text:"Almost there... One last surprise is waiting."
+    icon:"💼",
+    title:"Surprise 09",
+    text:"Something you can keep with you... because important things deserve a safe place. 😌"
 },
 
 {
-    icon:"🎬",
-    title:"Gift 24",
-    text:"Okay... this one isn't something you can open here. Get ready. ❤️"
+    icon:"🌙",
+    title:"Surprise 10",
+    text:"Ee one ki konchem special meaning undhi. Look at it carefully. ❤️✨"
+},
+
+{
+    icon:"🧢",
+    title:"Surprise 11",
+    text:"Birthday boy ki konchem extra style kavali ani anipinchindhi. 😂❤️"
+},
+
+{
+    icon:"🏍️",
+    title:"Surprise 12",
+    text:"Something for those moments when you're doing your own thing and enjoying the ride. 👀"
+},
+
+{
+    icon:"🧦",
+    title:"Surprise 13",
+    text:"Small thing... but daily life lo chala useful ayye type. 😌"
+},
+
+{
+    icon:"🤍",
+    title:"Surprise 14",
+    text:"Something connected to those quiet moments that matter more than people realize. ❤️"
+},
+
+{
+    icon:"📸",
+    title:"Surprise 15",
+    text:"Memories are important... so I wanted one little thing to hold one close. 🥹❤️"
+},
+
+{
+    icon:"☀️",
+    title:"Surprise 16",
+    text:"Because self-care kuda important ani birthday boy ki remind cheyyali kadaaa. 😂❤️"
+},
+
+{
+    icon:"✨",
+    title:"Surprise 17",
+    text:"Same reason as the previous one... konchem extra care from me. 😌❤️"
+},
+
+{
+    icon:"🖤",
+    title:"Surprise 18",
+    text:"A small finishing touch. Because sometimes little details complete everything. 👀"
+},
+
+{
+    icon:"😎",
+    title:"Surprise 19",
+    text:"Sunny days ki konchem protection... plus birthday boy ki konchem attitude. 😂"
+},
+
+{
+    icon:"🤍",
+    title:"Surprise 20",
+    text:"Idi multiple times use avuthadhi... so don't lose it. 😌"
+},
+
+{
+    icon:"🌹",
+    title:"Surprise 21",
+    text:"This one is all about making your presence memorable. ❤️"
+},
+
+{
+    icon:"🍫",
+    title:"Surprise 22",
+    text:"Because every serious birthday plan needs at least a little sweetness. 😂❤️"
+},
+
+{
+    icon:"🎂",
+    title:"Surprise 23",
+    text:"Okay... now you should probably know that something edible is involved. 👀😂"
+},
+
+{
+    icon:"🎉",
+    title:"Surprise 24",
+    text:"This isn't really something you open... it's something you experience. And it's the reason I kept saying 'wait'. 👀❤️"
 }
 
 ];
 
 
-/* ==========================================
-   CREATE GIFT GRID
-========================================== */
+const giftGrid =
+document.getElementById("giftGrid");
 
-const giftGrid = document.getElementById("giftGrid");
 
-gifts.forEach((gift, index) => {
+let opened =
+new Set();
 
-    const box = document.createElement("div");
 
-    box.className = "gift";
+/* CREATE GIFTS */
 
-    box.innerHTML = `
-        <span class="gift-icon">${gift.icon}</span>
-        <span class="gift-number">${index + 1}</span>
+gifts.forEach((gift,index)=>{
+
+    const box =
+    document.createElement("div");
+
+    box.className="gift";
+
+    box.innerHTML=`
+
+        <span class="giftSymbol">
+            ${gift.icon}
+        </span>
+
+        <span class="giftNumber">
+            ${String(index+1).padStart(2,"0")}
+        </span>
+
     `;
 
-    box.onclick = () => openGift(index, box);
+    box.onclick=()=>{
+        openGift(index,box);
+    };
 
     giftGrid.appendChild(box);
 
 });
 
 
-/* ==========================================
-   SCREEN CONTROL
-========================================== */
 
-function showScreen(id) {
+/* OPEN GIFT */
 
-    document.querySelectorAll(".screen").forEach(screen => {
-        screen.classList.remove("active");
-    });
+function openGift(index,box){
 
-    document.getElementById(id).classList.add("active");
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-    createHearts(10);
-}
-
-
-/* ==========================================
-   START SURPRISE
-========================================== */
-
-function startSurprise() {
-
-    showScreen("screen2");
-
-    let progress = 0;
-
-    const bar = document.getElementById("loadingBar");
-
-    const timer = setInterval(() => {
-
-        progress += 2;
-
-        bar.style.width = progress + "%";
-
-        if(progress >= 100) {
-
-            clearInterval(timer);
-
-            setTimeout(() => {
-
-                showScreen("screen3");
-                celebration();
-
-            },500);
-
-        }
-
-    },30);
-
-}
-
-
-/* ==========================================
-   GIFT MODAL
-========================================== */
-
-let openedGifts = new Set();
-
-function openGift(index, box) {
-
-    openedGifts.add(index);
+    opened.add(index);
 
     box.classList.add("opened");
 
-    document.getElementById("modalGift").textContent =
-        gifts[index].icon;
+    document.getElementById("modalIcon")
+        .textContent=gifts[index].icon;
 
-    document.getElementById("modalTitle").textContent =
-        gifts[index].title;
+    document.getElementById("modalTitle")
+        .textContent=gifts[index].title;
 
-    document.getElementById("modalText").textContent =
-        gifts[index].text;
+    document.getElementById("modalText")
+        .textContent=gifts[index].text;
 
-    document.getElementById("giftModal").classList.add("show");
+    document.getElementById("giftModal")
+        .classList.add("show");
 
-    createHearts(6);
+    createHearts(7);
 
-    if(openedGifts.size === 24) {
 
-        document.getElementById("finalButton").style.display =
-            "inline-block";
+    if(opened.size===24){
 
-        document.getElementById("finalButton").scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
+        document.getElementById("giftFinished")
+            .style.display="inline-block";
+
+        setTimeout(()=>{
+
+            document.getElementById("giftFinished")
+                .scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+        },300);
 
         celebration();
-
     }
 
 }
 
 
-function closeGift() {
+
+/* CLOSE GIFT */
+
+function closeGift(){
 
     document.getElementById("giftModal")
         .classList.remove("show");
@@ -1145,13 +2114,105 @@ function closeGift() {
 }
 
 
-/* ==========================================
-   HEARTS
-========================================== */
 
-function createHearts(amount = 5) {
+/* SCREEN */
 
-    const hearts = [
+function showScreen(id){
+
+    document.querySelectorAll(".screen")
+        .forEach(screen=>{
+            screen.classList.remove("active");
+        });
+
+    document.getElementById(id)
+        .classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+
+/* MUSIC */
+
+const music =
+document.getElementById("birthdaySong");
+
+let playing=false;
+
+
+function beginEverything(){
+
+    music.play()
+    .then(()=>{
+
+        playing=true;
+
+        document.getElementById("musicButton")
+            .textContent="🔊";
+
+    })
+    .catch(()=>{
+
+        alert(
+            "Please tap the music button once to start the song ❤️"
+        );
+
+    });
+
+    showScreen("screen2");
+
+    celebration();
+
+}
+
+
+
+function toggleMusic(){
+
+    if(!music.src){
+
+        alert(
+            "Please upload birthday-song.mp3 to your GitHub repository first ❤️"
+        );
+
+        return;
+
+    }
+
+
+    if(playing){
+
+        music.pause();
+
+        playing=false;
+
+        document.getElementById("musicButton")
+            .textContent="♫";
+
+    }else{
+
+        music.play();
+
+        playing=true;
+
+        document.getElementById("musicButton")
+            .textContent="🔊";
+
+    }
+
+}
+
+
+
+/* HEARTS */
+
+function createHearts(amount=5){
+
+    const hearts=[
         "❤️",
         "💕",
         "💖",
@@ -1162,27 +2223,34 @@ function createHearts(amount = 5) {
         "🌸"
     ];
 
-    for(let i=0;i<amount;i++) {
 
-        const heart = document.createElement("div");
+    for(let i=0;i<amount;i++){
 
-        heart.className = "heart";
+        const heart =
+        document.createElement("div");
 
-        heart.textContent =
-            hearts[Math.floor(Math.random()*hearts.length)];
+        heart.className="heart";
 
-        heart.style.left =
-            Math.random()*100 + "vw";
+        heart.textContent=
+        hearts[
+            Math.floor(
+                Math.random()*hearts.length
+            )
+        ];
 
-        heart.style.fontSize =
-            (18 + Math.random()*30) + "px";
+        heart.style.left=
+        Math.random()*100+"vw";
 
-        heart.style.animationDuration =
-            (4 + Math.random()*5) + "s";
+        heart.style.fontSize=
+        (18+Math.random()*28)+"px";
+
+        heart.style.animationDuration=
+        (4+Math.random()*5)+"s";
 
         document.body.appendChild(heart);
 
-        setTimeout(() => {
+
+        setTimeout(()=>{
             heart.remove();
         },9000);
 
@@ -1191,13 +2259,12 @@ function createHearts(amount = 5) {
 }
 
 
-/* ==========================================
-   CONFETTI
-========================================== */
 
-function celebration() {
+/* CONFETTI */
 
-    const symbols = [
+function celebration(){
+
+    const items=[
         "🎉",
         "🎊",
         "✨",
@@ -1206,102 +2273,77 @@ function celebration() {
         "🎈"
     ];
 
-    for(let i=0;i<70;i++) {
 
-        const piece = document.createElement("div");
+    for(let i=0;i<60;i++){
 
-        piece.className = "confetti";
+        const piece=
+        document.createElement("div");
 
-        piece.textContent =
-            symbols[Math.floor(Math.random()*symbols.length)];
+        piece.className="confetti";
 
-        piece.style.left =
-            Math.random()*100 + "vw";
+        piece.textContent=
+        items[
+            Math.floor(
+                Math.random()*items.length
+            )
+        ];
 
-        piece.style.fontSize =
-            (12 + Math.random()*18) + "px";
+        piece.style.left=
+        Math.random()*100+"vw";
 
-        piece.style.animationDuration =
-            (2.5 + Math.random()*4) + "s";
+        piece.style.fontSize=
+        (12+Math.random()*18)+"px";
 
-        piece.style.animationDelay =
-            Math.random()*1.5 + "s";
+        piece.style.animationDuration=
+        (2.5+Math.random()*4)+"s";
+
+        piece.style.animationDelay=
+        Math.random()*1.5+"s";
 
         document.body.appendChild(piece);
 
-        setTimeout(() => {
+
+        setTimeout(()=>{
             piece.remove();
         },7000);
 
     }
 
-    createHearts(20);
+    createHearts(15);
 
 }
 
 
-/* ==========================================
-   MUSIC
-========================================== */
 
-let musicPlaying = false;
+/* MODAL OUTSIDE CLICK */
 
-function toggleMusic() {
-
-    const music = document.getElementById("music");
-
-    if(!music.src) {
-
-        alert(
-            "Add your MP3 file to the GitHub repository and set its name in the code first ❤️"
-        );
-
-        return;
-
-    }
-
-    if(musicPlaying) {
-
-        music.pause();
-        musicPlaying = false;
-
-    } else {
-
-        music.play();
-        musicPlaying = true;
-
-    }
-
-}
-
-
-/* ==========================================
-   BACKGROUND HEARTS
-========================================== */
-
-setInterval(() => {
-
-    if(Math.random() > .45) {
-        createHearts(1);
-    }
-
-},1500);
-
-
-/* ==========================================
-   CLOSE MODAL WHEN CLICKING OUTSIDE
-========================================== */
-
-document.getElementById("giftModal").addEventListener(
+document
+.getElementById("giftModal")
+.addEventListener(
     "click",
-    function(e) {
+    function(e){
 
-        if(e.target === this) {
+        if(e.target===this){
             closeGift();
         }
 
     }
 );
+
+
+
+/* BACKGROUND HEARTS */
+
+setInterval(()=>{
+
+    if(Math.random()>.55){
+
+        createHearts(1);
+
+    }
+
+},1700);
+
 
 </script>
 
