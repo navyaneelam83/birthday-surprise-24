@@ -776,7 +776,6 @@ body{
 
     backdrop-filter:
         blur(8px);
-
 }
 
 
@@ -985,13 +984,23 @@ body{
             </div>
 
 
+            <!--
+                IMPORTANT:
+                This button is hidden initially.
+                It appears automatically when
+                the 58-second song ends.
+            -->
+
             <button
+                id="prayerContinueBtn"
                 class="continueBtn"
-                onclick="showBirthdayScreen()">
+                onclick="showBirthdayScreen()"
+                style="display:none;">
 
                 Continue ❤️
 
             </button>
+
 
         </div>
 
@@ -1072,8 +1081,7 @@ body{
 
 
 <!-- =====================================================
-     FIRST SCREEN
-     TAP ANYWHERE
+     FIRST TAP SCREEN
 ===================================================== -->
 
 <div
@@ -1130,8 +1138,28 @@ const tapScreen =
         "tapScreen"
     );
 
+const prayerContinueBtn =
+    document.getElementById(
+        "prayerContinueBtn"
+    );
+
 
 let playing = false;
+
+
+/*
+   This becomes true once the
+   58-second song has completely
+   finished.
+*/
+
+let songFinished = false;
+
+
+/*
+   Prevents the first tap from
+   being triggered more than once.
+*/
 
 let experienceStarted = false;
 
@@ -1223,6 +1251,46 @@ function showScreen(id){
         0
     );
 
+
+    /*
+       When Prayer opens, check whether
+       the song has already finished.
+    */
+
+    if(id === "screen2"){
+
+        updatePrayerButton();
+
+    }
+
+}
+
+
+/* =====================================================
+   UPDATE PRAYER BUTTON
+===================================================== */
+
+function updatePrayerButton(){
+
+    /*
+       Show Continue only after
+       the 58-second song finishes.
+    */
+
+    if(songFinished){
+
+        prayerContinueBtn.style.display =
+            "inline-block";
+
+    }
+
+    else{
+
+        prayerContinueBtn.style.display =
+            "none";
+
+    }
+
 }
 
 
@@ -1239,8 +1307,7 @@ function startMusic(){
 
 
     /*
-       Always start from the
-       beginning.
+       Always begin from 00:00.
     */
 
     music.currentTime = 0;
@@ -1283,7 +1350,7 @@ function startMusic(){
 function startExperience(){
 
     /*
-       Prevent double tapping.
+       Prevent double tap.
     */
 
     if(experienceStarted){
@@ -1296,7 +1363,7 @@ function startExperience(){
 
 
     /*
-       Remove first screen.
+       Hide Tap Anywhere screen.
     */
 
     tapScreen.classList.add(
@@ -1305,7 +1372,7 @@ function startExperience(){
 
 
     /*
-       Start video automatically.
+       Start countdown video.
     */
 
     introVideo
@@ -1328,10 +1395,7 @@ function startExperience(){
 
 
     /*
-       Start song automatically.
-       Because this happens directly
-       from the user's tap, the browser
-       allows audio playback.
+       Start song from 00:00.
     */
 
     startMusic();
@@ -1340,12 +1404,81 @@ function startExperience(){
 
 
 /* =====================================================
-   MUSIC TOGGLE
+   SONG FINISHED
+===================================================== */
+
+music.addEventListener(
+    "ended",
+    function(){
+
+        /*
+           The full 58 seconds are finished.
+        */
+
+        songFinished = true;
+
+        playing = false;
+
+
+        /*
+           Make sure the music is stopped.
+        */
+
+        music.pause();
+
+
+        music.currentTime = 0;
+
+
+        musicButton.textContent =
+            "🔇";
+
+
+        /*
+           Show Continue only if
+           Prayer is currently visible.
+        */
+
+        const prayerScreen =
+            document.getElementById(
+                "screen2"
+            );
+
+
+        if(
+            prayerScreen.classList.contains(
+                "active"
+            )
+        ){
+
+            prayerContinueBtn.style.display =
+                "inline-block";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MUSIC BUTTON
 ===================================================== */
 
 function toggleMusic(){
 
     if(music.paused){
+
+        /*
+           Do not restart the song
+           after it has already finished.
+        */
+
+        if(songFinished){
+
+            return;
+
+        }
+
 
         music.play()
 
@@ -1393,9 +1526,7 @@ introVideo.addEventListener(
 
         /*
            IMPORTANT:
-           Do NOT restart music here.
-
-           The same song continues.
+           Do not restart the music.
         */
 
         showScreen(
@@ -1413,7 +1544,7 @@ introVideo.addEventListener(
 function showBirthdayScreen(){
 
     /*
-       Stop the song completely.
+       Stop music completely.
     */
 
     if(music){
@@ -1432,7 +1563,8 @@ function showBirthdayScreen(){
 
 
     /*
-       Open Happy Birthday.
+       Birthday screen opens
+       with NO SONG.
     */
 
     showScreen(
