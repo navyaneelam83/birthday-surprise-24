@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,6 +9,7 @@
       content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday My Love ❤️</title>
+
 
 <style>
 
@@ -25,13 +27,37 @@ body{
 }
 
 body{
-    font-family:"Times New Roman",Georgia,serif;
+
+    font-family:"Times New Roman",
+                Georgia,
+                serif;
 
     background:
-        radial-gradient(circle at 20% 20%, rgba(255,70,160,.28), transparent 30%),
-        radial-gradient(circle at 80% 25%, rgba(80,90,255,.30), transparent 32%),
-        radial-gradient(circle at 50% 90%, rgba(255,50,120,.20), transparent 35%),
-        linear-gradient(135deg,#130022,#25004b,#16005c,#090018);
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,70,160,.28),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(80,90,255,.30),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255,50,120,.20),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #130022,
+            #25004b,
+            #16005c,
+            #090018
+        );
 
     color:white;
 }
@@ -42,8 +68,11 @@ body{
 ===================================================== */
 
 .screen{
+
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
 
@@ -62,10 +91,13 @@ body{
 }
 
 .content{
+
     position:relative;
+
     z-index:10;
 
     width:92%;
+
     max-width:900px;
 }
 
@@ -75,14 +107,18 @@ body{
 ===================================================== */
 
 .stars{
+
     position:absolute;
+
     inset:0;
 
     overflow:hidden;
+
     pointer-events:none;
 }
 
 .star{
+
     position:absolute;
 
     width:2px;
@@ -94,19 +130,26 @@ body{
 
     opacity:.7;
 
-    animation:twinkle 3s infinite ease-in-out;
+    animation:
+        twinkle 3s infinite ease-in-out;
 }
 
 @keyframes twinkle{
 
     0%,100%{
+
         opacity:.25;
-        transform:scale(.8);
+
+        transform:
+            scale(.8);
     }
 
     50%{
+
         opacity:1;
-        transform:scale(1.5);
+
+        transform:
+            scale(1.5);
     }
 }
 
@@ -116,6 +159,7 @@ body{
 ===================================================== */
 
 .glow{
+
     position:absolute;
 
     width:450px;
@@ -123,22 +167,30 @@ body{
 
     border-radius:50%;
 
-    background:rgba(255,60,170,.12);
+    background:
+        rgba(255,60,170,.12);
 
     filter:blur(80px);
 
-    animation:pulseGlow 5s infinite alternate;
+    animation:
+        pulseGlow 5s infinite alternate;
 }
 
 @keyframes pulseGlow{
 
     from{
-        transform:scale(.9);
+
+        transform:
+            scale(.9);
+
         opacity:.5;
     }
 
     to{
-        transform:scale(1.15);
+
+        transform:
+            scale(1.15);
+
         opacity:1;
     }
 }
@@ -149,6 +201,7 @@ body{
 ===================================================== */
 
 #videoScreen{
+
     background:#050008;
 }
 
@@ -170,11 +223,95 @@ body{
 
     inset:0;
 
-    background:rgba(0,0,0,.15);
+    background:
+        rgba(0,0,0,.12);
 
     z-index:2;
 
     pointer-events:none;
+}
+
+
+/* =====================================================
+   FIRST TAP SCREEN
+===================================================== */
+
+#tapScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:500;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255,70,170,.20),
+            transparent 40%
+        ),
+
+        #080010;
+
+    cursor:pointer;
+
+    transition:
+        opacity .7s ease;
+}
+
+#tapScreen.hide{
+
+    opacity:0;
+
+    pointer-events:none;
+}
+
+.tapHeart{
+
+    font-size:
+        clamp(55px,12vw,90px);
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+.tapText{
+
+    margin-top:20px;
+
+    font-size:
+        clamp(25px,6vw,46px);
+
+    font-weight:bold;
+
+    text-shadow:
+
+        0 0 15px
+        rgba(255,150,220,.5),
+
+        0 0 35px
+        rgba(180,80,255,.4);
+}
+
+.tapSub{
+
+    margin-top:12px;
+
+    font-size:
+        clamp(15px,3vw,21px);
+
+    color:#f5dff0;
 }
 
 
@@ -185,21 +322,39 @@ body{
 #screen1{
 
     background:
-        radial-gradient(circle at 50% 45%, rgba(255,70,170,.18), transparent 35%),
-        linear-gradient(135deg,#180026,#33005c,#10004d,#090018);
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,70,170,.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #180026,
+            #33005c,
+            #10004d,
+            #090018
+        );
 }
 
 .assalam{
 
-    font-size:clamp(32px,6vw,64px);
+    font-size:
+        clamp(32px,6vw,64px);
 
     font-weight:bold;
 
     text-shadow:
-        0 0 15px rgba(255,160,220,.5),
-        0 0 40px rgba(180,80,255,.4);
 
-    animation:fadeUp 1.5s ease forwards;
+        0 0 15px
+        rgba(255,160,220,.5),
+
+        0 0 40px
+        rgba(180,80,255,.4);
+
+    animation:
+        fadeUp 1.5s ease forwards;
 }
 
 .heart{
@@ -210,30 +365,41 @@ body{
 
     margin-top:18px;
 
-    animation:heartbeat 1.5s infinite;
+    animation:
+        heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat{
 
     0%,100%{
-        transform:scale(1);
+
+        transform:
+            scale(1);
     }
 
     50%{
-        transform:scale(1.18);
+
+        transform:
+            scale(1.18);
     }
 }
 
 @keyframes fadeUp{
 
     from{
+
         opacity:0;
-        transform:translateY(30px);
+
+        transform:
+            translateY(30px);
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
@@ -245,9 +411,26 @@ body{
 #screen2{
 
     background:
-        radial-gradient(circle at 50% 30%, rgba(255,100,180,.18), transparent 35%),
-        radial-gradient(circle at 20% 80%, rgba(100,80,255,.18), transparent 30%),
-        linear-gradient(135deg,#12001f,#280047,#11004b,#080016);
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,100,180,.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(100,80,255,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #12001f,
+            #280047,
+            #11004b,
+            #080016
+        );
 }
 
 .prayerBox{
@@ -256,19 +439,28 @@ body{
 
     margin:auto;
 
-    padding:35px 30px;
+    padding:
+        35px 30px;
 
-    border:1px solid rgba(255,255,255,.18);
+    border:
+        1px solid
+        rgba(255,255,255,.18);
 
     border-radius:25px;
 
-    background:rgba(255,255,255,.07);
+    background:
+        rgba(255,255,255,.07);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:
+        blur(12px);
 
     box-shadow:
-        0 0 40px rgba(190,70,255,.18),
-        inset 0 0 25px rgba(255,255,255,.03);
+
+        0 0 40px
+        rgba(190,70,255,.18),
+
+        inset 0 0 25px
+        rgba(255,255,255,.03);
 }
 
 .prayerEmoji{
@@ -280,7 +472,8 @@ body{
 
 .prayerEnglish{
 
-    font-size:clamp(18px,2.5vw,26px);
+    font-size:
+        clamp(18px,2.5vw,26px);
 
     line-height:1.65;
 
@@ -291,7 +484,8 @@ body{
 
 .prayerTelugu{
 
-    font-size:clamp(17px,2.3vw,23px);
+    font-size:
+        clamp(17px,2.3vw,23px);
 
     line-height:1.75;
 
@@ -302,14 +496,20 @@ body{
 
     margin-top:30px;
 
-    padding:13px 30px;
+    padding:
+        13px 30px;
 
     border:none;
 
     border-radius:30px;
 
     background:
-        linear-gradient(90deg,#ff4fa3,#9b5cff);
+
+        linear-gradient(
+            90deg,
+            #ff4fa3,
+            #9b5cff
+        );
 
     color:white;
 
@@ -319,13 +519,18 @@ body{
 
     cursor:pointer;
 
-    box-shadow:0 0 25px rgba(255,70,170,.35);
+    box-shadow:
+
+        0 0 25px
+        rgba(255,70,170,.35);
 
     transition:.3s;
 }
 
 .continueBtn:hover{
-    transform:scale(1.05);
+
+    transform:
+        scale(1.05);
 }
 
 
@@ -336,15 +541,38 @@ body{
 #screen3{
 
     background:
-        radial-gradient(circle at 50% 30%, rgba(255,70,160,.25), transparent 32%),
-        radial-gradient(circle at 20% 70%, rgba(100,80,255,.20), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(255,180,80,.13), transparent 25%),
-        linear-gradient(135deg,#170021,#35005c,#18005a,#080014);
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,70,160,.25),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(100,80,255,.20),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,180,80,.13),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #170021,
+            #35005c,
+            #18005a,
+            #080014
+        );
 }
 
 .birthdaySmall{
 
-    font-size:clamp(17px,2.5vw,24px);
+    font-size:
+        clamp(17px,2.5vw,24px);
 
     margin-bottom:10px;
 
@@ -353,7 +581,8 @@ body{
 
 .birthdayTitle{
 
-    font-size:clamp(55px,10vw,115px);
+    font-size:
+        clamp(55px,10vw,115px);
 
     line-height:.9;
 
@@ -362,6 +591,7 @@ body{
     letter-spacing:3px;
 
     background:
+
         linear-gradient(
             90deg,
             #ffd7f0,
@@ -373,14 +603,12 @@ body{
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
-
-    text-shadow:
-        0 0 25px rgba(255,150,220,.2);
 }
 
 .buddu{
 
-    font-size:clamp(38px,7vw,75px);
+    font-size:
+        clamp(38px,7vw,75px);
 
     margin-top:25px;
 
@@ -389,26 +617,33 @@ body{
     color:white;
 
     text-shadow:
-        0 0 15px rgba(255,100,190,.5),
-        0 0 35px rgba(160,80,255,.4);
+
+        0 0 15px
+        rgba(255,100,190,.5),
+
+        0 0 35px
+        rgba(160,80,255,.4);
 }
 
 .mubarak{
 
     margin-top:20px;
 
-    font-size:clamp(21px,3vw,31px);
+    font-size:
+        clamp(21px,3vw,31px);
 
     font-weight:bold;
 }
 
 .dua{
 
-    margin:22px auto 0;
+    margin:
+        22px auto 0;
 
     max-width:600px;
 
-    font-size:clamp(17px,2.3vw,22px);
+    font-size:
+        clamp(17px,2.3vw,22px);
 
     line-height:1.6;
 
@@ -427,11 +662,13 @@ body{
     width:62px;
     height:78px;
 
-    border-radius:50% 50% 45% 45%;
+    border-radius:
+        50% 50% 45% 45%;
 
     opacity:.85;
 
-    animation:float 5s ease-in-out infinite;
+    animation:
+        float 5s ease-in-out infinite;
 }
 
 .balloon:after{
@@ -441,9 +678,11 @@ body{
     position:absolute;
 
     width:1px;
+
     height:100px;
 
-    background:rgba(255,255,255,.45);
+    background:
+        rgba(255,255,255,.45);
 
     top:75px;
 
@@ -491,11 +730,15 @@ body{
 @keyframes float{
 
     0%,100%{
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 
     50%{
-        transform:translateY(-18px);
+
+        transform:
+            translateY(-18px);
     }
 }
 
@@ -516,9 +759,12 @@ body{
 
     border-radius:50%;
 
-    border:2px solid rgba(255,255,255,.5);
+    border:
+        2px solid
+        rgba(255,255,255,.5);
 
-    background:rgba(255,255,255,.12);
+    background:
+        rgba(255,255,255,.12);
 
     color:white;
 
@@ -528,7 +774,9 @@ body{
 
     cursor:pointer;
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:
+        blur(8px);
+
 }
 
 
@@ -539,21 +787,28 @@ body{
 @media(max-width:600px){
 
     .prayerBox{
-        padding:25px 18px;
+
+        padding:
+            25px 18px;
     }
 
     .prayerEnglish{
+
         line-height:1.5;
     }
 
     .prayerTelugu{
+
         line-height:1.6;
     }
 
     .balloon{
+
         width:45px;
+
         height:58px;
     }
+
 }
 
 </style>
@@ -571,7 +826,6 @@ body{
 <audio
     id="birthdaySong"
     src="./birthday-song-00-00-to-00-58.mp3"
-    autoplay
     preload="auto"
     playsinline>
 </audio>
@@ -586,7 +840,7 @@ body{
     id="musicButton"
     onclick="toggleMusic()">
 
-    🔊
+    🔇
 
 </button>
 
@@ -601,7 +855,6 @@ body{
 
     <video
         id="introVideo"
-        autoplay
         muted
         playsinline
         preload="auto">
@@ -612,7 +865,9 @@ body{
 
     </video>
 
-    <div class="videoOverlay"></div>
+    <div
+        class="videoOverlay">
+    </div>
 
 </section>
 
@@ -634,8 +889,11 @@ body{
 
 
     <div class="balloon b1"></div>
+
     <div class="balloon b2"></div>
+
     <div class="balloon b3"></div>
+
     <div class="balloon b4"></div>
 
 
@@ -646,6 +904,7 @@ body{
             Assalamu Alaikum ❤️
 
         </div>
+
 
         <span class="heart">
 
@@ -758,8 +1017,11 @@ body{
 
 
     <div class="balloon b1"></div>
+
     <div class="balloon b2"></div>
+
     <div class="balloon b3"></div>
+
     <div class="balloon b4"></div>
 
 
@@ -809,6 +1071,38 @@ body{
 </section>
 
 
+<!-- =====================================================
+     FIRST SCREEN
+     TAP ANYWHERE
+===================================================== -->
+
+<div
+    id="tapScreen"
+    onclick="startExperience()">
+
+    <div class="tapHeart">
+
+        ❤️
+
+    </div>
+
+
+    <div class="tapText">
+
+        Tap Anywhere to Begin
+
+    </div>
+
+
+    <div class="tapSub">
+
+        Your surprise is about to begin... ✨
+
+    </div>
+
+</div>
+
+
 <script>
 
 
@@ -831,7 +1125,15 @@ const introVideo =
         "introVideo"
     );
 
+const tapScreen =
+    document.getElementById(
+        "tapScreen"
+    );
+
+
 let playing = false;
+
+let experienceStarted = false;
 
 
 /* =====================================================
@@ -852,6 +1154,7 @@ function createStars(id){
 
         const star =
             document.createElement("div");
+
 
         star.className =
             "star";
@@ -910,24 +1213,37 @@ function showScreen(id){
 
     document
         .getElementById(id)
-        .classList.add("active");
+        .classList.add(
+            "active"
+        );
 
 
-    window.scrollTo(0,0);
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
 
 /* =====================================================
-   START MUSIC AUTOMATICALLY
+   START MUSIC
 ===================================================== */
 
 function startMusic(){
 
     if(!music){
+
         return;
     }
 
+
+    /*
+       Always start from the
+       beginning.
+    */
+
+    music.currentTime = 0;
 
     music.volume = 1;
 
@@ -941,10 +1257,6 @@ function startMusic(){
         musicButton.textContent =
             "🔊";
 
-        console.log(
-            "Birthday song started automatically."
-        );
-
     })
 
     .catch(function(error){
@@ -955,7 +1267,7 @@ function startMusic(){
             "🔇";
 
         console.log(
-            "Browser blocked automatic audio:",
+            "Music error:",
             error
         );
 
@@ -965,24 +1277,64 @@ function startMusic(){
 
 
 /* =====================================================
-   STOP MUSIC
+   START EXPERIENCE
 ===================================================== */
 
-function stopMusic(){
+function startExperience(){
 
-    if(!music){
+    /*
+       Prevent double tapping.
+    */
+
+    if(experienceStarted){
+
         return;
     }
 
 
-    music.pause();
+    experienceStarted = true;
 
-    music.currentTime = 0;
 
-    playing = false;
+    /*
+       Remove first screen.
+    */
 
-    musicButton.textContent =
-        "🔇";
+    tapScreen.classList.add(
+        "hide"
+    );
+
+
+    /*
+       Start video automatically.
+    */
+
+    introVideo
+        .play()
+        .then(function(){
+
+            console.log(
+                "Countdown video started."
+            );
+
+        })
+        .catch(function(error){
+
+            console.log(
+                "Video error:",
+                error
+            );
+
+        });
+
+
+    /*
+       Start song automatically.
+       Because this happens directly
+       from the user's tap, the browser
+       allows audio playback.
+    */
+
+    startMusic();
 
 }
 
@@ -1009,7 +1361,7 @@ function toggleMusic(){
         .catch(function(error){
 
             console.log(
-                "Music blocked:",
+                "Music error:",
                 error
             );
 
@@ -1032,66 +1384,19 @@ function toggleMusic(){
 
 
 /* =====================================================
-   AUTOMATIC VIDEO
-===================================================== */
-
-function startVideo(){
-
-    introVideo
-        .play()
-        .then(function(){
-
-            console.log(
-                "Countdown video started automatically."
-            );
-
-        })
-
-        .catch(function(error){
-
-            console.log(
-                "Video autoplay error:",
-                error
-            );
-
-        });
-
-}
-
-
-/* =====================================================
-   PAGE LOAD
-===================================================== */
-
-window.addEventListener(
-    "load",
-    function(){
-
-        /*
-           Start video automatically.
-        */
-
-        startVideo();
-
-
-        /*
-           Start song automatically
-           from 00:00.
-        */
-
-        startMusic();
-
-    }
-);
-
-
-/* =====================================================
-   VIDEO END
+   VIDEO FINISHED
 ===================================================== */
 
 introVideo.addEventListener(
     "ended",
     function(){
+
+        /*
+           IMPORTANT:
+           Do NOT restart music here.
+
+           The same song continues.
+        */
 
         showScreen(
             "screen1"
@@ -1108,14 +1413,26 @@ introVideo.addEventListener(
 function showBirthdayScreen(){
 
     /*
-       First song stops completely.
+       Stop the song completely.
     */
 
-    stopMusic();
+    if(music){
+
+        music.pause();
+
+        music.currentTime = 0;
+
+        playing = false;
+
+    }
+
+
+    musicButton.textContent =
+        "🔇";
 
 
     /*
-       Happy Birthday screen opens.
+       Open Happy Birthday.
     */
 
     showScreen(
@@ -1126,5 +1443,7 @@ function showBirthdayScreen(){
 
 </script>
 
+
 </body>
+
 </html>
