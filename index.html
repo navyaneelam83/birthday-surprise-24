@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
+    font-family:"Times New Roman",Georgia,serif;
     background:#12002d;
     color:white;
     overflow-x:hidden;
@@ -55,8 +55,6 @@ body{
     to{transform:translateY(75px)}
 }
 
-/* MUSIC */
-
 .musicBtn{
     position:fixed;
     top:18px;
@@ -72,8 +70,6 @@ body{
     cursor:pointer;
     box-shadow:0 0 25px rgba(255,80,190,.5);
 }
-
-/* SCREEN */
 
 .screen{
     min-height:100vh;
@@ -94,27 +90,10 @@ body{
     text-align:center;
 }
 
-/* TEXT */
-
-.script{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
-}
-
-.small{
-    font-size:22px;
-    color:#ffe1f5;
-}
-
 .bigGradient{
     font-size:clamp(55px,12vw,125px);
     line-height:.9;
-    background:linear-gradient(
-        90deg,
-        #ffd45b,
-        #ff7ac8,
-        #9cecff,
-        #ffd45b
-    );
+    background:linear-gradient(90deg,#ffd45b,#ff7ac8,#9cecff,#ffd45b);
     background-size:300%;
     -webkit-background-clip:text;
     background-clip:text;
@@ -134,21 +113,14 @@ body{
     line-height:1.6;
 }
 
-/* BUTTON */
-
 .btn{
     margin-top:30px;
     padding:16px 34px;
     border:0;
     border-radius:60px;
-    background:linear-gradient(
-        90deg,
-        #ff3fa4,
-        #ff7b62,
-        #ffd05b
-    );
+    background:linear-gradient(90deg,#ff3fa4,#ff7b62,#ffd05b);
     color:white;
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
+    font-family:"Times New Roman",Georgia,serif;
     font-size:20px;
     font-weight:800;
     cursor:pointer;
@@ -165,8 +137,6 @@ body{
 .btn:active{
     transform:scale(.96);
 }
-
-/* BALLOONS */
 
 .balloonArea{
     height:150px;
@@ -218,26 +188,22 @@ body{
     0%,100%{
         transform:translateY(0) rotate(-3deg)
     }
-
     50%{
         transform:translateY(-25px) rotate(3deg)
     }
 }
 
-/* LETTER */
-
 .letter{
     width:min(850px,100%);
-    max-height:75vh;
+    max-height:70vh;
     overflow-y:auto;
     padding:35px 30px;
     border-radius:30px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.12),
-            rgba(255,255,255,.04)
-        );
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.04)
+    );
     border:1px solid rgba(255,255,255,.2);
     box-shadow:
         0 20px 70px rgba(0,0,0,.3),
@@ -255,19 +221,39 @@ body{
 }
 
 .letter p{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
-    font-size:clamp(22px,4vw,30px);
+    font-size:clamp(20px,4vw,27px);
     line-height:1.55;
     color:#fff5fc;
     margin-bottom:22px;
 }
 
-.letter .highlight{
+.highlight{
     color:#ffd1ec;
     font-weight:700;
 }
 
-/* GIFTS */
+.dua{
+    text-align:center;
+    padding:22px;
+    margin-bottom:25px;
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,215,235,.25);
+}
+
+.duaArabic{
+    font-size:30px;
+    line-height:1.8;
+    direction:rtl;
+    color:#ffe5a7;
+}
+
+.duaEnglish{
+    margin-top:12px;
+    font-size:20px;
+    line-height:1.5;
+    color:#ffe8f7;
+}
 
 .giftHeading{
     font-size:clamp(38px,7vw,65px);
@@ -296,40 +282,22 @@ body{
     cursor:pointer;
     position:relative;
     border:2px solid rgba(255,255,255,.22);
-    background:
-        linear-gradient(
-            145deg,
-            #ff4fa4,
-            #743eff
-        );
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.25);
+    background:linear-gradient(145deg,#ff4fa4,#743eff);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
     transition:.3s;
     overflow:hidden;
 }
 
 .gift:nth-child(3n){
-    background:
-        linear-gradient(
-            145deg,
-            #ff8c4a,
-            #ff3f9f
-        );
+    background:linear-gradient(145deg,#ff8c4a,#ff3f9f);
 }
 
 .gift:nth-child(4n){
-    background:
-        linear-gradient(
-            145deg,
-            #5b6cff,
-            #20c9ff
-        );
+    background:linear-gradient(145deg,#5b6cff,#20c9ff);
 }
 
 .gift:hover{
-    transform:
-        translateY(-8px)
-        scale(1.04);
+    transform:translateY(-8px) scale(1.04);
 }
 
 .giftNumber{
@@ -344,16 +312,9 @@ body{
 }
 
 .gift.opened{
-    background:
-        linear-gradient(
-            145deg,
-            #fff,
-            #ffd8ee
-        );
+    background:linear-gradient(145deg,#fff,#ffd8ee);
     color:#64134e;
 }
-
-/* MODAL */
 
 .modal{
     position:fixed;
@@ -372,24 +333,15 @@ body{
 }
 
 .modalCard{
-    width:min(520px,100%);
+    width:min(540px,100%);
     padding:35px 25px;
     text-align:center;
     border-radius:32px;
     color:#5a164e;
     background:
-        radial-gradient(
-            circle at top,
-            #ffb2df,
-            transparent 45%
-        ),
-        linear-gradient(
-            145deg,
-            #fff,
-            #ffd7ed
-        );
-    box-shadow:
-        0 0 80px rgba(255,60,190,.5);
+        radial-gradient(circle at top,#ffb2df,transparent 45%),
+        linear-gradient(145deg,#fff,#ffd7ed);
+    box-shadow:0 0 80px rgba(255,60,190,.5);
     animation:modalIn .4s ease;
 }
 
@@ -398,7 +350,6 @@ body{
         opacity:0;
         transform:scale(.75);
     }
-
     to{
         opacity:1;
         transform:scale(1);
@@ -415,9 +366,8 @@ body{
 }
 
 .modalText{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
-    font-size:28px;
-    line-height:1.45;
+    font-size:24px;
+    line-height:1.5;
 }
 
 .close{
@@ -432,26 +382,15 @@ body{
     cursor:pointer;
 }
 
-/* THEATRE */
-
 .theatre{
     width:min(850px,100%);
     padding:25px;
     border-radius:30px;
     background:
-        radial-gradient(
-            circle,
-            rgba(255,80,80,.25),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            #26000c,
-            #65001e
-        );
+        radial-gradient(circle,rgba(255,80,80,.25),transparent 55%),
+        linear-gradient(145deg,#26000c,#65001e);
     border:2px solid rgba(255,200,80,.4);
-    box-shadow:
-        0 0 80px rgba(255,50,80,.3);
+    box-shadow:0 0 80px rgba(255,50,80,.3);
     position:relative;
     overflow:hidden;
 }
@@ -467,8 +406,7 @@ body{
 .theatreTitle{
     font-size:clamp(40px,8vw,75px);
     color:#ffd85c;
-    text-shadow:
-        0 0 25px rgba(255,210,70,.5);
+    text-shadow:0 0 25px rgba(255,210,70,.5);
 }
 
 .ticket{
@@ -491,18 +429,9 @@ body{
     margin-top:7px;
 }
 
-/* FINAL */
-
 .finalTitle{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:clamp(60px,12vw,120px);
-    background:
-        linear-gradient(
-            90deg,
-            #ff71b8,
-            #ffe477,
-            #72eaff
-        );
+    background:linear-gradient(90deg,#ff71b8,#ffe477,#72eaff);
     background-size:300%;
     -webkit-background-clip:text;
     background-clip:text;
@@ -511,13 +440,10 @@ body{
 }
 
 .finalText{
-    font-family:"Nirmala UI","Noto Sans Telugu","Times New Roman",Georgia,serif;
     font-size:clamp(25px,5vw,38px);
     line-height:1.5;
     color:#ffe8f7;
 }
-
-/* HEARTS */
 
 .heart{
     position:fixed;
@@ -528,28 +454,18 @@ body{
 }
 
 @keyframes heartFloat{
-
     0%{
-        transform:
-            translateY(0)
-            scale(.6);
+        transform:translateY(0) scale(.6);
         opacity:0;
     }
-
     15%{
         opacity:1;
     }
-
     100%{
-        transform:
-            translateY(-110vh)
-            scale(1.4)
-            rotate(25deg);
+        transform:translateY(-110vh) scale(1.4) rotate(25deg);
         opacity:0;
     }
 }
-
-/* CONFETTI */
 
 .confetti{
     position:fixed;
@@ -561,13 +477,9 @@ body{
 
 @keyframes fall{
     to{
-        transform:
-            translateY(110vh)
-            rotate(720deg);
+        transform:translateY(110vh) rotate(720deg);
     }
 }
-
-/* MOBILE */
 
 @media(max-width:650px){
 
@@ -603,13 +515,12 @@ body{
 
 <div class="stars"></div>
 
-<!-- MUSIC BUTTON -->
-
 <button class="musicBtn"
         id="musicButton"
         onclick="toggleMusic()">
     ♫
 </button>
+
 
 <!-- SCREEN 1 -->
 
@@ -626,35 +537,41 @@ body{
 
 </div>
 
-<div class="script"
-     style="font-size:32px;">
-    Hey Buddu Thalli... ❤️
-</div>
+<p class="script"
+   style="font-size:30px;color:#ffe2f3;">
+
+Assalamu Alaikum, my love... ❤️
+
+</p>
 
 <h1 class="bigGradient">
-    HAPPY<br>
-    BIRTHDAY
+
+HAPPY<br>
+BIRTHDAY
+
 </h1>
 
-<h2 class="script"
-    style="
-    font-size:clamp(45px,9vw,80px);
-    color:white;
-    ">
-    My Love ❤️
+<h2 style="font-size:clamp(45px,9vw,80px);">
+
+My Love ❤️
+
 </h2>
 
 <p class="subtitle">
 
-Finallyyyy... aa roju vachindhiii 🥹❤️
+<strong>24th Birthday Mubarak. 🥹❤️</strong>
+
+<br><br>
+
+May Allah protect you,
+guide you,
+bless you with happiness,
+health, peace and success.
 
 <br>
 
-October 1st nunchi wait chesthunna roju...
-
-<br>
-
-<strong>October 30th. 🎂</strong>
+And may He always keep you safe
+wherever you go. 🤲❤️
 
 </p>
 
@@ -665,20 +582,20 @@ CLICK HERE ❤️
 
 </button>
 
-<p style="
-margin-top:15px;
-color:#ffd8ed;
-">
+<p style="margin-top:15px;color:#ffd8ed;">
 
-Song start avuthundiii... 🎶
+Put your headphones on... 🎧
+
 <br>
-Headphones pettukunte inka baguntundhi. 🥹❤️
+
+I have something for you. 🥹❤️
 
 </p>
 
 </div>
 
 </section>
+
 
 <!-- SCREEN 2 -->
 
@@ -690,11 +607,7 @@ Headphones pettukunte inka baguntundhi. 🥹❤️
 🎈 🎂 🎈
 </div>
 
-<p class="script"
-   style="
-   font-size:34px;
-   color:#ffd7ef;
-   ">
+<p style="font-size:32px;color:#ffd7ef;">
 
 HAPPIEEE 24TH BIRTHDAYYY...
 
@@ -711,9 +624,10 @@ THALLIII ❤️
 
 24 years vachayiiii... 🥹❤️
 
-<br>
+<br><br>
 
-And somehow, aa 24 years lo
+And somehow,
+aa 24 years lo
 nuvvu na life loki vachina part
 na favourite part ayyindhi.
 
@@ -724,16 +638,22 @@ Ivala just nee birthday kaadhu...
 <br>
 
 <strong>
-It's the day my favourite person
-came into this world. ❤️
+It's the day Allah brought
+my favourite person into this world.
+❤️
 </strong>
+
+<br><br>
+
+And I'm so grateful
+I got to find you. 🫂❤️
 
 </p>
 
 <button class="btn"
         onclick="showScreen('screen3');createHearts(15);">
 
-ONE MORE THING... 👀❤️
+I HAVE SOMETHING TO TELL YOU ❤️
 
 </button>
 
@@ -741,7 +661,8 @@ ONE MORE THING... 👀❤️
 
 </section>
 
-<!-- SCREEN 3 -->
+
+<!-- SCREEN 3 LETTER -->
 
 <section class="screen" id="screen3">
 
@@ -751,105 +672,108 @@ ONE MORE THING... 👀❤️
 💌
 </div>
 
-<h2 class="script"
-    style="
-    font-size:48px;
-    margin-bottom:20px;
-    ">
+<h2 style="font-size:48px;margin-bottom:20px;">
 
 Buddu Thalli... ❤️
 
 </h2>
 
+
 <div class="letter">
 
+<div class="dua">
+
+<div class="duaArabic">
+رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ
+</div>
+
+<div class="duaEnglish">
+
+May Allah bless your life with goodness,
+protect you wherever you go,
+give you success in everything that is good for you,
+keep your heart peaceful,
+and make every coming year better than the last. 🤲❤️
+
+</div>
+
+</div>
+
+
 <p>
+
 <strong>
-Happy Birthday to My Favorite Person,
-My Forever, My Love ❤️🥹🎂
+Assalamu Alaikum, my love. ❤️
 </strong>
+
+<br><br>
+
+Happy Birthday to my favourite person,
+my safest place,
+my forever,
+and the person I secretly hope I get to call
+my husband someday. 🥹💍❤️
+
 </p>
+
 
 <p>
 
 Finally… <span class="highlight">nee birthday vachindhi.</span> 🥹❤️
 
-Nijanga cheppali ante, ee roju kosam nenu
-chala excited ga wait chesa.
+Nijanga cheppali ante,
+ee roju kosam nenu chala excited ga wait chesa.
 
-Endukante idi just another date for me kadu…
+Because it's not just another date for me...
 
 <span class="highlight">
-it's the day my favorite person came into this world.
-</span> 🫂❤️
+it's the day my favourite person came into this world.
+</span>
 
 </p>
 
+
 <p>
 
-Sometimes I still wonder how someone who was once
-a complete stranger became the person I can't imagine
-my life without. 🥺
+Sometimes I still wonder how someone
+who was once a complete stranger
+became the person I can't imagine
+my life without.
 
 <br><br>
 
 <span class="highlight">
-You were once someone I didn't even know existed…
+You were once someone I didn't even know existed...
 and now you're someone I can't imagine my tomorrow without.
 </span>
 
 </p>
 
-<p>
-
-Life lo chala mandi people ostharu, potharu.
-
-Konthamandi memories istaru,
-konthamandi lessons istaru.
-
-Kani <span class="highlight">
-nuvvu na life loki vachhi na life lo oka permanent place create chesav.
-</span> ❤️
-
-</p>
 
 <p>
 
-Netho unna relationship ni explain cheyyadaniki
-oka perfect word dorakadam kastam.
+Nuvvu na life loki vachhi
+na life lo oka permanent place create chesav.
 
 You're not just my boyfriend.
 
-You're the person I run to when I'm happy,
-the person I want when I'm upset,
-the person I want to tell everything to,
-and the person whose presence itself makes me feel okay. 🥹❤️
+You're the person I want to tell everything to.
+
+The person I want beside me when I'm happy.
+
+The person I want when I'm upset.
+
+And the person whose presence itself
+makes me feel okay.
 
 <br><br>
 
-<span class="highlight">
-You're my person.
-</span>
+<strong>
+You're my person. ❤️
+</strong>
 
 </p>
 
-<p>
-
-The one I want to share stupid things with.
-
-<br>
-
-The one I want to annoy forever. 😂❤️
-
-<br>
-
-The one I want beside me when life is beautiful.
-
-<br>
-
-And the one I want beside me when life isn't beautiful at all.
-
-</p>
 
 <p>
 
@@ -857,47 +781,49 @@ Nenu perfect kadhu.
 
 Na mood swings untayi,
 overthinking untadhi,
-unnecessary ga irritate chestha,
-sometimes ninnu hurt kuda chestha. 😭
+sometimes unnecessary ga irritate chestha,
+sometimes ninnu hurt kuda chestha.
 
-But through all of that,
-one thing has never changed—
+But through everything...
 
 <br><br>
 
 <strong>
-I choose you. ❤️
+I still choose you. ❤️
 </strong>
 
 </p>
 
+
 <p>
 
-And if life ever gave me the chance
-to start everything from zero,
+And if life ever gave me
+the chance to start everything from zero,
+
 I'd still want to find you.
 
-Maybe this time konchem earlier ga. 😭❤️
+Maybe this time konchem earlier ga. 🥹❤️
 
-Because I wouldn't want to miss even one chapter
-of whatever <span class="highlight">"us"</span> becomes.
+Because I don't want to miss
+whatever our story becomes.
 
 </p>
 
+
 <p>
 
-Nee birthday roju nenu neeku expensive gifts ivvalekapoyina,
-oka thing matram wholeheartedly ivvagalanu—
+Nee birthday roju
+nenu neeku expensive gifts ivvalekapoyina,
+
+oka promise matram wholeheartedly ivvagalanu—
 
 <br><br>
 
-<strong>
-my promise that I'll always want to see you happy. 🫂❤️
-</strong>
+<span class="highlight">
+I'll always want to see you happy.
+</span>
 
-</p>
-
-<p>
+<br><br>
 
 Nee dreams anni fulfill avvali.
 
@@ -905,75 +831,49 @@ Nuvvu anukunna places ki vellali.
 
 Nuvvu korukunna success motham ravali.
 
-Nuvvu proud ga
-<span class="highlight">"I did it"</span>
-ani cheppukune days chala ravali. ❤️
+And when one day you say,
+<strong>"I did it,"</strong>
 
-<br><br>
-
-And somewhere in all those dreams,
-I hope there is a little place for me too. 🥹
+I want to be somewhere beside you,
+smiling proudly at you. ❤️
 
 </p>
 
+
 <p>
 
-Because naa biggest dreams lo okati
-success or money kante simple ga untadhi…
+And selfish ga oka dream na kosam...
 
 <br><br>
 
 <span class="highlight">
-One day, morning nee pakkana lechi,
+One day morning nee pakkana lechi,
 ninnu chusi "manam really did it"
 ani smile cheskovali. 🏡💍❤️
 </span>
 
-</p>
-
-<p>
+<br><br>
 
 No perfect life.
 
-<br>
-
 No perfect relationship.
 
-<br>
-
-No perfect people.
-
-<br><br>
-
-<span class="highlight">
-Just you and me, choosing each other
+Just you and me,
+choosing each other
 through every version of life.
-</span>
 
 <br><br>
 
+<strong>
 That's the life I want. ❤️
+</strong>
 
 </p>
 
-<p>
-
-And birthday boy,
-I hope this new year of your life
-changes you only for the better.
-
-I hope you become everything
-you've ever wanted to become.
-
-I hope you get opportunities that scare you,
-achievements that make you proud,
-and happiness that stays longer than you expect. 🥹✨
-
-</p>
 
 <p>
 
-And when something good happens to you,
+When something good happens to you,
 I want to be the person you call first.
 
 When something bad happens,
@@ -982,66 +882,41 @@ I want to be the person you know will stay.
 When you're tired,
 I want my presence to feel like home.
 
-And when you're happy…
+And when you're happy...
+
+<br><br>
 
 <span class="highlight">
 I want to be there smiling because you're smiling.
-</span> ❤️
+</span>
 
 </p>
 
+
 <p>
-
-Nuvvu na life lo entha important ayipoyavo
-sometimes nene realize avvanu.
-
-But small things make me realize it.
-
-<br><br>
 
 Oka random song vintunte nuvvu gurthosthav.
 
-<br>
+Something funny jarigithe
+first netho share cheyali anipisthadhi.
 
-Something funny jarigithe first netho share cheyali anipisthadhi.
-
-<br>
-
-Something bad jarigithe netho matladali anipisthadhi.
-
-<br>
+Something bad jarigithe
+netho matladali anipisthadhi.
 
 Something beautiful kanipisthe
-<span class="highlight">
-"if he was here..."
-</span>
+<strong>"if he was here..."</strong>
 ani anipisthadhi.
 
-</p>
-
-<p>
-
-That's when I realize…
-
 <br><br>
+
+That's when I realise...
 
 <span class="highlight">
-You became a part of the way I experience life.
-</span> 🥹❤️
+you became a part of the way I experience life.
+</span>
 
 </p>
 
-<p>
-
-And maybe that's why I don't want just a beautiful life.
-
-<br><br>
-
-<strong>
-I want my life to be beautiful because you're in it. ❤️
-</strong>
-
-</p>
 
 <p>
 
@@ -1056,9 +931,10 @@ Please find me again.
 
 <br><br>
 
-And this time,
-don't come as just a friend,
-don't come as someone I have to lose and find again…
+And this time...
+
+don't come as someone
+I have to lose and find again.
 
 <br><br>
 
@@ -1068,11 +944,8 @@ Come as my husband. 💍❤️
 
 </p>
 
-<p>
 
-Because somehow,
-life partner ane bond ni first time
-truly feel cheyinchindhi nuvve. 🥹
+<p>
 
 Netho nenu na real self ga undagalanu.
 
@@ -1092,16 +965,14 @@ Very, very rare. ❤️
 
 </p>
 
+
 <p>
 
-So thank you.
+Thank you...
 
-Not just for loving me.
+For knowing me.
 
-Thank you for knowing me.
-
-For understanding the versions of me
-that even I don't understand sometimes.
+For understanding me.
 
 For staying through my difficult days.
 
@@ -1109,34 +980,31 @@ For making ordinary conversations into memories.
 
 For making me laugh when I don't feel like laughing.
 
-For being the person I can call
-<span class="highlight">mine.</span> 🫂❤️
+For being the person I can call mine.
 
-</p>
+<br><br>
 
-<p>
+And for every time
+I made your heart heavy...
 
-And yes…
-I know I've hurt you too. 😔
-
-Konni words tho,
-konni actions tho,
-konni unnecessary fights tho.
-
-For every time I made your heart heavy,
 <span class="highlight">
 I'm genuinely sorry. ❤️
 </span>
 
 </p>
 
+
 <p>
 
-I may not always know how to express everything correctly,
-but please never confuse my imperfect way of loving
+I may not always know
+how to express everything correctly,
+
+but please never confuse
+my imperfect way of loving
 with a lack of love.
 
-Because if there is one thing I'm completely sure about…
+Because one thing
+I'm completely sure about is...
 
 <br><br>
 
@@ -1148,14 +1016,14 @@ More than these words can explain. 🥹❤️
 
 </p>
 
+
 <p>
 
-Actually, ee whole message kuda
-naa heart lo unna love lo maybe
-<span class="highlight">1% kuda undadhu.</span> 😂❤️
+Actually ee whole message kuda
+naa heart lo unna love lo
+maybe <span class="highlight">1% kuda undadhu.</span> 😂❤️
 
-Remaining <span class="highlight">99%</span>
-words lo explain cheyyadam impossible.
+Remaining 99% words lo explain cheyyadam impossible.
 
 So aa 99% ni oka promise laga petkuntunna—
 
@@ -1181,36 +1049,11 @@ Every ordinary day too. ❤️
 
 </p>
 
-<p>
-
-Today, I don't just want to wish you a happy birthday.
-
-I want to wish you a life that makes you genuinely happy.
-
-A life where you achieve everything you've worked for.
-
-A life where you never feel alone.
-
-A life full of laughter,
-peace,
-success,
-love,
-and beautiful memories.
-
-<br><br>
-
-And selfish ga oka wish na kosam…
-
-<span class="highlight">
-I want to be there for as many of those moments
-as life allows me to be. 🥹❤️
-</span>
-
-</p>
 
 <p>
 
-Because I don't want to be just a chapter in your life.
+I don't want to be
+just a chapter in your life.
 
 <br><br>
 
@@ -1218,11 +1061,9 @@ Because I don't want to be just a chapter in your life.
 I want to be there for the whole story. ♾️❤️
 </strong>
 
-</p>
+<br><br>
 
-<p>
-
-So here's to another year of you.
+Another year of you.
 
 Another year of your dreams.
 
@@ -1232,14 +1073,14 @@ Another year of us.
 
 <br><br>
 
-And hopefully…
+And hopefully...
 
-<span class="highlight">
-many, many more birthdays where I'm still
-the girl annoying you at midnight. 😂❤️
-</span>
+many, many more birthdays
+where I'm still the girl
+annoying you at midnight. 😂❤️
 
 </p>
+
 
 <p>
 
@@ -1253,9 +1094,7 @@ Happy Birthday to the man I fell in love with,
 the person who became my safest place,
 and the husband I hope life lets me call mine someday. 💍🥹❤️
 
-</p>
-
-<p>
+<br><br>
 
 I loved you yesterday.
 
@@ -1265,7 +1104,7 @@ I love you today.
 
 <br>
 
-And whatever tomorrow brings…
+And whatever tomorrow brings...
 
 <br>
 
@@ -1273,30 +1112,21 @@ And whatever tomorrow brings…
 I hope it brings me to you. ♾️❤️
 </span>
 
-</p>
-
-<p>
+<br><br>
 
 <strong>
 Happy Birthday, Jaan. ❤️🫂🎂💍
 </strong>
 
-<br><br>
-
-Now go enjoy your day, birthday boy…
-
-because today the whole world gets to celebrate you,
-
-but I'm going to celebrate you a little extra. 😌❤️
-
 </p>
 
 </div>
 
+
 <button class="btn"
         onclick="showScreen('screen4');createHearts(20);">
 
-OKAYYY... NOW THE SURPRISES 🎁❤️
+NOW... YOUR 24 SURPRISES 🎁❤️
 
 </button>
 
@@ -1304,7 +1134,8 @@ OKAYYY... NOW THE SURPRISES 🎁❤️
 
 </section>
 
-<!-- SCREEN 4 -->
+
+<!-- SCREEN 4 GIFTS -->
 
 <section class="screen" id="screen4">
 
@@ -1320,8 +1151,8 @@ OKAYYY... NOW THE SURPRISES 🎁❤️
 
 <br>
 
-Kani exact ga em unnayo...
-<strong>ippude telusukunte surprise pothundhi kadaaa 👀😂</strong>
+But exact ga em unnayo
+ippude cheppesthe surprise pothundhi kadaaa. 👀😂
 
 <br>
 
@@ -1329,9 +1160,7 @@ So don't try guessing. 😌❤️
 
 </p>
 
-<div class="giftGrid"
-     id="giftGrid">
-</div>
+<div class="giftGrid" id="giftGrid"></div>
 
 <button class="btn"
         id="giftFinished"
@@ -1346,6 +1175,7 @@ So don't try guessing. 😌❤️
 
 </section>
 
+
 <!-- SCREEN 5 -->
 
 <section class="screen" id="screen5">
@@ -1359,15 +1189,11 @@ So don't try guessing. 😌❤️
 <h1 class="bigGradient"
     style="font-size:clamp(50px,10vw,100px);">
 
-24 ayipoyay...
+24 AYIPOYAY... ❤️
 
 </h1>
 
-<p class="script"
-   style="
-   font-size:42px;
-   color:#ffe0f3;
-   ">
+<p style="font-size:42px;color:#ffe0f3;">
 
 Kani naa daggara...
 
@@ -1377,8 +1203,7 @@ inka oka surprise undhiii. 👀
 
 </p>
 
-<p class="subtitle"
-   style="margin-top:20px;">
+<p class="subtitle" style="margin-top:20px;">
 
 Idi konchem different.
 
@@ -1409,7 +1234,8 @@ OPEN IT 🎬❤️
 
 </section>
 
-<!-- SCREEN 6 -->
+
+<!-- SCREEN 6 THEATRE -->
 
 <section class="screen" id="screen6">
 
@@ -1461,11 +1287,7 @@ for longer than you think. ❤️
 
 </div>
 
-<p class="script"
-   style="
-   font-size:32px;
-   color:#ffe1e8;
-   ">
+<p style="font-size:32px;color:#ffe1e8;">
 
 Movie chuddam ani cheppina...
 
@@ -1490,7 +1312,8 @@ BUT THIS ISN'T THE LAST ONE ❤️
 
 </section>
 
-<!-- SCREEN 7 -->
+
+<!-- FINAL -->
 
 <section class="screen" id="screen7">
 
@@ -1500,11 +1323,7 @@ BUT THIS ISN'T THE LAST ONE ❤️
 ❤️✨🥹✨❤️
 </div>
 
-<p class="script"
-   style="
-   font-size:38px;
-   color:#ffd7ef;
-   ">
+<p style="font-size:38px;color:#ffd7ef;">
 
 And finally...
 
@@ -1552,19 +1371,13 @@ Because...
 
 </p>
 
-<h2 class="script"
-    style="
-    font-size:clamp(55px,12vw,100px);
-    color:#fff;
-    margin-top:20px;
-    ">
+<h2 style="font-size:clamp(55px,12vw,100px);color:#fff;margin-top:20px;">
 
 It's Me. ❤️
 
 </h2>
 
-<p class="finalText"
-   style="margin-top:25px;">
+<p class="finalText" style="margin-top:25px;">
 
 Your 25th surprise... 😂❤️
 
@@ -1579,17 +1392,19 @@ already permanent. 🥹❤️
 <br><br>
 
 <strong>
+
 24 gifts are things I bought for you.
 
-<br>
+<br><br>
 
 But this one...
 
-<br>
+<br><br>
 
 is the person who wants to
 stay beside you through all the
 next birthdays too. ❤️
+
 </strong>
 
 <br><br>
@@ -1597,7 +1412,7 @@ next birthdays too. ❤️
 Happy Birthday,
 Buddu Thalli. ❤️🫂🎂
 
-<br>
+<br><br>
 
 <strong>
 Here's to 24...
@@ -1610,25 +1425,22 @@ and hopefully a lifetime of us. ♾️💍❤️
 
 </section>
 
+
 <!-- GIFT MODAL -->
 
-<div class="modal"
-     id="giftModal">
+<div class="modal" id="giftModal">
 
 <div class="modalCard">
 
-<div class="modalIcon"
-     id="modalIcon">
+<div class="modalIcon" id="modalIcon">
 🎁
 </div>
 
-<h2 class="modalTitle"
-    id="modalTitle">
+<h2 class="modalTitle" id="modalTitle">
 Surprise
 </h2>
 
-<p class="modalText"
-   id="modalText">
+<p class="modalText" id="modalText">
 Something special is waiting...
 </p>
 
@@ -1643,180 +1455,251 @@ Awww ❤️
 
 </div>
 
-<!-- MUSIC -->
 
-<audio
-    id="birthdaySong"
-    src="./birthday-song.mp3"
-    loop
-    preload="auto"
-    playsinline>
+<!-- DO NOT DELETE THIS SONG -->
+
+<audio id="birthdaySong"
+       preload="auto"
+       loop
+       playsinline>
+
+    <source src="./birthday-song.mp3"
+            type="audio/mpeg">
+
 </audio>
 
-<script>
 
-/* 24 GIFTS */
+<script>
 
 const gifts = [
 
 {
-    icon:"✨",
-    title:"Surprise 01",
-    text:"Idi chinna comfort kosam... daily life lo silent ga nee pakkana undedhi. 😌❤️"
+icon:"✨",
+title:"Surprise 01",
+text:"Idi chinna comfort kosam... daily life lo silent ga nee pakkana undedhi. 😌❤️"
 },
 
 {
-    icon:"👕",
-    title:"Surprise 02",
-    text:"Konni things choosthe simple ga anipisthayi... kani avi ninnu imagine chesi choose chesinavi. 👀❤️"
+icon:"👕",
+title:"Surprise 02",
+text:"Konni things choosthe simple ga anipisthayi... kani avi ninnu imagine chesi choose chesinavi. 👀❤️"
 },
 
 {
-    icon:"💫",
-    title:"Surprise 03",
-    text:"Another little something... because birthday boy ki options ekkuva undali kadaaa 😂❤️"
+icon:"👕",
+title:"Surprise 03",
+text:"Another little something... because birthday boy ki options ekkuva undali kadaaa 😂❤️"
 },
 
 {
-    icon:"🖤",
-    title:"Surprise 04",
-    text:"Idi everyday adventures kosam. Nee style lo neeku set avvali ani chusa. 😌"
+icon:"🚗",
+title:"Surprise 04",
+text:"Idi konchem different... four wheels, konchem freedom, and something I imagined you enjoying. 👀❤️"
 },
 
 {
-    icon:"🔥",
-    title:"Surprise 05",
-    text:"Konchem different. Konchem cool. And definitely something I imagined you wearing. 👀"
+icon:"🔥",
+title:"Surprise 05",
+text:"Konchem different. Konchem cool. And definitely something I imagined you wearing. 👀"
 },
 
 {
-    icon:"🤲",
-    title:"Surprise 06",
-    text:"Idi chusthe naaku oka peaceful feeling osthundhi. Something close to the heart. ❤️"
+icon:"🤲",
+title:"Surprise 06",
+text:"Idi naaku chala emotional gift. Ayatul Kursi — Allah protection kosam chadive oka pavitra ayat. Nuvvu ekkadiki vellina Allah ninnu protect cheyyali ani naa heart nunchi ichina small reminder. ❤️🤲"
 },
 
 {
-    icon:"🧸",
-    title:"Surprise 07",
-    text:"Chinna cute thing... but somehow it reminded me of you immediately. 🥹❤️"
+icon:"🧸",
+title:"Surprise 07",
+text:"Chinna cute thing... but somehow it reminded me of you immediately. 🥹❤️"
 },
 
 {
-    icon:"🫶",
-    title:"Surprise 08",
-    text:"Cold weather, long days, busy days... whatever it is, I thought this might make things a little easier. ❤️"
+icon:"🫶",
+title:"Surprise 08",
+text:"Cold weather, long days, busy days... whatever it is, I thought this might make things a little easier. ❤️"
 },
 
 {
-    icon:"💼",
-    title:"Surprise 09",
-    text:"Something you can keep with you... because important things deserve a safe place. 😌"
+icon:"💼",
+title:"Surprise 09",
+text:"Something you can keep with you... because important things deserve a safe place. 😌"
 },
 
 {
-    icon:"🌙",
-    title:"Surprise 10",
-    text:"Ee one ki konchem special meaning undhi. Look at it carefully. ❤️✨"
+icon:"🌙",
+title:"Surprise 10",
+text:"Ee one ki konchem special meaning undhi. Look at it carefully. ❤️✨"
 },
 
 {
-    icon:"🧢",
-    title:"Surprise 11",
-    text:"Birthday boy ki konchem extra style kavali ani anipinchindhi. 😂❤️"
+icon:"🧢",
+title:"Surprise 11",
+text:"Birthday boy ki konchem extra style kavali ani anipinchindhi. 😂❤️"
 },
 
 {
-    icon:"🏍️",
-    title:"Surprise 12",
-    text:"Something for those moments when you're doing your own thing and enjoying the ride. 👀"
+icon:"🏍️",
+title:"Surprise 12",
+text:"Something for those moments when you're doing your own thing and enjoying the ride. 👀"
 },
 
 {
-    icon:"🧦",
-    title:"Surprise 13",
-    text:"Small thing... but daily life lo chala useful ayye type. 😌"
+icon:"🧦",
+title:"Surprise 13",
+text:"Small thing... but daily life lo chala useful ayye type. 😌"
 },
 
 {
-    icon:"🤍",
-    title:"Surprise 14",
-    text:"Something connected to those quiet moments that matter more than people realize. ❤️"
+icon:"🤍",
+title:"Surprise 14",
+text:"Something connected to those quiet moments that matter more than people realize. ❤️"
 },
 
 {
-    icon:"📸",
-    title:"Surprise 15",
-    text:"Memories are important... so I wanted one little thing to hold one close. 🥹❤️"
+icon:"📸",
+title:"Surprise 15",
+text:"Memories are important... so I wanted one little thing to hold one close. 🥹❤️"
 },
 
 {
-    icon:"☀️",
-    title:"Surprise 16",
-    text:"Because self-care kuda important ani birthday boy ki remind cheyyali kadaaa. 😂❤️"
+icon:"☀️",
+title:"Surprise 16",
+text:"Because self-care kuda important ani birthday boy ki remind cheyyali kadaaa. 😂❤️"
 },
 
 {
-    icon:"✨",
-    title:"Surprise 17",
-    text:"Same reason as the previous one... konchem extra care from me. 😌❤️"
+icon:"✨",
+title:"Surprise 17",
+text:"Same reason as the previous one... konchem extra care from me. 😌❤️"
 },
 
 {
-    icon:"🖤",
-    title:"Surprise 18",
-    text:"A small finishing touch. Because sometimes little details complete everything. 👀"
+icon:"🖤",
+title:"Surprise 18",
+text:"A small finishing touch. Because sometimes little details complete everything. 👀"
 },
 
 {
-    icon:"😎",
-    title:"Surprise 19",
-    text:"Sunny days ki konchem protection... plus birthday boy ki konchem attitude. 😂"
+icon:"😎",
+title:"Surprise 19",
+text:"Sunny days ki konchem protection... plus birthday boy ki konchem attitude. 😂"
 },
 
 {
-    icon:"🤍",
-    title:"Surprise 20",
-    text:"Idi multiple times use avuthadhi... so don't lose it. 😌"
+icon:"🤍",
+title:"Surprise 20",
+text:"Idi multiple times use avuthadhi... so don't lose it. 😌"
 },
 
 {
-    icon:"🌹",
-    title:"Surprise 21",
-    text:"This one is all about making your presence memorable. ❤️"
+icon:"🌹",
+title:"Surprise 21",
+text:"This one is all about making your presence memorable. ❤️"
 },
 
 {
-    icon:"🍫",
-    title:"Surprise 22",
-    text:"Because every serious birthday plan needs at least a little sweetness. 😂❤️"
+icon:"🍫",
+title:"Surprise 22",
+text:"Because every serious birthday plan needs at least a little sweetness. 😂❤️"
 },
 
 {
-    icon:"🎂",
-    title:"Surprise 23",
-    text:"Okay... now you should probably know that something edible is involved. 👀😂"
+icon:"🎂",
+title:"Surprise 23",
+text:"Okay... now you should probably know that something edible is involved. 👀😂"
 },
 
 {
-    icon:"🎉",
-    title:"Surprise 24",
-    text:"This isn't really something you open... it's something you experience. And it's the reason I kept saying 'wait'. 👀❤️"
+icon:"🎉",
+title:"Surprise 24",
+text:"This isn't really something you open... it's something you experience. And it's the reason I kept saying 'wait'. 👀❤️"
 }
 
 ];
 
-const giftGrid =
-document.getElementById("giftGrid");
 
-let opened =
-new Set();
+const music=document.getElementById("birthdaySong");
 
-/* CREATE GIFTS */
+let playing=false;
 
-gifts.forEach((gift,index)=>{
 
-    const box =
-    document.createElement("div");
+function startMusic(){
+
+    if(!music){
+        return;
+    }
+
+    music.volume=1;
+
+    music.play()
+    .then(function(){
+
+        playing=true;
+
+        document.getElementById("musicButton")
+        .textContent="🔊";
+
+    })
+    .catch(function(error){
+
+        console.log("Music error:",error);
+
+    });
+
+}
+
+
+function beginEverything(){
+
+    /*
+      The button click itself starts the music.
+      This is important because the browser
+      allows audio playback from a user click.
+    */
+
+    startMusic();
+
+    showScreen("screen2");
+
+    celebration();
+
+}
+
+
+function toggleMusic(){
+
+    if(!music){
+        return;
+    }
+
+    if(!playing){
+
+        startMusic();
+
+    }else{
+
+        music.pause();
+
+        playing=false;
+
+        document.getElementById("musicButton")
+        .textContent="♫";
+
+    }
+
+}
+
+
+const giftGrid=document.getElementById("giftGrid");
+
+let opened=new Set();
+
+
+gifts.forEach(function(gift,index){
+
+    const box=document.createElement("div");
 
     box.className="gift";
 
@@ -1832,15 +1715,16 @@ gifts.forEach((gift,index)=>{
 
     `;
 
-    box.onclick=()=>{
+    box.onclick=function(){
+
         openGift(index,box);
+
     };
 
     giftGrid.appendChild(box);
 
 });
 
-/* OPEN GIFT */
 
 function openGift(index,box){
 
@@ -1849,59 +1733,63 @@ function openGift(index,box){
     box.classList.add("opened");
 
     document.getElementById("modalIcon")
-        .textContent=gifts[index].icon;
+    .textContent=gifts[index].icon;
 
     document.getElementById("modalTitle")
-        .textContent=gifts[index].title;
+    .textContent=gifts[index].title;
 
     document.getElementById("modalText")
-        .textContent=gifts[index].text;
+    .textContent=gifts[index].text;
 
     document.getElementById("giftModal")
-        .classList.add("show");
+    .classList.add("show");
 
     createHearts(7);
+
 
     if(opened.size===24){
 
         document.getElementById("giftFinished")
-            .style.display="inline-block";
+        .style.display="inline-block";
 
-        setTimeout(()=>{
+        setTimeout(function(){
 
             document.getElementById("giftFinished")
-                .scrollIntoView({
-                    behavior:"smooth",
-                    block:"center"
-                });
+            .scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
 
         },300);
 
         celebration();
+
     }
 
 }
 
-/* CLOSE GIFT */
 
 function closeGift(){
 
     document.getElementById("giftModal")
-        .classList.remove("show");
+    .classList.remove("show");
 
 }
 
-/* SCREEN */
 
 function showScreen(id){
 
-    document.querySelectorAll(".screen")
-        .forEach(screen=>{
-            screen.classList.remove("active");
-        });
+    document
+    .querySelectorAll(".screen")
+    .forEach(function(screen){
 
-    document.getElementById(id)
-        .classList.add("active");
+        screen.classList.remove("active");
+
+    });
+
+    document
+    .getElementById(id)
+    .classList.add("active");
 
     window.scrollTo({
         top:0,
@@ -1910,94 +1798,6 @@ function showScreen(id){
 
 }
 
-/* MUSIC */
-
-const music =
-document.getElementById("birthdaySong");
-
-let playing=false;
-
-/*
-   IMPORTANT:
-   No music.src check here.
-   The song is already:
-   ./birthday-song.mp3
-*/
-
-function beginEverything(){
-
-    if(music){
-
-        music.load();
-
-        music.play()
-        .then(()=>{
-
-            playing=true;
-
-            document.getElementById("musicButton")
-                .textContent="🔊";
-
-        })
-        .catch((error)=>{
-
-            console.log(
-                "Music playback error:",
-                error
-            );
-
-        });
-
-    }
-
-    showScreen("screen2");
-
-    celebration();
-
-}
-
-function toggleMusic(){
-
-    if(!music){
-        return;
-    }
-
-    if(playing){
-
-        music.pause();
-
-        playing=false;
-
-        document.getElementById("musicButton")
-            .textContent="♫";
-
-    }else{
-
-        music.load();
-
-        music.play()
-        .then(()=>{
-
-            playing=true;
-
-            document.getElementById("musicButton")
-                .textContent="🔊";
-
-        })
-        .catch((error)=>{
-
-            console.log(
-                "Music playback error:",
-                error
-            );
-
-        });
-
-    }
-
-}
-
-/* HEARTS */
 
 function createHearts(amount=5){
 
@@ -2014,8 +1814,7 @@ function createHearts(amount=5){
 
     for(let i=0;i<amount;i++){
 
-        const heart =
-        document.createElement("div");
+        const heart=document.createElement("div");
 
         heart.className="heart";
 
@@ -2037,15 +1836,16 @@ function createHearts(amount=5){
 
         document.body.appendChild(heart);
 
-        setTimeout(()=>{
+        setTimeout(function(){
+
             heart.remove();
+
         },9000);
 
     }
 
 }
 
-/* CONFETTI */
 
 function celebration(){
 
@@ -2060,8 +1860,7 @@ function celebration(){
 
     for(let i=0;i<60;i++){
 
-        const piece=
-        document.createElement("div");
+        const piece=document.createElement("div");
 
         piece.className="confetti";
 
@@ -2086,8 +1885,10 @@ function celebration(){
 
         document.body.appendChild(piece);
 
-        setTimeout(()=>{
+        setTimeout(function(){
+
             piece.remove();
+
         },7000);
 
     }
@@ -2096,24 +1897,21 @@ function celebration(){
 
 }
 
-/* MODAL OUTSIDE CLICK */
 
 document
 .getElementById("giftModal")
-.addEventListener(
-    "click",
-    function(e){
+.addEventListener("click",function(e){
 
-        if(e.target===this){
-            closeGift();
-        }
+    if(e.target===this){
+
+        closeGift();
 
     }
-);
 
-/* BACKGROUND HEARTS */
+});
 
-setInterval(()=>{
+
+setInterval(function(){
 
     if(Math.random()>.55){
 
