@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24 Little Surprises ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Dancing+Script:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Baloo 2', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background: #12002b;
+    color: white;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+.page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, #ff4fa3 0, transparent 25%),
+        radial-gradient(circle at 80% 20%, #7b4dff 0, transparent 28%),
+        radial-gradient(circle at 50% 80%, #ff8c42 0, transparent 25%),
+        linear-gradient(135deg, #16002f, #32005c, #0d174d);
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, #ffd6f6 1px, transparent 1px);
+    background-size: 80px 80px, 130px 130px;
+    background-position: 0 0, 40px 50px;
+    opacity: .35;
+    animation: starsMove 15s linear infinite;
+}
+
+@keyframes starsMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(80px); }
+}
+
+/* ---------- SCREENS ---------- */
+
+.screen {
+    min-height: 100vh;
+    display: none;
+    position: relative;
+    z-index: 2;
+    padding: 35px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.content {
+    width: min(900px, 100%);
+    text-align: center;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+.small-title {
+    font-size: clamp(18px, 4vw, 28px);
+    letter-spacing: 3px;
+    color: #ffd9f4;
+}
+
+.script {
+    font-family: 'Dancing Script', cursive;
+}
+
+.big-title {
+    font-size: clamp(55px, 13vw, 125px);
+    line-height: .85;
+    margin: 15px 0;
+    background: linear-gradient(
+        90deg,
+        #ff76c8,
+        #ffd35a,
+        #8be9ff,
+        #ff76c8
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientText 5s linear infinite;
+    filter: drop-shadow(0 5px 20px rgba(255, 90, 190, .35));
+}
+
+@keyframes gradientText {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+
+.subtitle {
+    font-size: clamp(19px, 4vw, 28px);
+    color: #ffeafa;
+    margin: 15px auto;
+    max-width: 650px;
+}
+
+.message {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(25px, 5vw, 42px);
+    line-height: 1.35;
+    color: #fff;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 16px 35px;
+    margin-top: 28px;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff3f9f, #ff7a59, #ffcf4a);
+    box-shadow:
+        0 0 20px rgba(255, 64, 165, .7),
+        0 0 50px rgba(255, 100, 100, .3);
+    transition: .25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+}
+
+.btn:active {
+    transform: scale(.96);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,.3);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    30%, 100% { left: 140%; }
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 25px;
+    pointer-events: none;
+    animation: floatHeart linear forwards;
+    z-index: 10;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(.6) rotate(0);
+        opacity: 0;
+    }
+    15% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) scale(1.4) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+/* ---------- BALLOONS ---------- */
+
+.balloon-area {
+    height: 150px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: 0;
+    width: 65px;
+    height: 80px;
+    border-radius: 50% 50% 48% 48%;
+    animation: balloonFloat 3s ease-in-out infinite;
+    box-shadow: inset -10px -12px 20px rgba(0,0,0,.15);
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background: rgba(255,255,255,.6);
+    left: 50%;
+    top: 78px;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 28px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: inherit;
+}
+
+.b1 { left: 7%; background: #ff4fa3; animation-delay: 0s; }
+.b2 { left: 25%; background: #ffd34e; animation-delay: .5s; }
+.b3 { right: 25%; background: #61dcff; animation-delay: 1s; }
+.b4 { right: 7%; background: #a86cff; animation-delay: 1.5s; }
+
+@keyframes balloonFloat {
+    0%,100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-25px) rotate(3deg); }
+}
+
+/* ---------- GIFT GRID ---------- */
+
+.gift-heading {
+    font-size: clamp(32px, 7vw, 58px);
+    margin-bottom: 8px;
+}
+
+.gift-subtitle {
+    color: #ffd7f0;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.gift {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,.25);
+    background: linear-gradient(145deg, #ff4fa3, #703cff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    transition: .3s;
+}
+
+.gift:nth-child(3n) {
+    background: linear-gradient(145deg, #ff8c42, #ff3f9f);
+}
+
+.gift:nth-child(4n) {
+    background: linear-gradient(145deg, #5d5cff, #25c8ff);
+}
+
+.gift:hover {
+    transform: translateY(-7px) scale(1.04);
+}
+
+.gift-number {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.gift-icon {
+    position: absolute;
+    font-size: 40px;
+    opacity: .35;
+}
+
+.gift.opened {
+    background: linear-gradient(145deg, #fff, #ffd9f1);
+    color: #6b165b;
+}
+
+/* ---------- MODAL ---------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,0,25,.82);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-card {
+    width: min(500px, 100%);
+    padding: 35px 25px;
+    border-radius: 35px;
+    text-align: center;
+    background:
+        radial-gradient(circle at top, #ff9ad7, transparent 40%),
+        linear-gradient(145deg, #fff, #ffd7ed);
+    color: #54134f;
+    box-shadow: 0 0 80px rgba(255,70,190,.5);
+    animation: modalIn .45s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(.7) rotate(-3deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.modal-gift {
+    font-size: 75px;
+}
+
+.modal-title {
+    font-size: 30px;
+    margin: 8px;
+}
+
+.modal-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    line-height: 1.35;
+}
+
+.close-btn {
+    margin-top: 22px;
+    border: none;
+    border-radius: 50px;
+    padding: 11px 25px;
+    cursor: pointer;
+    background: #ff3f9f;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* ---------- THEATRE ---------- */
+
+.theatre {
+    width: min(850px, 100%);
+    padding: 25px;
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at center, rgba(255,80,90,.2), transparent 50%),
+        linear-gradient(145deg, #26000b, #61001c);
+    border: 2px solid rgba(255,190,90,.4);
+    box-shadow: 0 0 80px rgba(255,50,80,.25);
+    position: relative;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 18%;
+    height: 100%;
+    background: linear-gradient(90deg, #5d0014, #e40045, #620015);
+    z-index: 2;
+}
+
+.curtain.left {
+    left: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.curtain.right {
+    right: 0;
+    border-radius: 0 30px 30px 0;
+}
+
+.theatre-inner {
+    position: relative;
+    z-index: 3;
+    padding: 40px 18%;
+}
+
+.movie-icon {
+    font-size: 70px;
+}
+
+.theatre-title {
+    font-size: clamp(38px, 8vw, 75px);
+    color: #ffd75e;
+    text-shadow: 0 0 20px rgba(255,200,60,.5);
+}
+
+.ticket {
+    margin: 25px auto;
+    max-width: 500px;
+    padding: 25px;
+    background: #fff4d4;
+    color: #4b1721;
+    border-radius: 15px;
+    border: 4px dashed #e34b5f;
+    transform: rotate(-1deg);
+}
+
+.ticket h3 {
+    font-size: 25px;
+}
+
+.ticket p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* ---------- FINAL ---------- */
+
+.final-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px, 11vw, 110px);
+    background: linear-gradient(90deg, #ff6fb5, #ffe477, #72eaff);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    animation: gradientText 5s linear infinite;
+}
+
+.final-message {
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #ffe8f7;
+}
+
+/* ---------- MUSIC ---------- */
+
+.music {
+    position: fixed;
+    right: 18px;
+    top: 18px;
+    z-index: 50;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.5);
+    background: rgba(255,60,160,.55);
+    color: white;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 650px) {
+    .gift-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .gift-number {
+        font-size: 25px;
+    }
+
+    .gift-icon {
+        font-size: 30px;
+    }
+
+    .balloon {
+        width: 48px;
+        height: 62px;
+    }
+
+    .theatre-inner {
+        padding: 35px 12%;
+    }
+
+    .curtain {
+        width: 10%;
+    }
+}
+
+@media (max-width: 400px) {
+    .gift-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gift-number {
+        font-size: 22px;
+    }
+}
+
+/* ---------- CONFETTI ---------- */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 15px;
+    top: -30px;
+    z-index: 200;
+    pointer-events: none;
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="stars"></div>
+
+<button class="music" onclick="toggleMusic()">♫</button>
+
+<!-- ================= SCREEN 1 ================= -->
+
+<section class="screen active" id="screen1">
+
+<div class="content">
+
+    <div class="balloon-area">
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
+    </div>
+
+    <div class="small-title script">Hey you... ❤️</div>
+
+    <h1 class="big-title">I Have<br>Something</h1>
+
+    <p class="subtitle">
+        very special waiting for you...
+        <br>
+        But I'm not telling you what it is. 👀
+    </p>
+
+    <button class="btn" onclick="startSurprise()">
+        CLICK HERE ❤️
+    </button>
+
+    <p style="margin-top:15px;color:#ffd3ed;">
+        Don't overthink... just click 😌
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 2 ================= -->
+
+<section class="screen" id="screen2">
+
+<div class="content">
+
+    <div style="font-size:70px;">🎁</div>
+
+    <p class="small-title">Loading your surprise...</p>
+
+    <h1 class="big-title" style="font-size:65px;">
+        Almost...
+    </h1>
+
+    <p class="message">
+        Good things take a little time ❤️
+    </p>
+
+    <div style="
+        width:min(500px,90%);
+        height:18px;
+        background:rgba(255,255,255,.15);
+        border-radius:50px;
+        margin:30px auto;
+        overflow:hidden;
+    ">
+        <div id="loadingBar" style="
+            width:0%;
+            height:100%;
+            border-radius:50px;
+            background:linear-gradient(90deg,#ff3fa4,#ffd34e);
+        "></div>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 3 ================= -->
+
+<section class="screen" id="screen3">
+
+<div class="content">
+
+    <div class="balloon-area">
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
+    </div>
+
+    <div style="font-size:35px;">🎉 🎈 ✨ ❤️ ✨ 🎈 🎉</div>
+
+    <h1 class="big-title">
+        HAPPY<br>24TH
+    </h1>
+
+    <h1 class="script" style="
+        font-size:clamp(50px,10vw,90px);
+        color:#fff;
+    ">
+        Birthday! ❤️
+    </h1>
+
+    <p class="subtitle">
+        24 years of you...
+        <br>
+        24 reasons to smile...
+        <br>
+        and so many more memories to make. ✨
+    </p>
+
+    <button class="btn" onclick="showScreen('screen4')">
+        LET'S GO ❤️ →
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 4 ================= -->
+
+<section class="screen" id="screen4">
+
+<div class="content">
+
+    <div style="font-size:70px;">💌</div>
+
+    <p class="small-title">A little message from me...</p>
+
+    <p class="message" style="margin-top:25px;">
+        To the person who makes my ordinary days
+        feel a little more special... ❤️
+        <br><br>
+        This is just a small digital hug
+        before all the real surprises begin.
+        <br><br>
+        And yes...
+        there are <b>24</b> little surprises waiting for you. 🎁
+    </p>
+
+    <button class="btn" onclick="showScreen('screen5')">
+        OPEN THE 24 GIFTS 🎁
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 5 ================= -->
+
+<section class="screen" id="screen5">
+
+<div class="content">
+
+    <h1 class="gift-heading">🎁 24 Little Surprises</h1>
+
+    <p class="gift-subtitle">
+        Tap every gift. Some are sweet, some are silly... 👀
+    </p>
+
+    <div class="gift-grid" id="giftGrid"></div>
+
+    <button class="btn" id="finalButton"
+            style="display:none;"
+            onclick="showScreen('screen6')">
+        ONE LAST SURPRISE → 🎬
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 6 ================= -->
+
+<section class="screen" id="screen6">
+
+<div class="content">
+
+<div class="theatre">
+
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+
+    <div class="theatre-inner">
+
+        <div class="movie-icon">🎬 🍿</div>
+
+        <h1 class="theatre-title">
+            YOUR NEXT<br>SURPRISE
+        </h1>
+
+        <div class="ticket">
+
+            <h3>🎟️ SPECIAL INVITATION 🎟️</h3>
+
+            <p><b>For:</b> The Birthday Boy ❤️</p>
+
+            <p><b>Experience:</b> Private Theatre Party</p>
+
+            <p><b>Reason:</b> Because 24 deserves a celebration.</p>
+
+            <p><b>With:</b> Me. Obviously. 😌❤️</p>
+
+        </div>
+
+        <p class="message">
+            Get ready for a movie experience
+            that's not really about the movie... 👀
+        </p>
+
+        <button class="btn" onclick="showScreen('screen7'); celebration();">
+            OPEN FINAL MESSAGE ❤️
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SCREEN 7 ================= -->
+
+<section class="screen" id="screen7">
+
+<div class="content">
+
+    <div style="font-size:65px;">
+        💖 ✨ 🎈 🎉 ✨ 💖
+    </div>
+
+    <h1 class="final-title">
+        Happy 24th<br>
+        My Love ❤️
+    </h1>
+
+    <p class="final-message">
+        24 gifts.<br>
+        Countless memories.<br>
+        One very special person.
+        <br><br>
+        This isn't the end of the surprise...
+        <br>
+        It's only the beginning. ✨
+        <br><br>
+        Here's to 24,
+        and all the beautiful chapters ahead.
+        ❤️
+    </p>
+
+    <div style="
+        font-family:'Dancing Script',cursive;
+        font-size:34px;
+        color:#ffd7ef;
+        margin-top:25px;
+    ">
+        Always with you. ❤️
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GIFT MODAL ================= -->
+
+<div class="modal" id="giftModal">
+
+    <div class="modal-card">
+
+        <div class="modal-gift" id="modalGift">🎁</div>
+
+        <h2 class="modal-title" id="modalTitle">
+            Gift 1
+        </h2>
+
+        <p class="modal-text" id="modalText">
+            Something special...
+        </p>
+
+        <button class="close-btn" onclick="closeGift()">
+            Aww ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- OPTIONAL AUDIO -->
+<audio id="music" loop>
+    <!--
+    OPTIONAL:
+    Upload an MP3 to your GitHub repository and replace the
+    line below with:
+
+    src="yourmusic.mp3"
+
+    Example:
+    -->
+</audio>
+
+
+<script>
+
+/* ==========================================
+   24 GIFTS
+   EDIT THESE MESSAGES
+========================================== */
+
+const gifts = [
+
+{
+    icon:"💖",
+    title:"Gift 1",
+    text:"You are one of the best things that ever happened to me. ❤️"
+},
+
+{
+    icon:"🥰",
+    title:"Gift 2",
+    text:"Your smile is still one of my favourite things in this world."
+},
+
+{
+    icon:"😂",
+    title:"Gift 3",
+    text:"Thank you for giving me approximately 847 reasons to laugh at you. 😂"
+},
+
+{
+    icon:"📸",
+    title:"Gift 4",
+    text:"Some memories become favourites without us even realizing it."
+},
+
+{
+    icon:"🧸",
+    title:"Gift 5",
+    text:"If hugs could be wrapped, this gift would be a giant one. 🤗"
+},
+
+{
+    icon:"🌙",
+    title:"Gift 6",
+    text:"Even ordinary nights become better when I get to talk to you."
+},
+
+{
+    icon:"🍫",
+    title:"Gift 7",
+    text:"A little sweetness for someone who already makes my life sweeter."
+},
+
+{
+    icon:"🎵",
+    title:"Gift 8",
+    text:"There are songs I hear now that automatically remind me of you."
+},
+
+{
+    icon:"🌎",
+    title:"Gift 9",
+    text:"Wherever life takes us, I hope we keep making memories together."
+},
+
+{
+    icon:"✨",
+    title:"Gift 10",
+    text:"You deserve more happiness than you know."
+},
+
+{
+    icon:"❤️",
+    title:"Gift 11",
+    text:"One simple truth: I really, really love you."
+},
+
+{
+    icon:"🎈",
+    title:"Gift 12",
+    text:"Halfway there... and I'm still not done surprising you. 👀"
+},
+
+{
+    icon:"☀️",
+    title:"Gift 13",
+    text:"You have a way of making even normal days feel special."
+},
+
+{
+    icon:"🫶",
+    title:"Gift 14",
+    text:"Thank you for being someone I can laugh, talk and be myself with."
+},
+
+{
+    icon:"🌹",
+    title:"Gift 15",
+    text:"Some people enter your life. Some people become a part of it."
+},
+
+{
+    icon:"🥳",
+    title:"Gift 16",
+    text:"Today is your day. So yes, you're allowed to be extra. 😂"
+},
+
+{
+    icon:"💫",
+    title:"Gift 17",
+    text:"I hope 24 brings you everything you've been wishing for."
+},
+
+{
+    icon:"🎬",
+    title:"Gift 18",
+    text:"Some surprises are better experienced together... ❤️"
+},
+
+{
+    icon:"🍿",
+    title:"Gift 19",
+    text:"Hmm... why does this gift suddenly feel like a movie night? 👀"
+},
+
+{
+    icon:"🎁",
+    title:"Gift 20",
+    text:"Only four more. Don't get too confident. 😌"
+},
+
+{
+    icon:"💌",
+    title:"Gift 21",
+    text:"If I could wrap up every happy memory with you, I'd need a much bigger box."
+},
+
+{
+    icon:"🔐",
+    title:"Gift 22",
+    text:"There's something I'm still keeping secret... 🤫"
+},
+
+{
+    icon:"❓",
+    title:"Gift 23",
+    text:"Almost there... One last surprise is waiting."
+},
+
+{
+    icon:"🎬",
+    title:"Gift 24",
+    text:"Okay... this one isn't something you can open here. Get ready. ❤️"
+}
+
+];
+
+
+/* ==========================================
+   CREATE GIFT GRID
+========================================== */
+
+const giftGrid = document.getElementById("giftGrid");
+
+gifts.forEach((gift, index) => {
+
+    const box = document.createElement("div");
+
+    box.className = "gift";
+
+    box.innerHTML = `
+        <span class="gift-icon">${gift.icon}</span>
+        <span class="gift-number">${index + 1}</span>
+    `;
+
+    box.onclick = () => openGift(index, box);
+
+    giftGrid.appendChild(box);
+
+});
+
+
+/* ==========================================
+   SCREEN CONTROL
+========================================== */
+
+function showScreen(id) {
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    createHearts(10);
+}
+
+
+/* ==========================================
+   START SURPRISE
+========================================== */
+
+function startSurprise() {
+
+    showScreen("screen2");
+
+    let progress = 0;
+
+    const bar = document.getElementById("loadingBar");
+
+    const timer = setInterval(() => {
+
+        progress += 2;
+
+        bar.style.width = progress + "%";
+
+        if(progress >= 100) {
+
+            clearInterval(timer);
+
+            setTimeout(() => {
+
+                showScreen("screen3");
+                celebration();
+
+            },500);
+
+        }
+
+    },30);
+
+}
+
+
+/* ==========================================
+   GIFT MODAL
+========================================== */
+
+let openedGifts = new Set();
+
+function openGift(index, box) {
+
+    openedGifts.add(index);
+
+    box.classList.add("opened");
+
+    document.getElementById("modalGift").textContent =
+        gifts[index].icon;
+
+    document.getElementById("modalTitle").textContent =
+        gifts[index].title;
+
+    document.getElementById("modalText").textContent =
+        gifts[index].text;
+
+    document.getElementById("giftModal").classList.add("show");
+
+    createHearts(6);
+
+    if(openedGifts.size === 24) {
+
+        document.getElementById("finalButton").style.display =
+            "inline-block";
+
+        document.getElementById("finalButton").scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+        celebration();
+
+    }
+
+}
+
+
+function closeGift() {
+
+    document.getElementById("giftModal")
+        .classList.remove("show");
+
+}
+
+
+/* ==========================================
+   HEARTS
+========================================== */
+
+function createHearts(amount = 5) {
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "✨",
+        "💫",
+        "🌸"
+    ];
+
+    for(let i=0;i<amount;i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.textContent =
+            hearts[Math.floor(Math.random()*hearts.length)];
+
+        heart.style.left =
+            Math.random()*100 + "vw";
+
+        heart.style.fontSize =
+            (18 + Math.random()*30) + "px";
+
+        heart.style.animationDuration =
+            (4 + Math.random()*5) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        },9000);
+
+    }
+
+}
+
+
+/* ==========================================
+   CONFETTI
+========================================== */
+
+function celebration() {
+
+    const symbols = [
+        "🎉",
+        "🎊",
+        "✨",
+        "💖",
+        "⭐",
+        "🎈"
+    ];
+
+    for(let i=0;i<70;i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.textContent =
+            symbols[Math.floor(Math.random()*symbols.length)];
+
+        piece.style.left =
+            Math.random()*100 + "vw";
+
+        piece.style.fontSize =
+            (12 + Math.random()*18) + "px";
+
+        piece.style.animationDuration =
+            (2.5 + Math.random()*4) + "s";
+
+        piece.style.animationDelay =
+            Math.random()*1.5 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        },7000);
+
+    }
+
+    createHearts(20);
+
+}
+
+
+/* ==========================================
+   MUSIC
+========================================== */
+
+let musicPlaying = false;
+
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+
+    if(!music.src) {
+
+        alert(
+            "Add your MP3 file to the GitHub repository and set its name in the code first ❤️"
+        );
+
+        return;
+
+    }
+
+    if(musicPlaying) {
+
+        music.pause();
+        musicPlaying = false;
+
+    } else {
+
+        music.play();
+        musicPlaying = true;
+
+    }
+
+}
+
+
+/* ==========================================
+   BACKGROUND HEARTS
+========================================== */
+
+setInterval(() => {
+
+    if(Math.random() > .45) {
+        createHearts(1);
+    }
+
+},1500);
+
+
+/* ==========================================
+   CLOSE MODAL WHEN CLICKING OUTSIDE
+========================================== */
+
+document.getElementById("giftModal").addEventListener(
+    "click",
+    function(e) {
+
+        if(e.target === this) {
+            closeGift();
+        }
+
+    }
+);
+
+</script>
+
+</div>
+
+</body>
+</html>
