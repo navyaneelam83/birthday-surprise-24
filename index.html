@@ -13,6 +13,10 @@
 
 <style>
 
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -27,13 +31,15 @@ body{
 
 body{
 
-    font-family:"Times New Roman",
-                Georgia,
-                serif;
+    font-family:
+        "Times New Roman",
+        Georgia,
+        serif;
 
     overflow:hidden;
 
     background:
+
         radial-gradient(
             circle at 20% 20%,
             rgba(255,70,160,.28),
@@ -171,7 +177,8 @@ body{
     background:
         rgba(255,60,170,.12);
 
-    filter:blur(80px);
+    filter:
+        blur(80px);
 
     animation:
         pulseGlow 5s infinite alternate;
@@ -317,7 +324,7 @@ body{
 
 
 /* =====================================================
-   SCREEN 1 - ASSALAM
+   SCREEN 1 - ASSALAM WISH
 ===================================================== */
 
 #screen1{
@@ -358,13 +365,33 @@ body{
         fadeUp 1.5s ease forwards;
 }
 
+.assalamWish{
+
+    margin-top:25px;
+
+    font-size:
+        clamp(18px,3vw,28px);
+
+    line-height:1.75;
+
+    color:#f8e9f4;
+
+    animation:
+        fadeUp 1.8s ease forwards;
+}
+
+.assalamWish strong{
+
+    color:#ffd8ee;
+}
+
 .heart{
 
     display:block;
 
     font-size:42px;
 
-    margin-top:18px;
+    margin-top:20px;
 
     animation:
         heartbeat 1.5s infinite;
@@ -786,11 +813,6 @@ body{
         rgba(255,120,190,.35);
 }
 
-.letterButton{
-
-    margin-top:8px;
-}
-
 
 /* =====================================================
    BALLOONS
@@ -945,6 +967,7 @@ body{
     .balloon{
 
         width:45px;
+
         height:58px;
     }
 
@@ -1029,7 +1052,7 @@ body{
 
 
 <!-- =====================================================
-     SCREEN 1 - ASSALAM
+     SCREEN 1 - ASSALAM WISH
 ===================================================== -->
 
 <section
@@ -1045,19 +1068,60 @@ body{
 
 
     <div class="balloon b1"></div>
-
     <div class="balloon b2"></div>
-
     <div class="balloon b3"></div>
-
     <div class="balloon b4"></div>
 
 
     <div class="content">
 
+
         <div class="assalam">
 
             Assalamu Alaikum ❤️
+
+        </div>
+
+
+        <div class="assalamWish">
+
+            Andariki Assalamu Alaikum. ❤️
+
+            <br><br>
+
+            Especially to my
+            <strong>
+                Buddu Thalli... 🥹❤️
+            </strong>
+
+            <br><br>
+
+            I hope Allah always keeps you
+            happy, healthy and peaceful.
+
+            <br>
+
+            May He protect you from every
+            difficulty, guide you towards
+            everything good, and fill your life
+            with endless happiness,
+            success and barakah. 🤲❤️
+
+            <br><br>
+
+            Today is your special day,
+            and I pray that this new year
+            of your life brings you
+            many beautiful moments,
+            beautiful memories and
+            everything your heart wishes for. ❤️
+
+            <br><br>
+
+            <strong>
+                May Allah bless you always,
+                my love. 🤍
+            </strong>
 
         </div>
 
@@ -1068,14 +1132,12 @@ body{
 
         </span>
 
+        <!--
+            NO CONTINUE BUTTON HERE.
 
-        <button
-            class="continueBtn"
-            onclick="showScreen('screen2')">
-
-            Continue ❤️
-
-        </button>
+            Prayer opens automatically
+            after the wish-reading time.
+        -->
 
     </div>
 
@@ -1142,8 +1204,8 @@ body{
 
 
             <!--
-                Hidden until the 58-second song
-                has completely finished.
+                Hidden until the 58-second
+                song has completely finished.
             -->
 
             <button
@@ -1181,11 +1243,8 @@ body{
 
 
     <div class="balloon b1"></div>
-
     <div class="balloon b2"></div>
-
     <div class="balloon b3"></div>
-
     <div class="balloon b4"></div>
 
 
@@ -1261,11 +1320,8 @@ body{
 
 
     <div class="balloon b1"></div>
-
     <div class="balloon b2"></div>
-
     <div class="balloon b3"></div>
-
     <div class="balloon b4"></div>
 
 
@@ -1305,7 +1361,7 @@ body{
 
                     Nijanga cheppali ante,
                     <span class="letterHighlight">
-                    having you in my life makes me feel so lucky.
+                        having you in my life makes me feel so lucky.
                     </span>
 
                     There are so many people in this world,
@@ -1324,7 +1380,7 @@ body{
 
                     Kani anni ayyaka kuda,
                     <span class="letterHighlight">
-                    I still choose you, and I still want us.
+                        I still choose you, and I still want us.
                     </span>
                     🫂❤️
 
@@ -1352,7 +1408,7 @@ body{
                     <br>
 
                     <span class="letterHighlight">
-                    I feel lucky to have you.
+                        I feel lucky to have you.
                     </span>
                     🥹❤️
 
@@ -1558,8 +1614,9 @@ function showScreen(id){
 
 
     /*
-       When Prayer opens, check whether
-       the song has already finished.
+       Whenever Prayer opens,
+       initially keep Continue hidden
+       until song is finished.
     */
 
     if(id === "screen2"){
@@ -1568,10 +1625,6 @@ function showScreen(id){
 
     }
 
-
-    /*
-       When letter opens, move to top.
-    */
 
     if(id === "screen4"){
 
@@ -1585,7 +1638,7 @@ function showScreen(id){
 
 
 /* =====================================================
-   PRAYER CONTINUE BUTTON
+   PRAYER BUTTON
 ===================================================== */
 
 function updatePrayerButton(){
@@ -1618,6 +1671,10 @@ function startMusic(){
         return;
     }
 
+
+    /*
+       Start exactly from 00:00.
+    */
 
     music.currentTime = 0;
 
@@ -1658,6 +1715,10 @@ function startMusic(){
 
 function startExperience(){
 
+    /*
+       Only allow first tap once.
+    */
+
     if(experienceStarted){
 
         return;
@@ -1668,7 +1729,7 @@ function startExperience(){
 
 
     /*
-       Remove the first tap screen.
+       Hide first tap screen.
     */
 
     tapScreen.classList.add(
@@ -1677,7 +1738,7 @@ function startExperience(){
 
 
     /*
-       Start video.
+       Start countdown video.
     */
 
     introVideo
@@ -1700,7 +1761,8 @@ function startExperience(){
 
 
     /*
-       Start song from 00:00.
+       Start 58-second song
+       from exactly 00:00.
     */
 
     startMusic();
@@ -1726,7 +1788,7 @@ music.addEventListener(
 
 
         /*
-           Stop song completely.
+           Stop completely.
         */
 
         music.pause();
@@ -1739,8 +1801,8 @@ music.addEventListener(
 
 
         /*
-           Show Continue button only
-           after song completion.
+           Show Continue only
+           when Prayer is visible.
         */
 
         const prayerScreen =
@@ -1771,8 +1833,8 @@ music.addEventListener(
 function toggleMusic(){
 
     /*
-       Don't restart after the
-       58-second song has finished.
+       Do not restart after song
+       has completed.
     */
 
     if(songFinished){
@@ -1830,11 +1892,54 @@ introVideo.addEventListener(
 
         /*
            Video finishes.
-           Music continues.
+
+           IMPORTANT:
+           Song does NOT restart.
         */
 
         showScreen(
             "screen1"
+        );
+
+
+        /*
+           No Continue button on
+           Assalamu Alaikum screen.
+
+           After the complete wish has
+           been displayed for 15 seconds,
+           Prayer opens automatically.
+        */
+
+        setTimeout(
+            function(){
+
+                /*
+                   Only move to Prayer
+                   if user is still on
+                   Assalamu Alaikum screen.
+                */
+
+                const assalamScreen =
+                    document.getElementById(
+                        "screen1"
+                    );
+
+
+                if(
+                    assalamScreen.classList.contains(
+                        "active"
+                    )
+                ){
+
+                    showScreen(
+                        "screen2"
+                    );
+
+                }
+
+            },
+            15000
         );
 
     }
@@ -1848,10 +1953,10 @@ introVideo.addEventListener(
 function showBirthdayScreen(){
 
     /*
-       This is called only after
-       the Continue button appears.
+       Song is already finished
+       before this button appears.
 
-       Stop song completely.
+       Make sure it is stopped.
     */
 
     if(music){
