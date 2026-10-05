@@ -23,7 +23,6 @@ html,
 body{
     width:100%;
     height:100%;
-    overflow:hidden;
 }
 
 body{
@@ -31,6 +30,8 @@ body{
     font-family:"Times New Roman",
                 Georgia,
                 serif;
+
+    overflow:hidden;
 
     background:
         radial-gradient(
@@ -316,7 +317,7 @@ body{
 
 
 /* =====================================================
-   SCREEN 1
+   SCREEN 1 - ASSALAM
 ===================================================== */
 
 #screen1{
@@ -652,6 +653,146 @@ body{
 
 
 /* =====================================================
+   SCREEN 4 - LETTER
+===================================================== */
+
+#screen4{
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,100,190,.20),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(100,80,255,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #150020,
+            #2e004f,
+            #16004b,
+            #080013
+        );
+
+    overflow-y:auto;
+
+    align-items:flex-start;
+
+    padding:
+        45px 0;
+}
+
+.letterBox{
+
+    max-width:820px;
+
+    margin:auto;
+
+    padding:
+        38px 34px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(190,70,255,.16),
+
+        inset 0 0 30px
+        rgba(255,255,255,.025);
+
+    animation:
+        fadeUp 1.2s ease forwards;
+}
+
+.letterEmoji{
+
+    font-size:58px;
+
+    margin-bottom:12px;
+}
+
+.letterHeading{
+
+    font-size:
+        clamp(30px,5vw,48px);
+
+    color:#ffd8ee;
+
+    margin-bottom:25px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 0 18px
+        rgba(255,130,200,.3);
+}
+
+.letterText{
+
+    text-align:center;
+
+    font-size:
+        clamp(17px,2.2vw,22px);
+
+    line-height:1.8;
+
+    color:#f8eefa;
+}
+
+.letterText p{
+
+    margin-bottom:22px;
+}
+
+.letterHighlight{
+
+    color:#ffd5eb;
+
+    font-weight:bold;
+}
+
+.letterEnding{
+
+    font-size:
+        clamp(22px,3.5vw,30px);
+
+    color:white;
+
+    font-weight:bold;
+
+    margin-top:28px;
+
+    line-height:1.6;
+
+    text-shadow:
+        0 0 15px
+        rgba(255,120,190,.35);
+}
+
+.letterButton{
+
+    margin-top:8px;
+}
+
+
+/* =====================================================
    BALLOONS
 ===================================================== */
 
@@ -804,8 +945,24 @@ body{
     .balloon{
 
         width:45px;
-
         height:58px;
+    }
+
+    #screen4{
+
+        padding:
+            25px 0;
+    }
+
+    .letterBox{
+
+        padding:
+            28px 20px;
+    }
+
+    .letterText{
+
+        line-height:1.7;
     }
 
 }
@@ -872,7 +1029,7 @@ body{
 
 
 <!-- =====================================================
-     SCREEN 1
+     SCREEN 1 - ASSALAM
 ===================================================== -->
 
 <section
@@ -985,10 +1142,8 @@ body{
 
 
             <!--
-                IMPORTANT:
-                This button is hidden initially.
-                It appears automatically when
-                the 58-second song ends.
+                Hidden until the 58-second song
+                has completely finished.
             -->
 
             <button
@@ -1075,6 +1230,171 @@ body{
         </div>
 
 
+        <button
+            class="continueBtn"
+            onclick="showLetterScreen()">
+
+            One More Thing... ❤️
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 4 - ROMANTIC LETTER
+===================================================== -->
+
+<section
+    id="screen4"
+    class="screen">
+
+    <div
+        class="stars"
+        id="stars4">
+    </div>
+
+    <div class="glow"></div>
+
+
+    <div class="balloon b1"></div>
+
+    <div class="balloon b2"></div>
+
+    <div class="balloon b3"></div>
+
+    <div class="balloon b4"></div>
+
+
+    <div class="content">
+
+
+        <div class="letterBox">
+
+
+            <div class="letterEmoji">
+
+                💌❤️
+
+            </div>
+
+
+            <div class="letterHeading">
+
+                My Buddu Thalli... ❤️
+
+            </div>
+
+
+            <div class="letterText">
+
+
+                <p>
+
+                    Happy Birthday to the person
+                    who became one of the most
+                    beautiful parts of my life. ❤️
+
+                </p>
+
+
+                <p>
+
+                    Nijanga cheppali ante,
+                    <span class="letterHighlight">
+                    having you in my life makes me feel so lucky.
+                    </span>
+
+                    There are so many people in this world,
+                    but somehow our paths met,
+                    and I am really grateful for that. 🥹❤️
+
+                </p>
+
+
+                <p>
+
+                    Mana relationship perfect ani kaadhu...
+                    manaki kuda small fights,
+                    misunderstandings,
+                    silly moments untayi.
+
+                    Kani anni ayyaka kuda,
+                    <span class="letterHighlight">
+                    I still choose you, and I still want us.
+                    </span>
+                    🫂❤️
+
+                </p>
+
+
+                <p>
+
+                    Nuvvu na life lo unna way
+                    naaku teliyakunda chala things change chesav.
+
+                    You became the person I want to
+                    share my happiness with,
+                    laugh with,
+                    complain to,
+                    and simply have beside me. ❤️
+
+                </p>
+
+
+                <p>
+
+                    I don't just feel lucky to have a boyfriend...
+
+                    <br>
+
+                    <span class="letterHighlight">
+                    I feel lucky to have you.
+                    </span>
+                    🥹❤️
+
+                </p>
+
+
+                <p>
+
+                    And more than anything,
+                    I hope we keep growing together,
+                    understanding each other,
+                    supporting each other,
+                    and making many more beautiful memories together. ♾️❤️
+
+                </p>
+
+
+                <div class="letterEnding">
+
+                    Thank you for being you. ❤️
+
+                    <br>
+
+                    And thank you for being my person. 🫂
+
+                    <br><br>
+
+                    Happy Birthday, Buddu Thalli. 🎂❤️
+
+                    <br>
+
+                    I love you more than I can properly
+                    put into words. ❤️
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
     </div>
 
 </section>
@@ -1087,6 +1407,7 @@ body{
 <div
     id="tapScreen"
     onclick="startExperience()">
+
 
     <div class="tapHeart">
 
@@ -1107,6 +1428,7 @@ body{
         Your surprise is about to begin... ✨
 
     </div>
+
 
 </div>
 
@@ -1146,20 +1468,7 @@ const prayerContinueBtn =
 
 let playing = false;
 
-
-/*
-   This becomes true once the
-   58-second song has completely
-   finished.
-*/
-
 let songFinished = false;
-
-
-/*
-   Prevents the first tap from
-   being triggered more than once.
-*/
 
 let experienceStarted = false;
 
@@ -1221,6 +1530,8 @@ createStars("stars2");
 
 createStars("stars3");
 
+createStars("stars4");
+
 
 /* =====================================================
    SHOW SCREEN
@@ -1246,12 +1557,6 @@ function showScreen(id){
         );
 
 
-    window.scrollTo(
-        0,
-        0
-    );
-
-
     /*
        When Prayer opens, check whether
        the song has already finished.
@@ -1263,19 +1568,27 @@ function showScreen(id){
 
     }
 
+
+    /*
+       When letter opens, move to top.
+    */
+
+    if(id === "screen4"){
+
+        document
+            .getElementById("screen4")
+            .scrollTop = 0;
+
+    }
+
 }
 
 
 /* =====================================================
-   UPDATE PRAYER BUTTON
+   PRAYER CONTINUE BUTTON
 ===================================================== */
 
 function updatePrayerButton(){
-
-    /*
-       Show Continue only after
-       the 58-second song finishes.
-    */
 
     if(songFinished){
 
@@ -1305,10 +1618,6 @@ function startMusic(){
         return;
     }
 
-
-    /*
-       Always begin from 00:00.
-    */
 
     music.currentTime = 0;
 
@@ -1349,10 +1658,6 @@ function startMusic(){
 
 function startExperience(){
 
-    /*
-       Prevent double tap.
-    */
-
     if(experienceStarted){
 
         return;
@@ -1363,7 +1668,7 @@ function startExperience(){
 
 
     /*
-       Hide Tap Anywhere screen.
+       Remove the first tap screen.
     */
 
     tapScreen.classList.add(
@@ -1372,7 +1677,7 @@ function startExperience(){
 
 
     /*
-       Start countdown video.
+       Start video.
     */
 
     introVideo
@@ -1412,7 +1717,7 @@ music.addEventListener(
     function(){
 
         /*
-           The full 58 seconds are finished.
+           Full 58 seconds completed.
         */
 
         songFinished = true;
@@ -1421,11 +1726,10 @@ music.addEventListener(
 
 
         /*
-           Make sure the music is stopped.
+           Stop song completely.
         */
 
         music.pause();
-
 
         music.currentTime = 0;
 
@@ -1435,8 +1739,8 @@ music.addEventListener(
 
 
         /*
-           Show Continue only if
-           Prayer is currently visible.
+           Show Continue button only
+           after song completion.
         */
 
         const prayerScreen =
@@ -1466,19 +1770,19 @@ music.addEventListener(
 
 function toggleMusic(){
 
+    /*
+       Don't restart after the
+       58-second song has finished.
+    */
+
+    if(songFinished){
+
+        return;
+
+    }
+
+
     if(music.paused){
-
-        /*
-           Do not restart the song
-           after it has already finished.
-        */
-
-        if(songFinished){
-
-            return;
-
-        }
-
 
         music.play()
 
@@ -1525,8 +1829,8 @@ introVideo.addEventListener(
     function(){
 
         /*
-           IMPORTANT:
-           Do not restart the music.
+           Video finishes.
+           Music continues.
         */
 
         showScreen(
@@ -1544,7 +1848,10 @@ introVideo.addEventListener(
 function showBirthdayScreen(){
 
     /*
-       Stop music completely.
+       This is called only after
+       the Continue button appears.
+
+       Stop song completely.
     */
 
     if(music){
@@ -1562,13 +1869,21 @@ function showBirthdayScreen(){
         "🔇";
 
 
-    /*
-       Birthday screen opens
-       with NO SONG.
-    */
-
     showScreen(
         "screen3"
+    );
+
+}
+
+
+/* =====================================================
+   LETTER SCREEN
+===================================================== */
+
+function showLetterScreen(){
+
+    showScreen(
+        "screen4"
     );
 
 }
