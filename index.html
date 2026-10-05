@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -29,66 +28,29 @@ body{
 }
 
 body{
-
-    font-family:
-        "Times New Roman",
-        Georgia,
-        serif;
-
-    overflow:hidden;
-
+    font-family:"Times New Roman", Georgia, serif;
     background:
-
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(255,70,160,.28),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 80% 25%,
-            rgba(80,90,255,.30),
-            transparent 32%
-        ),
-
-        radial-gradient(
-            circle at 50% 90%,
-            rgba(255,50,120,.20),
-            transparent 35%
-        ),
-
-        linear-gradient(
-            135deg,
-            #130022,
-            #25004b,
-            #16005c,
-            #090018
-        );
-
+        radial-gradient(circle at 20% 20%, rgba(255,70,160,.28), transparent 30%),
+        radial-gradient(circle at 80% 25%, rgba(80,90,255,.30), transparent 32%),
+        radial-gradient(circle at 50% 90%, rgba(255,50,120,.20), transparent 35%),
+        linear-gradient(135deg,#130022,#25004b,#16005c,#090018);
     color:white;
+    overflow:hidden;
 }
 
-
 /* =====================================================
-   COMMON SCREEN
+   COMMON SCREENS
 ===================================================== */
 
 .screen{
-
     position:absolute;
-
     inset:0;
-
     width:100%;
     height:100%;
-
     display:none;
-
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     overflow:hidden;
 }
 
@@ -97,245 +59,161 @@ body{
 }
 
 .content{
-
     position:relative;
-
     z-index:10;
-
     width:92%;
-
     max-width:900px;
 }
-
 
 /* =====================================================
    STARS
 ===================================================== */
 
 .stars{
-
     position:absolute;
-
     inset:0;
-
     overflow:hidden;
-
     pointer-events:none;
 }
 
 .star{
-
     position:absolute;
-
     width:2px;
     height:2px;
-
     background:white;
-
     border-radius:50%;
-
     opacity:.7;
-
-    animation:
-        twinkle 3s infinite ease-in-out;
+    animation:twinkle 3s infinite ease-in-out;
 }
 
 @keyframes twinkle{
-
     0%,100%{
-
         opacity:.25;
-
-        transform:
-            scale(.8);
+        transform:scale(.8);
     }
 
     50%{
-
         opacity:1;
-
-        transform:
-            scale(1.5);
+        transform:scale(1.5);
     }
 }
-
 
 /* =====================================================
    GLOW
 ===================================================== */
 
 .glow{
-
     position:absolute;
-
     width:450px;
     height:450px;
-
     border-radius:50%;
-
-    background:
-        rgba(255,60,170,.12);
-
-    filter:
-        blur(80px);
-
-    animation:
-        pulseGlow 5s infinite alternate;
+    background:rgba(255,60,170,.12);
+    filter:blur(80px);
+    animation:pulseGlow 5s infinite alternate;
 }
 
 @keyframes pulseGlow{
-
     from{
-
-        transform:
-            scale(.9);
-
+        transform:scale(.9);
         opacity:.5;
     }
 
     to{
-
-        transform:
-            scale(1.15);
-
+        transform:scale(1.15);
         opacity:1;
     }
 }
 
-
 /* =====================================================
-   INTRO VIDEO
+   VIDEO
 ===================================================== */
 
 #videoScreen{
-
     background:#050008;
-
 }
 
 #introVideo{
-
     position:absolute;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     background:#050008;
 }
 
 .videoOverlay{
-
     position:absolute;
-
     inset:0;
-
-    background:
-        rgba(0,0,0,.12);
-
+    background:rgba(0,0,0,.10);
     z-index:2;
-
     pointer-events:none;
 }
-
 
 /* =====================================================
    FIRST TAP SCREEN
 ===================================================== */
 
 #tapScreen{
-
     position:fixed;
-
     inset:0;
-
     z-index:500;
 
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     flex-direction:column;
 
     text-align:center;
 
     background:
-
         radial-gradient(
             circle at 50% 40%,
             rgba(255,70,170,.20),
             transparent 40%
         ),
-
         #080010;
 
     cursor:pointer;
 
-    transition:
-        opacity .7s ease;
+    transition:opacity .7s ease;
 }
 
 #tapScreen.hide{
-
     opacity:0;
-
     pointer-events:none;
 }
 
 .tapHeart{
-
-    font-size:
-        clamp(55px,12vw,90px);
-
-    animation:
-        heartbeat 1.5s infinite;
+    font-size:clamp(55px,12vw,90px);
+    animation:heartbeat 1.5s infinite;
 }
 
 .tapText{
-
     margin-top:20px;
-
-    font-size:
-        clamp(25px,6vw,46px);
-
+    font-size:clamp(25px,6vw,46px);
     font-weight:bold;
 
     text-shadow:
-
-        0 0 15px
-        rgba(255,150,220,.5),
-
-        0 0 35px
-        rgba(180,80,255,.4);
+        0 0 15px rgba(255,150,220,.5),
+        0 0 35px rgba(180,80,255,.4);
 }
 
 .tapSub{
-
     margin-top:12px;
-
-    font-size:
-        clamp(15px,3vw,21px);
-
+    font-size:clamp(15px,3vw,21px);
     color:#f5dff0;
 }
-
 
 /* =====================================================
    SCREEN 1 - ASSALAM WISH
 ===================================================== */
 
 #screen1{
-
     background:
-
         radial-gradient(
             circle at 50% 45%,
             rgba(255,70,170,.18),
             transparent 35%
         ),
-
         linear-gradient(
             135deg,
             #180026,
@@ -346,111 +224,52 @@ body{
 }
 
 .assalam{
-
-    font-size:
-        clamp(32px,6vw,64px);
-
+    font-size:clamp(32px,6vw,64px);
     font-weight:bold;
 
     text-shadow:
+        0 0 15px rgba(255,160,220,.5),
+        0 0 40px rgba(180,80,255,.4);
 
-        0 0 15px
-        rgba(255,160,220,.5),
-
-        0 0 40px
-        rgba(180,80,255,.4);
-
-    animation:
-        fadeUp 1.5s ease forwards;
+    animation:fadeUp 1.5s ease forwards;
 }
 
 .assalamWish{
-
     margin-top:25px;
-
-    font-size:
-        clamp(18px,3vw,28px);
-
+    font-size:clamp(18px,3vw,28px);
     line-height:1.75;
-
     color:#f8e9f4;
 
-    animation:
-        fadeUp 1.8s ease forwards;
+    animation:fadeUp 1.8s ease forwards;
 }
 
 .assalamWish strong{
-
     color:#ffd8ee;
 }
 
 .heart{
-
     display:block;
-
     font-size:42px;
-
     margin-top:20px;
-
-    animation:
-        heartbeat 1.5s infinite;
+    animation:heartbeat 1.5s infinite;
 }
-
-@keyframes heartbeat{
-
-    0%,100%{
-
-        transform:
-            scale(1);
-    }
-
-    50%{
-
-        transform:
-            scale(1.18);
-    }
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(30px);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-    }
-}
-
 
 /* =====================================================
    SCREEN 2 - PRAYER
 ===================================================== */
 
 #screen2{
-
     background:
-
         radial-gradient(
             circle at 50% 30%,
             rgba(255,100,180,.18),
             transparent 35%
         ),
-
         radial-gradient(
             circle at 20% 80%,
             rgba(100,80,255,.18),
             transparent 30%
         ),
-
         linear-gradient(
             135deg,
             #12001f,
@@ -461,77 +280,48 @@ body{
 }
 
 .prayerBox{
-
     max-width:850px;
-
     margin:auto;
+    padding:35px 30px;
 
-    padding:
-        35px 30px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.18);
-
+    border:1px solid rgba(255,255,255,.18);
     border-radius:25px;
 
-    background:
-        rgba(255,255,255,.07);
+    background:rgba(255,255,255,.07);
 
-    backdrop-filter:
-        blur(12px);
+    backdrop-filter:blur(12px);
 
     box-shadow:
-
-        0 0 40px
-        rgba(190,70,255,.18),
-
-        inset 0 0 25px
-        rgba(255,255,255,.03);
+        0 0 40px rgba(190,70,255,.18),
+        inset 0 0 25px rgba(255,255,255,.03);
 }
 
 .prayerEmoji{
-
     font-size:38px;
-
     margin-bottom:18px;
 }
 
 .prayerEnglish{
-
-    font-size:
-        clamp(18px,2.5vw,26px);
-
+    font-size:clamp(18px,2.5vw,26px);
     line-height:1.65;
-
     font-weight:bold;
-
     margin-bottom:25px;
 }
 
 .prayerTelugu{
-
-    font-size:
-        clamp(17px,2.3vw,23px);
-
+    font-size:clamp(17px,2.3vw,23px);
     line-height:1.75;
-
     color:#f7eaff;
 }
 
 .continueBtn{
-
     margin-top:30px;
-
-    padding:
-        13px 30px;
+    padding:13px 30px;
 
     border:none;
-
     border-radius:30px;
 
     background:
-
         linear-gradient(
             90deg,
             #ff4fa3,
@@ -541,52 +331,41 @@ body{
     color:white;
 
     font-size:17px;
-
     font-family:inherit;
 
     cursor:pointer;
 
     box-shadow:
-
-        0 0 25px
-        rgba(255,70,170,.35);
+        0 0 25px rgba(255,70,170,.35);
 
     transition:.3s;
 }
 
 .continueBtn:hover{
-
-    transform:
-        scale(1.05);
+    transform:scale(1.05);
 }
-
 
 /* =====================================================
    SCREEN 3 - BIRTHDAY
 ===================================================== */
 
 #screen3{
-
     background:
-
         radial-gradient(
             circle at 50% 30%,
             rgba(255,70,160,.25),
             transparent 32%
         ),
-
         radial-gradient(
             circle at 20% 70%,
             rgba(100,80,255,.20),
             transparent 30%
         ),
-
         radial-gradient(
             circle at 80% 70%,
             rgba(255,180,80,.13),
             transparent 25%
         ),
-
         linear-gradient(
             135deg,
             #170021,
@@ -597,28 +376,18 @@ body{
 }
 
 .birthdaySmall{
-
-    font-size:
-        clamp(17px,2.5vw,24px);
-
+    font-size:clamp(17px,2.5vw,24px);
     margin-bottom:10px;
-
     color:#f5d7ff;
 }
 
 .birthdayTitle{
-
-    font-size:
-        clamp(55px,10vw,115px);
-
+    font-size:clamp(55px,10vw,115px);
     line-height:.9;
-
     font-weight:bold;
-
     letter-spacing:3px;
 
     background:
-
         linear-gradient(
             90deg,
             #ffd7f0,
@@ -628,76 +397,50 @@ body{
         );
 
     -webkit-background-clip:text;
-
     -webkit-text-fill-color:transparent;
 }
 
 .buddu{
-
-    font-size:
-        clamp(38px,7vw,75px);
-
+    font-size:clamp(38px,7vw,75px);
     margin-top:25px;
-
     font-weight:bold;
-
     color:white;
 
     text-shadow:
-
-        0 0 15px
-        rgba(255,100,190,.5),
-
-        0 0 35px
-        rgba(160,80,255,.4);
+        0 0 15px rgba(255,100,190,.5),
+        0 0 35px rgba(160,80,255,.4);
 }
 
 .mubarak{
-
     margin-top:20px;
-
-    font-size:
-        clamp(21px,3vw,31px);
-
+    font-size:clamp(21px,3vw,31px);
     font-weight:bold;
 }
 
 .dua{
-
-    margin:
-        22px auto 0;
-
+    margin:22px auto 0;
     max-width:600px;
-
-    font-size:
-        clamp(17px,2.3vw,22px);
-
+    font-size:clamp(17px,2.3vw,22px);
     line-height:1.6;
-
     color:#f4eaff;
 }
-
 
 /* =====================================================
    SCREEN 4 - LETTER
 ===================================================== */
 
 #screen4{
-
     background:
-
         radial-gradient(
             circle at 50% 20%,
             rgba(255,100,190,.20),
             transparent 35%
         ),
-
         radial-gradient(
             circle at 20% 80%,
             rgba(100,80,255,.18),
             transparent 30%
         ),
-
         linear-gradient(
             135deg,
             #150020,
@@ -707,125 +450,81 @@ body{
         );
 
     overflow-y:auto;
-
     align-items:flex-start;
-
-    padding:
-        45px 0;
+    padding:45px 0;
 }
 
 .letterBox{
-
     max-width:820px;
-
     margin:auto;
+    padding:38px 34px;
 
-    padding:
-        38px 34px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.18);
-
+    border:1px solid rgba(255,255,255,.18);
     border-radius:28px;
 
-    background:
-        rgba(255,255,255,.07);
+    background:rgba(255,255,255,.07);
 
-    backdrop-filter:
-        blur(14px);
+    backdrop-filter:blur(14px);
 
     box-shadow:
+        0 0 45px rgba(190,70,255,.16),
+        inset 0 0 30px rgba(255,255,255,.025);
 
-        0 0 45px
-        rgba(190,70,255,.16),
-
-        inset 0 0 30px
-        rgba(255,255,255,.025);
-
-    animation:
-        fadeUp 1.2s ease forwards;
+    animation:fadeUp 1.2s ease forwards;
 }
 
 .letterEmoji{
-
     font-size:58px;
-
     margin-bottom:12px;
 }
 
 .letterHeading{
-
-    font-size:
-        clamp(30px,5vw,48px);
-
+    font-size:clamp(30px,5vw,48px);
     color:#ffd8ee;
-
     margin-bottom:25px;
-
     font-weight:bold;
 
     text-shadow:
-        0 0 18px
-        rgba(255,130,200,.3);
+        0 0 18px rgba(255,130,200,.3);
 }
 
 .letterText{
-
     text-align:center;
-
-    font-size:
-        clamp(17px,2.2vw,22px);
-
+    font-size:clamp(17px,2.2vw,22px);
     line-height:1.8;
-
     color:#f8eefa;
 }
 
 .letterText p{
-
     margin-bottom:22px;
 }
 
 .letterHighlight{
-
     color:#ffd5eb;
-
     font-weight:bold;
 }
 
 .letterEnding{
-
-    font-size:
-        clamp(22px,3.5vw,30px);
-
+    font-size:clamp(22px,3.5vw,30px);
     color:white;
-
     font-weight:bold;
-
     margin-top:28px;
-
     line-height:1.6;
 
     text-shadow:
-        0 0 15px
-        rgba(255,120,190,.35);
+        0 0 15px rgba(255,120,190,.35);
 }
-
 
 /* =====================================================
    BALLOONS
 ===================================================== */
 
 .balloon{
-
     position:absolute;
-
     width:62px;
     height:78px;
 
-    border-radius:
-        50% 50% 45% 45%;
+    border-radius:50% 50% 45% 45%;
 
     opacity:.85;
 
@@ -834,83 +533,89 @@ body{
 }
 
 .balloon:after{
-
     content:"";
 
     position:absolute;
 
     width:1px;
-
     height:100px;
 
-    background:
-        rgba(255,255,255,.45);
+    background:rgba(255,255,255,.45);
 
     top:75px;
-
     left:50%;
 }
 
 .b1{
-
     background:#ff4b9b;
-
     left:7%;
     top:8%;
 }
 
 .b2{
-
     background:#ffd34f;
-
     left:33%;
     top:4%;
-
     animation-delay:1s;
 }
 
 .b3{
-
     background:#4fdcff;
-
     right:33%;
     top:7%;
-
     animation-delay:2s;
 }
 
 .b4{
-
     background:#9d63ff;
-
     right:8%;
     top:5%;
-
     animation-delay:3s;
 }
 
 @keyframes float{
-
     0%,100%{
-
-        transform:
-            translateY(0);
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-18px);
+        transform:translateY(-18px);
     }
 }
 
+/* =====================================================
+   HEART ANIMATION
+===================================================== */
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
 /* =====================================================
    MUSIC BUTTON
 ===================================================== */
 
 .musicButton{
-
     position:fixed;
 
     top:18px;
@@ -936,10 +641,8 @@ body{
 
     cursor:pointer;
 
-    backdrop-filter:
-        blur(8px);
+    backdrop-filter:blur(8px);
 }
-
 
 /* =====================================================
    MOBILE
@@ -948,41 +651,31 @@ body{
 @media(max-width:600px){
 
     .prayerBox{
-
-        padding:
-            25px 18px;
+        padding:25px 18px;
     }
 
     .prayerEnglish{
-
         line-height:1.5;
     }
 
     .prayerTelugu{
-
         line-height:1.6;
     }
 
     .balloon{
-
         width:45px;
         height:58px;
     }
 
     #screen4{
-
-        padding:
-            25px 0;
+        padding:25px 0;
     }
 
     .letterBox{
-
-        padding:
-            28px 20px;
+        padding:28px 20px;
     }
 
     .letterText{
-
         line-height:1.7;
     }
 
@@ -1042,13 +735,15 @@ body{
 
     </video>
 
-    <div class="videoOverlay"></div>
+    <div
+        class="videoOverlay">
+    </div>
 
 </section>
 
 
 <!-- =====================================================
-     SCREEN 1 - ASSALAM WISH
+     SCREEN 1 - ASSALAM
 ===================================================== -->
 
 <section
@@ -1123,10 +818,9 @@ body{
 
 
         <span class="heart">
-
             ❤️
-
         </span>
+
 
     </div>
 
@@ -1150,6 +844,7 @@ body{
 
 
     <div class="content">
+
 
         <div class="prayerBox">
 
@@ -1191,6 +886,11 @@ body{
 
             </div>
 
+
+            <!--
+                Hidden until the song has
+                completely finished.
+            -->
 
             <button
                 id="prayerContinueBtn"
@@ -1288,7 +988,7 @@ body{
 
 
 <!-- =====================================================
-     SCREEN 4 - ROMANTIC LETTER
+     SCREEN 4 - LETTER
 ===================================================== -->
 
 <section
@@ -1366,6 +1066,7 @@ body{
                     <span class="letterHighlight">
                         I still choose you, and I still want us.
                     </span>
+
                     🫂❤️
 
                 </p>
@@ -1387,4 +1088,543 @@ body{
 
                 <p>
 
- 
+                    I don't just feel lucky to have a boyfriend...
+
+                    <br>
+
+                    <span class="letterHighlight">
+                        I feel lucky to have you.
+                    </span>
+
+                    🥹❤️
+
+                </p>
+
+
+                <p>
+
+                    And more than anything,
+                    I hope we keep growing together,
+                    understanding each other,
+                    supporting each other,
+                    and making many more beautiful memories together. ♾️❤️
+
+                </p>
+
+
+                <div class="letterEnding">
+
+                    Thank you for being you. ❤️
+
+                    <br>
+
+                    And thank you for being my person. 🫂
+
+                    <br><br>
+
+                    Happy Birthday, Buddu Thalli. 🎂❤️
+
+                    <br>
+
+                    I love you more than I can properly
+                    put into words. ❤️
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FIRST TAP SCREEN
+===================================================== -->
+
+<div
+    id="tapScreen"
+    onclick="startExperience()">
+
+
+    <div class="tapHeart">
+
+        ❤️
+
+    </div>
+
+
+    <div class="tapText">
+
+        Tap Anywhere to Begin
+
+    </div>
+
+
+    <div class="tapSub">
+
+        Your surprise is about to begin... ✨
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const music =
+    document.getElementById("birthdaySong");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+const introVideo =
+    document.getElementById("introVideo");
+
+const tapScreen =
+    document.getElementById("tapScreen");
+
+const prayerContinueBtn =
+    document.getElementById("prayerContinueBtn");
+
+
+/* =====================================================
+   STATE
+===================================================== */
+
+let playing = false;
+
+let songFinished = false;
+
+let experienceStarted = false;
+
+
+/* =====================================================
+   CREATE STARS
+===================================================== */
+
+function createStars(id){
+
+    const container =
+        document.getElementById(id);
+
+    for(
+        let i = 0;
+        i < 90;
+        i++
+    ){
+
+        const star =
+            document.createElement("div");
+
+        star.className =
+            "star";
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDelay =
+            Math.random() * 3 + "s";
+
+        container.appendChild(
+            star
+        );
+    }
+}
+
+
+createStars("stars1");
+createStars("stars2");
+createStars("stars3");
+createStars("stars4");
+
+
+/* =====================================================
+   SHOW SCREEN
+===================================================== */
+
+function showScreen(id){
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(function(screen){
+
+            screen.classList.remove(
+                "active"
+            );
+
+        });
+
+
+    document
+        .getElementById(id)
+        .classList.add(
+            "active"
+        );
+
+
+    /*
+       Prayer button must remain hidden
+       until the song finishes.
+    */
+
+    if(id === "screen2"){
+
+        if(songFinished){
+
+            prayerContinueBtn.style.display =
+                "inline-block";
+
+        }
+        else{
+
+            prayerContinueBtn.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    if(id === "screen4"){
+
+        document
+            .getElementById("screen4")
+            .scrollTop = 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   START MUSIC
+===================================================== */
+
+function startMusic(){
+
+    if(!music){
+
+        return;
+    }
+
+
+    /*
+       Start exactly from 00:00.
+    */
+
+    music.currentTime = 0;
+
+    music.volume = 1;
+
+
+    music.play()
+
+    .then(function(){
+
+        playing = true;
+
+        musicButton.textContent =
+            "🔊";
+
+    })
+
+    .catch(function(error){
+
+        playing = false;
+
+        musicButton.textContent =
+            "🔇";
+
+        console.log(
+            "Music error:",
+            error
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   START EXPERIENCE
+===================================================== */
+
+function startExperience(){
+
+    if(experienceStarted){
+
+        return;
+    }
+
+
+    experienceStarted = true;
+
+
+    /*
+       Hide Tap Anywhere.
+    */
+
+    tapScreen.classList.add(
+        "hide"
+    );
+
+
+    /*
+       Start video after user's tap.
+    */
+
+    introVideo
+        .play()
+        .then(function(){
+
+            console.log(
+                "Countdown video started."
+            );
+
+        })
+        .catch(function(error){
+
+            console.log(
+                "Video error:",
+                error
+            );
+
+        });
+
+
+    /*
+       Start song after user's tap.
+    */
+
+    startMusic();
+
+}
+
+
+/* =====================================================
+   SONG ENDED
+===================================================== */
+
+music.addEventListener(
+    "ended",
+    function(){
+
+        /*
+           Full 58-second song completed.
+        */
+
+        songFinished = true;
+
+        playing = false;
+
+
+        music.pause();
+
+        music.currentTime = 0;
+
+
+        musicButton.textContent =
+            "🔇";
+
+
+        /*
+           Show Continue automatically
+           if Prayer screen is visible.
+        */
+
+        if(
+            document
+                .getElementById("screen2")
+                .classList
+                .contains("active")
+        ){
+
+            prayerContinueBtn.style.display =
+                "inline-block";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+function toggleMusic(){
+
+    /*
+       Don't restart after the
+       song has completely finished.
+    */
+
+    if(songFinished){
+
+        return;
+    }
+
+
+    if(music.paused){
+
+        music.play()
+
+        .then(function(){
+
+            playing = true;
+
+            musicButton.textContent =
+                "🔊";
+
+        })
+
+        .catch(function(error){
+
+            console.log(
+                "Music error:",
+                error
+            );
+
+        });
+
+    }
+    else{
+
+        music.pause();
+
+        playing = false;
+
+        musicButton.textContent =
+            "🔇";
+
+    }
+
+}
+
+
+/* =====================================================
+   VIDEO FINISHED
+===================================================== */
+
+introVideo.addEventListener(
+    "ended",
+    function(){
+
+        /*
+           Countdown video finished.
+
+           Song continues.
+           It does NOT restart.
+        */
+
+        showScreen(
+            "screen1"
+        );
+
+
+        /*
+           Assalamu Alaikum wish stays
+           for 15 seconds.
+
+           No Continue button here.
+
+           Then Prayer opens automatically.
+        */
+
+        setTimeout(
+            function(){
+
+                const assalamScreen =
+                    document.getElementById(
+                        "screen1"
+                    );
+
+
+                /*
+                   Only move forward if
+                   still on Screen 1.
+                */
+
+                if(
+                    assalamScreen.classList
+                        .contains("active")
+                ){
+
+                    showScreen(
+                        "screen2"
+                    );
+
+                }
+
+            },
+            15000
+        );
+
+    }
+);
+
+
+/* =====================================================
+   BIRTHDAY SCREEN
+===================================================== */
+
+function showBirthdayScreen(){
+
+    /*
+       This button only becomes available
+       after the song has finished.
+
+       Make sure song is stopped.
+    */
+
+    if(music){
+
+        music.pause();
+
+        music.currentTime = 0;
+
+        playing = false;
+
+    }
+
+
+    musicButton.textContent =
+        "🔇";
+
+
+    showScreen(
+        "screen3"
+    );
+
+}
+
+
+/* =====================================================
+   LETTER SCREEN
+===================================================== */
+
+function showLetterScreen(){
+
+    showScreen(
+        "screen4"
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
